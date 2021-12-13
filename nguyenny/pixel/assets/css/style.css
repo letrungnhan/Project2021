@@ -1080,14 +1080,14 @@
     text-align: right;
 }
 .latest-product-content > h2 {
-    color: #e1e1e1;
+    color: #181818;
     font-size: 36px;
     font-weight: bold;
     line-height: 50px;
     margin-bottom: 35px;
 }
 .latest-product-content > p {
-    color: #ececec;
+    color: #181818;
     font-size: 15px;
     font-weight: 300;
     margin: 0 0 0 133px;
@@ -1097,7 +1097,7 @@
     font-weight: 600;
 }
 .latest-price > h3 {
-    color: #e1e1e1;
+    color: #181818;
     font-size: 38px;
     font-weight: bold;
     line-height: 1;
@@ -1126,6 +1126,7 @@
 }
 .latest-price {
     margin: 34px 0 49px;
+
 }
 
 .latest-product-img {
