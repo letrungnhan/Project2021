@@ -734,9 +734,11 @@ textarea:focus {
 .pt-205 { padding-top: 205px }
 .pt-255 { padding-top: 255px }
 .pt-210 { padding-top: 210px }
+.pt-340 { padding-top: 340px }
 .pt-365 { padding-top: 365px }
 .pt-370 { padding-top: 370px }   
 .pt-380 { padding-top: 380px }
+.pt-230 { padding-top: 230px }
 /*************************
         Padding right
 *************************/
@@ -801,8 +803,11 @@ textarea:focus {
 .pb-190 { padding-bottom: 190px }
 .pb-280 { padding-bottom: 280px }
 .pb-210 { padding-bottom: 210px }
+.pb-240 { padding-bottom: 240px }
+.pb-230 { padding-bottom: 230px }
 .pb-285 { padding-bottom: 285px }
 .pb-290 { padding-bottom: 290px }
+.pb-126 { padding-bottom: 126px }
 /*************************
         Padding left
 *************************/

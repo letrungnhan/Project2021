@@ -2129,6 +2129,7 @@ h3.sidebar-widget {
     padding-bottom: 11px;
     text-transform: uppercase;
 }
+
 .widget-categories ul li {
     margin-bottom: 16px;
 }
@@ -2145,6 +2146,7 @@ h3.sidebar-widget {
 .widget-categories ul li a:hover {
     color: #ffb52f;
 }
+
 .price_filter .ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all {
     background: #ebebeb none repeat scroll 0 0;
     border: medium none;
