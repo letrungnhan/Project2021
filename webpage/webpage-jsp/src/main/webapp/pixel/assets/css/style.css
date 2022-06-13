@@ -1218,14 +1218,14 @@
 }
 .testimonial-dec::before {
     bottom: auto;
-    content: url("../../assets/img/icon-img/quote-1.png");
+    content: url("../img/icon-img/quote-1.png");
     left: -60px;
     position: absolute;
     top: -47px;
 }
 .testimonial-dec::after {
     bottom: -50px;
-    content: url("../../assets/img/icon-img/quote-2.png");
+    content: url("../img/icon-img/quote-2.png");
     position: absolute;
     right: -60px;
 }
@@ -1659,7 +1659,7 @@
     padding-left: 20px;
     position: relative;
     width: 100%;
-    background: rgba(0, 0, 0, 0) url("../../assets/img/icon-img/1.png") no-repeat scroll right 20px center;
+    background: rgba(0, 0, 0, 0) url("../img/icon-img/1.png") no-repeat scroll right 20px center;
 }
 .qtybutton {
     color: #727272;
@@ -2033,7 +2033,7 @@ input.cart-plus-minus-box {
 .product-sorting .sorting select {
     -moz-appearance: none;
     -webkit-appearance: none;
-    background: #f1f1f1 url("../../assets/img/icon-img/1.png") no-repeat scroll right 10px center;
+    background: #f1f1f1 url("../img/icon-img/1.png") no-repeat scroll right 10px center;
     border: medium none;
     border-radius: 5px;
     font-size: 13px;
