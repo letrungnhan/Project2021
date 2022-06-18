@@ -34,7 +34,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-4">
                         <div class="logo-small-device">
-                            <a href="index.html"><img alt="" src="assets/img/logo/logo.png"></a>
+                            <a href="../WEB-INF/index.jsp"><img alt="" src="assets/img/logo/logo.png"></a>
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-8 col-8">
@@ -50,7 +50,7 @@
                                 <div class="main-menu">
                                     <nav>
                                         <ul>
-                                            <li><a href="index.html">Trang chủ</a></li>
+                                            <li><a href="../WEB-INF/index.jsp">Trang chủ</a></li>
                                             <li class="active"><a href="about-us.html">Về chúng tôi</a></li>
                                             <li><a href="#">Cửa hàng</a>
                                                 <ul>
@@ -67,7 +67,7 @@
                                                     <li><a href="cart.html">Trang giỏ hàng</a></li>
                                                     <li><a href="checkout.html">Thanh toán</a></li>
                                                     <li><a href="wishlist.html">Danh sách yêu thích</a></li>
-                                                    <li><a href="login-register.html">Đăng nhập</a></li>
+                                                    <li><a href="../WEB-INF/login-register.jsp">Đăng nhập</a></li>
                                                     <li><a href="contact.html">Liên hệ</a></li>
                                                 </ul>
                                             </li>
@@ -144,14 +144,14 @@
                         <div class="mobile-menu">
                             <nav id="mobile-menu-active">
                                 <ul class="menu-overflow">
-                                    <li><a href="index.html">HOME</a></li>
+                                    <li><a href="../WEB-INF/index.jsp">HOME</a></li>
                                     <li><a href="#">pages</a>
                                         <ul>
                                             <li><a href="about-us.html">about us</a></li>
                                             <li><a href="cart.html">cart page</a></li>
                                             <li><a href="checkout.html">checkout</a></li>
                                             <li><a href="wishlist.html">wishlist</a></li>
-                                            <li><a href="login-register.html">login</a></li>
+                                            <li><a href="../WEB-INF/login-register.jsp">login</a></li>
                                             <li><a href="contact.html">contact</a></li>
                                         </ul>
                                     </li>
@@ -2886,7 +2886,7 @@
                     <div class="col-lg-3 col-md-6 col-12">
                         <div class="footer-widget mb-30">
                             <div class="footer-logo">
-                                <a href="index.html">
+                                <a href="../index.jsp">
                                     <img src="assets/img/logo/2.png" alt="">
                                 </a>
                             </div>

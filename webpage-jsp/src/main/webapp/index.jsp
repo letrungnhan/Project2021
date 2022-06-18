@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
@@ -7,21 +8,21 @@
     <meta name="description" content="Live Preview Of Oswan eCommerce HTML5 Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/pix.png">
+    <link rel="shortcut icon" type="image/x-icon" href="pixel/assets/img/pix.png">
 
     <!-- all css here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/chosen.min.css">
-    <link rel="stylesheet" href="assets/css/icofont.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/meanmenu.min.css">
-    <link rel="stylesheet" href="assets/css/bundle.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <link rel="stylesheet" href="pixel/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="pixel/assets/css/animate.css">
+    <link rel="stylesheet" href="pixel/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="pixel/assets/css/chosen.min.css">
+    <link rel="stylesheet" href="pixel/assets/css/icofont.css">
+    <link rel="stylesheet" href="pixel/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="pixel/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="pixel/assets/css/meanmenu.min.css">
+    <link rel="stylesheet" href="pixel/assets/css/bundle.css">
+    <link rel="stylesheet" href="pixel/assets/css/style.css">
+    <link rel="stylesheet" href="pixel/assets/css/responsive.css">
+    <script src="pixel/assets/js/vendor/modernizr-2.8.3.min.js"></script>
 
 </head>
 <body>
@@ -33,7 +34,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-4">
                         <div class="logo-small-device">
-                            <a href="index.html"><img alt="" src="assets/img/logo/logo.png"></a>
+                            <a href="index.jsp"><img alt="" src="pixel/assets/img/logo/logo.png"></a>
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-8 col-8">
@@ -43,40 +44,40 @@
                             </div>
                             <div class="menu-wrapper text-center">
                                 <button class="menu-toggle">
-                                    <img class="s-open" alt="" src="assets/img/icon-img/menu.png">
-                                    <img class="s-close" alt="" src="assets/img/icon-img/menu-close.png">
+                                    <img class="s-open" alt="" src="pixel/assets/img/icon-img/menu.png">
+                                    <img class="s-close" alt="" src="pixel/assets/img/icon-img/menu-close.png">
                                 </button>
                                 <div class="main-menu">
                                     <nav>
                                         <ul>
-                                            <li><a href="index.html">Trang Chủ</a></li>
+                                            <li><a href="index.jsp">Trang Chủ</a></li>
                                             <li class="active"><a href="about-us.html">Về PIXEl</a></li>
                                             <li><a href="#">Cửa Hàng</a>
                                                 <ul>
-                                                    <li><a href="mouse-shop-page.html">Cửa Hàng</a></li>
-                                                    <li><a href="product-details.html">Chi tiết sản phẩm</a></li>
-                                                    <li><a href="checkout.html">Checkout</a></li>
-                                                    <li><a href="wishlist.html">Danh sách yêu thích</a></li>
-                                                    <li><a href="cart.html">Giỏ hàng</a></li>
+                                                    <li><a href="pixel/mouse-shop-page.html">Cửa Hàng</a></li>
+                                                    <li><a href="pixel/product-details.html">Chi tiết sản phẩm</a></li>
+                                                    <li><a href="pixel/checkout.html">Checkout</a></li>
+                                                    <li><a href="pixel/wishlist.html">Danh sách yêu thích</a></li>
+                                                    <li><a href="pixel/cart.html">Giỏ hàng</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="#">pages</a>
                                                 <ul>
                                                     <li><a href="about-us.html">Về PIXEL</a></li>
-                                                    <li><a href="cart.html">Giỏ hàng</a></li>
-                                                    <li><a href="checkout.html">Checkout</a></li>
-                                                    <li><a href="wishlist.html">Danh sách yêu thích</a></li>
-                                                    <li><a href="login-register.html">Đăng nhập</a></li>
-                                                    <li><a href="contact.html">Liên lạc</a></li>
+                                                    <li><a href="pixel/cart.html">Giỏ hàng</a></li>
+                                                    <li><a href="pixel/checkout.html">Checkout</a></li>
+                                                    <li><a href="pixel/wishlist.html">Danh sách yêu thích</a></li>
+                                                    <li><a href="login.jsp">Đăng nhập</a></li>
+                                                    <li><a href="pixel/contact.html">Liên lạc</a></li>
                                                 </ul>
                                             </li>
-<!--                                            <li><a href="#">blog</a>-->
-<!--                                                <ul>-->
-<!--                                                    <li><a href="blog.html">blog</a></li>-->
-<!--                                                    <li><a href="blog-details.html">blog chi tiết</a></li>-->
-<!--                                                </ul>-->
-<!--                                            </li>-->
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <!--                                            <li><a href="#">blog</a>-->
+                                            <!--                                                <ul>-->
+                                            <!--                                                    <li><a href="blog.html">blog</a></li>-->
+                                            <!--                                                    <li><a href="blog-details.html">blog chi tiết</a></li>-->
+                                            <!--                                                </ul>-->
+                                            <!--                                            </li>-->
+                                            <li><a href="pixel/contact.html">Contact</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -92,7 +93,7 @@
                                 <ul>
                                     <li class="single-shopping-cart">
                                         <div class="shopping-cart-img">
-                                            <a href="#"><img alt="" src="assets/img/cart/img.png"></a>
+                                            <a href="#"><img alt="" src="pixel/assets/img/cart/img.png"></a>
                                         </div>
                                         <div class="shopping-cart-title">
                                             <h3><a href="#">Asus ROG Strix Hero II </a></h3>
@@ -105,7 +106,7 @@
                                     </li>
                                     <li class="single-shopping-cart">
                                         <div class="shopping-cart-img">
-                                            <a href="#"><img alt="" src="assets/img/cart/alienware14.png"></a>
+                                            <a href="#"><img alt="" src="pixel/assets/img/cart/alienware14.png"></a>
                                         </div>
                                         <div class="shopping-cart-title">
                                             <h3><a href="#">Demonissi Gori</a></h3>
@@ -118,7 +119,7 @@
                                     </li>
                                     <li class="single-shopping-cart">
                                         <div class="shopping-cart-img">
-                                            <a href="#"><img alt="" src="assets/img/cart/cart-3.jpg"></a>
+                                            <a href="#"><img alt="" src="pixel/assets/img/cart/cart-3.jpg"></a>
                                         </div>
                                         <div class="shopping-cart-title">
                                             <h3><a href="#">Demonissi Gori</a></h3>
@@ -143,33 +144,33 @@
                         <div class="mobile-menu">
                             <nav id="mobile-menu-active">
                                 <ul class="menu-overflow">
-                                    <li><a href="index.html">TRANG CHỦ</a></li>
+                                    <li><a href="index.jsp">TRANG CHỦ</a></li>
                                     <li><a href="#">pages</a>
                                         <ul>
                                             <li><a href="about-us.html">về chúng tôi</a></li>
-                                            <li><a href="cart.html">trang giỏ hàng</a></li>
-                                            <li><a href="checkout.html">checkout</a></li>
-                                            <li><a href="wishlist.html">danh sách mong muốn</a></li>
-                                            <li><a href="login-register.html">đăng nhập</a></li>
-                                            <li><a href="contact.html">liên lạc</a></li>
+                                            <li><a href="pixel/cart.html">trang giỏ hàng</a></li>
+                                            <li><a href="pixel/checkout.html">checkout</a></li>
+                                            <li><a href="pixel/wishlist.html">danh sách mong muốn</a></li>
+                                            <li><a href="login.jsp">đăng nhập</a></li>
+                                            <li><a href="pixel/contact.html">liên lạc</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">cửa hàng</a>
                                         <ul>
-                                            <li><a href="mouse-shop-page.html">cửa hàng</a></li>
-                                            <li><a href="product-details.html">chi tiết sản phẩm</a></li>
-                                            <li><a href="checkout.html">checkout</a></li>
-                                            <li><a href="wishlist.html">danh sách mong muốn</a></li>
-                                            <li><a href="cart.html">giỏ hàng</a></li>
+                                            <li><a href="pixel/mouse-shop-page.html">cửa hàng</a></li>
+                                            <li><a href="pixel/product-details.html">chi tiết sản phẩm</a></li>
+                                            <li><a href="pixel/checkout.html">checkout</a></li>
+                                            <li><a href="pixel/wishlist.html">danh sách mong muốn</a></li>
+                                            <li><a href="pixel/cart.html">giỏ hàng</a></li>
                                         </ul>
                                     </li>
-<!--                                    <li><a href="#">BLOG</a>-->
-<!--                                        <ul>-->
-<!--                                            <li><a href="blog.html">trang blog</a></li>-->
-<!--                                            <li><a href="blog-details.html">chi tiết blog</a></li>-->
-<!--                                        </ul>-->
-<!--                                    </li>-->
-                                    <li><a href="contact.html"> Liên Lạc Với Chúng Tôi</a></li>
+                                    <!--                                    <li><a href="#">BLOG</a>-->
+                                    <!--                                        <ul>-->
+                                    <!--                                            <li><a href="blog.html">trang blog</a></li>-->
+                                    <!--                                            <li><a href="blog-details.html">chi tiết blog</a></li>-->
+                                    <!--                                        </ul>-->
+                                    <!--                                    </li>-->
+                                    <li><a href="pixel/contact.html"> Liên Lạc Với Chúng Tôi</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -188,7 +189,7 @@
                         <ul>
                             <li class="single-shopping-cart">
                                 <div class="shopping-cart-img">
-                                    <a href="#"><img alt="" src="assets/img/cart/img.png"></a>
+                                    <a href="#"><img alt="" src="pixel/assets/img/cart/img.png"></a>
                                 </div>
                                 <div class="shopping-cart-title">
                                     <h3><a href="#">Asus ROG Strix Hero II </a></h3>
@@ -201,7 +202,7 @@
                             </li>
                             <li class="single-shopping-cart">
                                 <div class="shopping-cart-img">
-                                    <a href="#"><img alt="" src="assets/img/cart/alienware14.png"></a>
+                                    <a href="#"><img alt="" src="pixel/assets/img/cart/alienware14.png"></a>
                                 </div>
                                 <div class="shopping-cart-title">
                                     <h3><a href="#">Dell Alienware 14</a></h3>
@@ -214,7 +215,7 @@
                             </li>
                             <li class="single-shopping-cart">
                                 <div class="shopping-cart-img">
-                                    <a href="#"><img alt="" src="assets/img/cart/msi-gamin-gf65.png"></a>
+                                    <a href="#"><img alt="" src="pixel/assets/img/cart/msi-gamin-gf65.png"></a>
                                 </div>
                                 <div class="shopping-cart-title">
                                     <h3><a href="#">MSI Gaming GF65</a></h3>
@@ -230,7 +231,7 @@
                             <h4>tổng giá: <span>96.940đ</span></h4>
                         </div>
                         <div class="shopping-cart-btn">
-                            <a class="btn-style cr-btn" href="cart.html">Thanh toán</a>
+                            <a class="btn-style cr-btn" href="pixel/cart.html">Thanh toán</a>
                         </div>
                     </div>
                 </div>
@@ -239,44 +240,44 @@
     </header>
     <div class="slider-area">
         <div class="slider-active owl-carousel">
-            <div class="single-slider slider-1" style="background-image: url(assets/img/slider/img_3.png)">
+            <div class="single-slider slider-1" style="background-image: url(pixel/assets/img/slider/img_3.png)">
                 <div class="container">
                     <div class="slider-content slider-animated-1">
                         <div class="slider-img text-center">
-                            <img class="animated" src="assets/img/slider/alieware14.png" alt="slider images">
+                            <img class="animated" src="pixel/assets/img/slider/alieware14.png" alt="slider images">
                         </div>
                         <div class="slider-text-img">
                             <h6 class="animated">HÃY ĐẶT MẶT HÀNG CỦA BẠN VỚI GIÁ mắc</h6>
-                            <img class="animated" src="assets/img/icon-img/iconlaptop.png" alt="slider images">
+                            <img class="animated" src="pixel/assets/img/icon-img/iconlaptop.png" alt="slider images">
                         </div>
                         <h2 class="animated">LAPTOP</h2>
                     </div>
                 </div>
             </div>
-            <div class="single-slider slider-1" style="background-image: url(assets/img/slider/img_3.png)">
+            <div class="single-slider slider-1" style="background-image: url(pixel/assets/img/slider/img_3.png)">
                 <div class="container">
                     <div class="slider-content slider-animated-1">
                         <div class="slider-img text-center">
-                            <img class="animated" src="assets/img/slider/Asus-ROG-Strix-Hero-II.png"
+                            <img class="animated" src="pixel/assets/img/slider/Asus-ROG-Strix-Hero-II.png"
                                  alt="slider images">
                         </div>
                         <div class="slider-text-img">
                             <h6 class="animated">HÃY ĐẶT MẶT HÀNG CỦA BẠN VỚI GIÁ RẺ</h6>
-                            <img class="animated" src="assets/img/icon-img/iconlaptop.png" alt="slider images">
+                            <img class="animated" src="pixel/assets/img/icon-img/iconlaptop.png" alt="slider images">
                         </div>
                         <h2 class="animated">LAPTOP</h2>
                     </div>
                 </div>
             </div>
-            <div class="single-slider slider-1" style="background-image: url(assets/img/slider/img_3.png)">
+            <div class="single-slider slider-1" style="background-image: url(pixel/assets/img/slider/img_3.png)">
                 <div class="container">
                     <div class="slider-content slider-animated-1">
                         <div class="slider-img text-center">
-                            <img class="animated" src="assets/img/slider/msi-gamin-gf65.png" alt="slider images">
+                            <img class="animated" src="pixel/assets/img/slider/msi-gamin-gf65.png" alt="slider images">
                         </div>
                         <div class="slider-text-img">
                             <h6 class="animated">HÃY ĐẶT MẶT HÀNG CỦA BẠN VỚI GIÁ Rẻ</h6>
-                            <img class="animated" src="assets/img/icon-img/iconlaptop.png" alt="slider images">
+                            <img class="animated" src="pixel/assets/img/icon-img/iconlaptop.png" alt="slider images">
                         </div>
                         <h2 class="animated">LAPTOP</h2>
                     </div>
@@ -334,7 +335,7 @@
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="overview-img">
-                        <img class="tilter" src="assets/img/banner/RTX3606.jpg" alt="">
+                        <img class="tilter" src="pixel/assets/img/banner/RTX3606.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -345,7 +346,7 @@
             <div class="row">
                 <div class="col-md-4 col-lg-4">
                     <div class="banner-wrapper mb-30">
-                        <a href="laptop-shop-page.html"><img src="assets/img/banner/laptop3cai1.png" alt="image"></a>
+                        <a href="pixel/laptop-shop-page.html"><img src="pixel/assets/img/banner/laptop3cai1.png" alt="image"></a>
                         <div class="banner-content">
                             <h2>MUA LAPTOP MỚI</h2>
                         </div>
@@ -353,7 +354,8 @@
                 </div>
                 <div class="col-md-4 col-lg-4">
                     <div class="banner-wrapper mb-30">
-                        <a href="pc-shop-page.html"><img src="assets/img/banner/XiaomiMiDesktopMonitor%2027.jpg" alt="image"></a>
+                        <a href="pixel/pc-shop-page.html"><img src="pixel/assets/img/banner/XiaomiMiDesktopMonitor 27.jpg"
+                                                               alt="image"></a>
                         <div class="banner-content">
                             <h2>MUA MONITOR MỚI</h2>
                         </div>
@@ -361,7 +363,7 @@
                 </div>
                 <div class="col-md-4 col-lg-4">
                     <div class="banner-wrapper mb-30">
-                        <a href="shop-keyboard.html"><img src="assets/img/banner/chuotvabanphim.jpg" alt="image"></a>
+                        <a href="pixel/shop-keyboard.html"><img src="pixel/assets/img/banner/chuotvabanphim.jpg" alt="image"></a>
                         <div class="banner-content">
                             <h2>MUA BÀN PHÍM VÀ CHUỘT MỚI</h2>
                         </div>
@@ -374,7 +376,8 @@
         <div class="container">
             <div class="section-title text-center mb-50">
                 <h2>CHỌN MẶT HÀNG CỦA BẠN</h2>
-                <p><span>PIXEL</span> cửa hàng bán linh kiện máy tính hàng đầu thế giới có thể cung cấp cho bạn những loại sản
+                <p><span>PIXEL</span> cửa hàng bán linh kiện máy tính hàng đầu thế giới có thể cung cấp cho bạn những
+                    loại sản
                     phẩm mới nhất và tốt nhất</p>
             </div>
             <div class="product-tab-list text-center mb-80 nav product-menu-mrg" role="tablist">
@@ -400,8 +403,9 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/Màn-hình-ViewSonic-VA2418-SH-2-24“-IPS-75Hz.png" alt="">
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/Màn-hình-ViewSonic-VA2418-SH-2-24“-IPS-75Hz.png"
+                                             alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -425,7 +429,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html">ViewSonic</a></h4>
+                                            <h4><a href="pixel/product-details.html">ViewSonic</a></h4>
                                             <span>Bảo Hành 36 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -436,8 +440,8 @@
                             </div>
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/MànhìnhLenovoG272027IPS144Hz.png" alt="">
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/MànhìnhLenovoG272027IPS144Hz.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -461,7 +465,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html">Lenovo</a></h4>
+                                            <h4><a href="pixel/product-details.html">Lenovo</a></h4>
                                             <span>Bảo Hành 36 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -474,8 +478,8 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/Màn-hình-cong-HKC-M27G3F-27-VA-144Hz.png" alt="">
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/Màn-hình-cong-HKC-M27G3F-27-VA-144Hz.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -499,7 +503,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html">HKC</a></h4>
+                                            <h4><a href="pixel/product-details.html">HKC</a></h4>
                                             <span>Bảo Hành 36 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -510,8 +514,9 @@
                             </div>
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/Màn-hình-cong-Samsung-LC27RG50FQE-27-VA-240Hz-Freesync.png " alt="">
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/Màn-hình-cong-Samsung-LC27RG50FQE-27-VA-240Hz-Freesync.png "
+                                             alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -535,7 +540,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html">SAMSUNG</a></h4>
+                                            <h4><a href="pixel/product-details.html">SAMSUNG</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -548,8 +553,9 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/Màn-hình-ASUS-TUF-GAMING-VG27AQ-27-IPS-2K-165Hz-G-Sync-HDR.png" alt="">
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/Màn-hình-ASUS-TUF-GAMING-VG27AQ-27-IPS-2K-165Hz-G-Sync-HDR.png"
+                                             alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -573,7 +579,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html">ASUS</a></h4>
+                                            <h4><a href="pixel/product-details.html">ASUS</a></h4>
                                             <span>Bảo Hành 36 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -584,8 +590,8 @@
                             </div>
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/Màn-hình-LG-27GP850-B-UltraGear-27-Nano-IPS-2K-180Hz.png"
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/Màn-hình-LG-27GP850-B-UltraGear-27-Nano-IPS-2K-180Hz.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -610,7 +616,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html">LG</a></h4>
+                                            <h4><a href="pixel/product-details.html">LG</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -623,8 +629,8 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/Màn-hình-HKC-MB24V9-24-IPS-75Hz.png" alt="">
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/Màn-hình-HKC-MB24V9-24-IPS-75Hz.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -648,7 +654,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html">HCK</a></h4>
+                                            <h4><a href="pixel/product-details.html">HCK</a></h4>
                                             <span>Bảo Thành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -659,8 +665,9 @@
                             </div>
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/Màn-hình-ViewSonic-VX2476-SMHD-24-IPS-75Hz.png" alt="">
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/Màn-hình-ViewSonic-VX2476-SMHD-24-IPS-75Hz.png"
+                                             alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -684,7 +691,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html">ViewSonic</a></h4>
+                                            <h4><a href="pixel/product-details.html">ViewSonic</a></h4>
                                             <span>Bảo Hành 36 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -701,8 +708,8 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/GhostS.png "
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/GhostS.png "
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -721,7 +728,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html"></a></h4>
+                                            <h4><a href="pixel/product-details.html"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -732,8 +739,8 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/PhantomS.png"
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/PhantomS.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -758,7 +765,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html"></a></h4>
+                                            <h4><a href="pixel/product-details.html"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -771,8 +778,8 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/volibearS.png" alt="">
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/volibearS.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -796,7 +803,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html"></a></h4>
+                                            <h4><a href="pixel/product-details.html"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -807,8 +814,8 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/garenS.png"
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/garenS.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -833,7 +840,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html"></a></h4>
+                                            <h4><a href="pixel/product-details.html"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -846,8 +853,8 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/venusS.png"
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/venusS.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -872,7 +879,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html"></a></h4>
+                                            <h4><a href="pixel/product-details.html"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -883,8 +890,8 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/hextechS.png"
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/hextechS.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -909,7 +916,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html"></a></h4>
+                                            <h4><a href="pixel/product-details.html"></a></h4>
                                             <span>8000 RPM</span>
                                         </div>
                                         <div class="product-price">
@@ -922,8 +929,8 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/dariusS.png" alt="">
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/dariusS.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -947,7 +954,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html"></a></h4>
+                                            <h4><a href="pixel/product-details.html"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -958,8 +965,8 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/pykeS.png" alt="">
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/pykeS.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -983,7 +990,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html"></a></h4>
+                                            <h4><a href="pixel/product-details.html"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -995,13 +1002,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane" id="home3"    >
+                <div class="tab-pane" id="home3">
                     <div class="product-slider-active owl-carousel">
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/laptop1.png"
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/laptop1.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1026,7 +1033,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html"></a></h4>
+                                            <h4><a href="pixel/product-details.html"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -1037,8 +1044,8 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/laptop2.png"
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/laptop2.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1063,7 +1070,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html"></a></h4>
+                                            <h4><a href="pixel/product-details.html"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -1076,8 +1083,8 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/laptop3.png" alt="">
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/laptop3.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -1101,7 +1108,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html"></a></h4>
+                                            <h4><a href="pixel/product-details.html"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -1112,8 +1119,8 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/laptop4.png"
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/laptop4.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1138,7 +1145,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html"></a></h4>
+                                            <h4><a href="pixel/product-details.html"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -1151,8 +1158,8 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/laptop5.png"
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/laptop5.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1177,7 +1184,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html"></a></h4>
+                                            <h4><a href="pixel/product-details.html"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -1188,8 +1195,8 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/laptop6.png"
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/laptop6.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1214,7 +1221,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html"></a></h4>
+                                            <h4><a href="pixel/product-details.html"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -1227,8 +1234,8 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/laptop7.png" alt="">
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/laptop7.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -1252,7 +1259,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html"></a></h4>
+                                            <h4><a href="pixel/product-details.html"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -1263,8 +1270,8 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/laptop8.png" alt="">
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/laptop8.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -1288,7 +1295,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html"></a></h4>
+                                            <h4><a href="pixel/product-details.html"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -1305,8 +1312,8 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/BànphímRazerBlackwidowGreenSwitch.png"
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/BànphímRazerBlackwidowGreenSwitch.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1331,7 +1338,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html">Razer</a></h4>
+                                            <h4><a href="pixel/product-details.html">Razer</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1342,8 +1349,8 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/BànphímcơMistelX8BumblebeeSilentRedSwitch.png"
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/BànphímcơMistelX8BumblebeeSilentRedSwitch.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1368,7 +1375,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html">Mistel</a></h4>
+                                            <h4><a href="pixel/product-details.html">Mistel</a></h4>
                                             <span>Bào Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1381,8 +1388,8 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/BànphímCorsairK70RGBMK.2SE.png" alt="">
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/BànphímCorsairK70RGBMK.2SE.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -1406,7 +1413,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html">Corsair</a></h4>
+                                            <h4><a href="pixel/product-details.html">Corsair</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1417,8 +1424,8 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/BànphímcơLeopoldFC980MPDDarkYellow.png"
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/BànphímcơLeopoldFC980MPDDarkYellow.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1443,7 +1450,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html">Leopold</a></h4>
+                                            <h4><a href="pixel/product-details.html">Leopold</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1456,8 +1463,8 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/BànphímLeopoldFC980CBlackTopreSwitch.png"
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/BànphímLeopoldFC980CBlackTopreSwitch.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1482,7 +1489,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html">Leopold</a></h4>
+                                            <h4><a href="pixel/product-details.html">Leopold</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1493,8 +1500,8 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/BànphímcơCorsairK100RGB.png"
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/BànphímcơCorsairK100RGB.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1519,7 +1526,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html">Corsair</a></h4>
+                                            <h4><a href="pixel/product-details.html">Corsair</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1532,8 +1539,8 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/BànphímcơRazerHuntsmanMiniMercury.png" alt="">
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/BànphímcơRazerHuntsmanMiniMercury.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -1557,7 +1564,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html">Razer</a></h4>
+                                            <h4><a href="pixel/product-details.html">Razer</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1568,8 +1575,8 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/BànphímRazerBlackwidowV3.png" alt="">
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/BànphímRazerBlackwidowV3.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -1593,7 +1600,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html">Razer</a></h4>
+                                            <h4><a href="pixel/product-details.html">Razer</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1610,8 +1617,8 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/ChuộtLogitechG102LightsyncRGBBlack.png"
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/ChuộtLogitechG102LightsyncRGBBlack.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1636,7 +1643,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html">Logitech</a></h4>
+                                            <h4><a href="pixel/product-details.html">Logitech</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1647,8 +1654,8 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/ChuộtLogitechG102LightsyncRGBWhite.png"
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/ChuộtLogitechG102LightsyncRGBWhite.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1673,7 +1680,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html">Logitech</a></h4>
+                                            <h4><a href="pixel/product-details.html">Logitech</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1686,8 +1693,8 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/ChuộtDareUEM901RGBWirelessBlack.png" alt="">
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/ChuộtDareUEM901RGBWirelessBlack.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -1711,7 +1718,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html">Dare-U</a></h4>
+                                            <h4><a href="pixel/product-details.html">Dare-U</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1722,8 +1729,8 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/ChuộtRazerBasiliskV2.png"
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/ChuộtRazerBasiliskV2.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1748,7 +1755,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html">Razer</a></h4>
+                                            <h4><a href="pixel/product-details.html">Razer</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1761,8 +1768,8 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/ChuộtRazerDeathAdderV2Pro.png"
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/ChuộtRazerDeathAdderV2Pro.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1787,7 +1794,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html">Razer</a></h4>
+                                            <h4><a href="pixel/product-details.html">Razer</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1798,8 +1805,8 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/ChuộtCorsairHarpoonRGBWireless.png"
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/ChuộtCorsairHarpoonRGBWireless.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1824,9 +1831,10 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html">Corsair</a></h4>
+                                            <h4><a href="pixel/product-details.html">Corsair</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
-                                        </div><
+                                        </div>
+                                        <
                                         <div class="product-price">
                                             <span>990.000</span>
                                         </div>
@@ -1837,8 +1845,8 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/ChuộtDareUEM908RGBQueen.png" alt="">
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/ChuộtDareUEM908RGBQueen.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -1862,7 +1870,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html">Dare-U</a></h4>
+                                            <h4><a href="pixel/product-details.html">Dare-U</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1873,8 +1881,8 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="assets/img/product/ChuộtAsusROGChakram.png" alt="">
+                                    <a href="pixel/product-details.html">
+                                        <img src="pixel/assets/img/product/ChuộtAsusROGChakram.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -1898,7 +1906,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="product-details.html">Asus</a></h4>
+                                            <h4><a href="pixel/product-details.html">Asus</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1913,20 +1921,21 @@
             </div>
         </div>
     </div>
-    <div class="latest-product-area pt-205 pb-145 bg-img" style="background-image: url(assets/img/banner/geomatry.jpg)">
+    <div class="latest-product-area pt-205 pb-145 bg-img" style="background-image: url(pixel/assets/img/banner/geomatry.jpg)">
         <div class="container-fluid">
             <div class="latest-product-slider owl-carousel">
                 <div class="single-latest-product slider-animated-2">
                     <div class="row">
                         <div class="col-lg-7 col-md-12 col-12">
                             <div class="latest-product-img">
-                                <img class="animated" src="assets/img/banner/nitro5%20(1).png" alt="image">
+                                <img class="animated" src="pixel/assets/img/banner/nitro5 (1).png" alt="image">
                             </div>
                         </div>
                         <div class="col-lg-5 col-md-12 col-12">
                             <div class="latest-product-content">
                                 <h2 class="animated">ƯU ĐÃI MỚI NHẤT <br>Sự phổ biến của các loại phụ kiện</h2>
-                                <p class="animated"><span>PIXEL</span>Nơi mua sắm tốt nhất cho sinh viên và học sinh, nhân viên văn phòng </p>
+                                <p class="animated"><span>PIXEL</span>Nơi mua sắm tốt nhất cho sinh viên và học sinh,
+                                    nhân viên văn phòng </p>
                                 <div class="latest-price">
                                     <h3 class="animated">NGAY BÂY GIỜ CHỈ CÓ <span>GIÁ:25,000,000d</span></h3>
                                     <span class="animated">GIẢM GIÁ 35%</span>
@@ -1942,15 +1951,17 @@
                     <div class="row">
                         <div class="col-lg-7 col-col-12 col-12">
                             <div class="latest-product-img">
-                                <img class="animated" src="assets/img/banner/dsd.png" alt="image">
+                                <img class="animated" src="pixel/assets/img/banner/dsd.png" alt="image">
                             </div>
                         </div>
                         <div class="col-lg-5 col-col-12 col-12">
                             <div class="latest-product-content">
                                 <h2 class="animated">ƯU ĐÃI MỚI NHẤT <br>Sự phổ biến của các loại phụ kiện</h2>
-                                <p class="animated"><span>PIXEL</span>Nơi mua sắm tốt nhất cho sinh viên và học sinh, nhân viên văn phòng </p>
+                                <p class="animated"><span>PIXEL</span>Nơi mua sắm tốt nhất cho sinh viên và học sinh,
+                                    nhân viên văn phòng </p>
                                 <div class="latest-price">
-                                    <h3 style="color: black" class="animated">NGAY BÂY GIỜ CHỈ CÓ <span>GIÁ:19,000,000d</span></h3>
+                                    <h3 style="color: black" class="animated">NGAY BÂY GIỜ CHỈ CÓ
+                                        <span>GIÁ:19,000,000d</span></h3>
                                     <span class="animated">GIẢM GIÁ 35%</span>
                                 </div>
                                 <div class="latext-btn">
@@ -1974,7 +1985,7 @@
                     <div class="product-wrapper">
                         <div class="product-img">
                             <a href="#">
-                                <img src="assets/img/product/manhinh4.png" alt="">
+                                <img src="pixel/assets/img/product/manhinh4.png" alt="">
                             </a>
                             <div class="product-action">
                                 <a class="action-plus-2" title="Thêm vào giỏ hàng" href="#">
@@ -1983,22 +1994,23 @@
                                 <a class="action-cart-2" title="Danh sách yêu thích" href="#">
                                     <i class=" ti-heart"></i>
                                 </a>
-                                <a class="action-reload" title="Xem lướt qua" data-toggle="modal" data-target="#exampleModal" href="#">
+                                <a class="action-reload" title="Xem lướt qua" data-toggle="modal"
+                                   data-target="#exampleModal" href="#">
                                     <i class=" ti-zoom-in"></i>
                                 </a>
                             </div>
                             <div class="product-content-wrapper-2">
                                 <div class="product-title-price-2 text-center">
                                     <span>Giá: 3,820,000d</span>
-                                    <h4><a href="product-details.html">Màn hình Acer R241YB 24" IPS 75Hz</a></h4>
+                                    <h4><a href="pixel/product-details.html">Màn hình Acer R241YB 24" IPS 75Hz</a></h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="product-wrapper">
                         <div class="product-img">
-                            <a href="product-details.html">
-                                <img src="assets/img/product/banphim4.png" alt="">
+                            <a href="pixel/product-details.html">
+                                <img src="pixel/assets/img/product/banphim4.png" alt="">
                             </a>
                             <div class="product-action">
                                 <a class="action-plus-2" title="Thêm vào giỏ hàng" href="#">
@@ -2007,22 +2019,23 @@
                                 <a class="action-cart-2" title="Danh sách yêu thích" href="#">
                                     <i class=" ti-heart"></i>
                                 </a>
-                                <a class="action-reload" title="Xem lướt qua" data-toggle="modal" data-target="#exampleModal" href="#">
+                                <a class="action-reload" title="Xem lướt qua" data-toggle="modal"
+                                   data-target="#exampleModal" href="#">
                                     <i class=" ti-zoom-in"></i>
                                 </a>
                             </div>
                             <div class="product-content-wrapper-2">
                                 <div class="product-title-price-2 text-center">
                                     <span>Giá: 2,590,000d</span>
-                                    <h4><a href="product-details.html">Bàn phím Corsair K63 Wireless</a></h4>
+                                    <h4><a href="pixel/product-details.html">Bàn phím Corsair K63 Wireless</a></h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="product-wrapper">
                         <div class="product-img">
-                            <a href="product-details.html">
-                                <img src="assets/img/product/cap5.png" alt="">
+                            <a href="pixel/product-details.html">
+                                <img src="pixel/assets/img/product/cap5.png" alt="">
                             </a>
                             <div class="product-action">
                                 <a class="action-plus-2" title="Thêm vào giỏ hàng" href="#">
@@ -2031,22 +2044,23 @@
                                 <a class="action-cart-2" title="Danh sách yêu thích" href="#">
                                     <i class=" ti-heart"></i>
                                 </a>
-                                <a class="action-reload" title="Xem lướt qua" data-toggle="modal" data-target="#exampleModal" href="#">
+                                <a class="action-reload" title="Xem lướt qua" data-toggle="modal"
+                                   data-target="#exampleModal" href="#">
                                     <i class=" ti-zoom-in"></i>
                                 </a>
                             </div>
                             <div class="product-content-wrapper-2">
                                 <div class="product-title-price-2 text-center">
                                     <span>Giá: 790,000d</span>
-                                    <h4><a href="product-details.html">Asus AI Noise-Canceling Mic Adapter</a></h4>
+                                    <h4><a href="pixel/product-details.html">Asus AI Noise-Canceling Mic Adapter</a></h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="product-wrapper">
                         <div class="product-img">
-                            <a href="product-details.html">
-                                <img src="assets/img/product/tainghe4.png" alt="">
+                            <a href="pixel/product-details.html">
+                                <img src="pixel/assets/img/product/tainghe4.png" alt="">
                             </a>
                             <div class="product-action">
                                 <a class="action-plus-2" title="Thêm vào giỏ hàng" href="#">
@@ -2055,22 +2069,23 @@
                                 <a class="action-cart-2" title="Danh sách yêu thích" href="#">
                                     <i class=" ti-heart"></i>
                                 </a>
-                                <a class="action-reload" title="Xem lướt qua" data-toggle="modal" data-target="#exampleModal" href="#">
+                                <a class="action-reload" title="Xem lướt qua" data-toggle="modal"
+                                   data-target="#exampleModal" href="#">
                                     <i class=" ti-zoom-in"></i>
                                 </a>
                             </div>
                             <div class="product-content-wrapper-2">
                                 <div class="product-title-price-2 text-center">
                                     <span>Giá:380,000d</span>
-                                    <h4><a href="product-details.html">Tai nghe DareU EH416 RGB</a></h4>
+                                    <h4><a href="pixel/product-details.html">Tai nghe DareU EH416 RGB</a></h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="product-wrapper">
                         <div class="product-img">
-                            <a href="product-details.html">
-                                <img src="assets/img/product/chip.jpg" alt="">
+                            <a href="pixel/product-details.html">
+                                <img src="pixel/assets/img/product/chip.jpg" alt="">
                             </a>
                             <div class="product-action">
                                 <a class="action-plus-2" title="Thêm vào giỏ hàng" href="#">
@@ -2079,21 +2094,23 @@
                                 <a class="action-cart-2" title="Danh sách yêu thích" href="#">
                                     <i class=" ti-heart"></i>
                                 </a>
-                                <a class="action-reload" title="Xem lướt qua" data-toggle="modal" data-target="#exampleModal" href="#">
+                                <a class="action-reload" title="Xem lướt qua" data-toggle="modal"
+                                   data-target="#exampleModal" href="#">
                                     <i class=" ti-zoom-in"></i>
                                 </a>
                             </div>
                             <div class="product-content-wrapper-2">
                                 <div class="product-title-price-2 text-center">
                                     <span>Giá: 11,390,000d</span>
-                                    <h4><a href="product-details.html">Intel Core i9 10850KA / 20MB / 3.6GHz / 10 Nhân 20 Luồng</a></h4>
+                                    <h4><a href="pixel/product-details.html">Intel Core i9 10850KA / 20MB / 3.6GHz / 10 Nhân
+                                        20 Luồng</a></h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="product-wrapper">
                         <div class="product-img">
-                            <a href="product-details.html">
+                            <a href="pixel/product-details.html">
                                 <img src="assets/img/product/pc.jpg" alt="">
                             </a>
                             <div class="product-action">
@@ -2103,21 +2120,22 @@
                                 <a class="action-cart-2" title="Danh sách yêu thích" href="#">
                                     <i class=" ti-heart"></i>
                                 </a>
-                                <a class="action-reload" title="Xem lướt qua" data-toggle="modal" data-target="#exampleModal" href="#">
+                                <a class="action-reload" title="Xem lướt qua" data-toggle="modal"
+                                   data-target="#exampleModal" href="#">
                                     <i class=" ti-zoom-in"></i>
                                 </a>
                             </div>
                             <div class="product-content-wrapper-2">
                                 <div class="product-title-price-2 text-center">
                                     <span>Giá: 12,890,000d</span>
-                                    <h4><a href="product-details.html">GVN Mystic M</a></h4>
+                                    <h4><a href="pixel/product-details.html">GVN Mystic M</a></h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="product-wrapper">
                         <div class="product-img">
-                            <a href="product-details.html">
+                            <a href="pixel/product-details.html">
                                 <img src="assets/img/product/laptop.jpg" alt="">
                             </a>
                             <div class="product-action">
@@ -2127,21 +2145,22 @@
                                 <a class="action-cart-2" title="Danh sách yêu thích" href="#">
                                     <i class=" ti-heart"></i>
                                 </a>
-                                <a class="action-reload" title="Xem lướt qua" data-toggle="modal" data-target="#exampleModal" href="#">
+                                <a class="action-reload" title="Xem lướt qua" data-toggle="modal"
+                                   data-target="#exampleModal" href="#">
                                     <i class=" ti-zoom-in"></i>
                                 </a>
                             </div>
                             <div class="product-content-wrapper-2">
                                 <div class="product-title-price-2 text-center">
                                     <span>Giá: 24,390,000d</span>
-                                    <h4><a href="product-details.html">Laptop Gaming MSI Katana GF66 11UC 676VN</a></h4>
+                                    <h4><a href="pixel/product-details.html">Laptop Gaming MSI Katana GF66 11UC 676VN</a></h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="product-wrapper">
                         <div class="product-img">
-                            <a href="product-details.html">
+                            <a href="pixel/product-details.html">
                                 <img src="assets/img/product/ghe.jpeg" alt="">
                             </a>
                             <div class="product-action">
@@ -2151,14 +2170,16 @@
                                 <a class="action-cart-2" title="Danh sách yêu thích" href="#">
                                     <i class=" ti-heart"></i>
                                 </a>
-                                <a class="action-reload" title="Xem lướt qua" data-toggle="modal" data-target="#exampleModal" href="#">
+                                <a class="action-reload" title="Xem lướt qua" data-toggle="modal"
+                                   data-target="#exampleModal" href="#">
                                     <i class=" ti-zoom-in"></i>
                                 </a>
                             </div>
                             <div class="product-content-wrapper-2">
                                 <div class="product-title-price-2 text-center">
                                     <span>Giá:3,690,000d</span>
-                                    <h4><a href="product-details.html">Ghế chơi game Warrior Raider Series – WGC206 Plus White/Pink</a></h4>
+                                    <h4><a href="pixel/product-details.html">Ghế chơi game Warrior Raider Series – WGC206 Plus
+                                        White/Pink</a></h4>
                                 </div>
                             </div>
                         </div>
@@ -2177,42 +2198,42 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-hm-wrapper mb-40">
                         <div class="blog-img">
-                            <a href="mouse-shop-page.html"><img src="assets/img/blog/blog-hm-1.jpg" alt="image"></a>
+                            <a href="pixel/mouse-shop-page.html"><img src="pixel/assets/img/blog/blog-hm-1.jpg" alt="image"></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-hm-wrapper mb-40">
                         <div class="blog-img">
-                            <a href="pc-shop-page.html"><img src="assets/img/blog/blog-hm-2.jpg" alt="image"></a>
+                            <a href="pixel/pc-shop-page.html"><img src="pixel/assets/img/blog/blog-hm-2.jpg" alt="image"></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-hm-wrapper mb-40">
                         <div class="blog-img">
-                            <a href="laptop-shop-page.html"><img src="assets/img/blog/blog-hm-3.jpg" alt="image"></a>
+                            <a href="pixel/laptop-shop-page.html"><img src="pixel/assets/img/blog/blog-hm-3.jpg" alt="image"></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-hm-wrapper mb-40">
                         <div class="blog-img">
-                            <a href="pc-shop-page.html"><img src="assets/img/blog/blog-hm-1a.jpg" alt="image"></a>
+                            <a href="pixel/pc-shop-page.html"><img src="pixel/assets/img/blog/blog-hm-1a.jpg" alt="image"></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-hm-wrapper mb-40">
                         <div class="blog-img">
-                            <a href="gaming-chair.html"><img src="assets/img/blog/blog-hm-2b.jpg" alt="image"></a>
+                            <a href="pixel/gaming-chair.html"><img src="pixel/assets/img/blog/blog-hm-2b.jpg" alt="image"></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-hm-wrapper mb-40">
                         <div class="blog-img">
-                            <a href="pc-shop-page.html "><img src="assets/img/blog/blog-hm-3c.jpg" alt="image"></a>
+                            <a href="pixel/pc-shop-page.html "><img src="pixel/assets/img/blog/blog-hm-3c.jpg" alt="image"></a>
                         </div>
                     </div>
                 </div>
@@ -2224,8 +2245,9 @@
             <div class="newsletter-wrapper-all theme-bg-2">
                 <div class="row">
                     <div class="col-lg-5 col-12 col-md-12">
-                        <div class="newsletter-img bg-img" style="background-image: url(assets/img/banner/newsletter-bg.png)">
-                            <img alt="image" src="assets/img/team/newsletter-img.png"/>
+                        <div class="newsletter-img bg-img"
+                             style="background-image: url(pixel/assets/img/banner/newsletter-bg.png)">
+                            <img alt="image" src="pixel/assets/img/team/newsletter-img.png"/>
                         </div>
                     </div>
                     <div class="col-lg-7 col-12 col-md-12">
@@ -2234,12 +2256,18 @@
                                 <h3>Đăng ký để nhận bản tin từ SHOP</h3>
                             </div>
                             <div id="mc_embed_signup" class="subscribe-form">
-                                <form action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                <form action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef"
+                                      method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                                      class="validate" target="_blank" novalidate>
                                     <div id="mc_embed_signup_scroll" class="mc-form">
-                                        <input type="email" value="" name="EMAIL" class="email" placeholder="Email của bạn..." required>
+                                        <input type="email" value="" name="EMAIL" class="email"
+                                               placeholder="Email của bạn..." required>
                                         <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                        <div class="mc-news" aria-hidden="true"><input type="text" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1" value=""></div>
-                                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                                        <div class="mc-news" aria-hidden="true"><input type="text"
+                                                                                       name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef"
+                                                                                       tabindex="-1" value=""></div>
+                                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe"
+                                                                  id="mc-embedded-subscribe" class="button"></div>
                                     </div>
                                 </form>
                             </div>
@@ -2257,12 +2285,13 @@
                     <div class="col-lg-3 col-md-6 col-12">
                         <div class="footer-widget mb-30">
                             <div class="footer-logo">
-                                <a href="index.html">
-                                    <img src="assets/img/logo/2.png" alt="">
+                                <a href="index.jsp">
+                                    <img src="pixel/assets/img/logo/2.png" alt="">
                                 </a>
                             </div>
                             <div class="footer-about">
-                                <p><span>PIXEL </span> là doanh nghiệp cung cấp PC gaming, laptop, phụ kiện máy tính, thiết bị chơi game chính hãng. Hãy mua và nhận điều ưu đãi hấp dẫn</p>
+                                <p><span>PIXEL </span> là doanh nghiệp cung cấp PC gaming, laptop, phụ kiện máy tính,
+                                    thiết bị chơi game chính hãng. Hãy mua và nhận điều ưu đãi hấp dẫn</p>
                                 <div class="footer-support">
                                     <h5>HỆ THỐNG TỒNG ĐÀI MIỄN PHÍ</h5>
                                     <span>Tổng đài mua hàng: <strong> 1800 1234</strong></span></br>
@@ -2281,10 +2310,10 @@
                                     <li><a href="about-us.html">Giới thiệu về Pixel</a></li>
                                     <li><a href="#">Mua và nhận đơn hàng</a></li>
                                     <li><a href="#">Quy định và hình thức thanh toán</a></li>
-                                    <li><a href="mouse-shop-page.html">Shop</a></li>
+                                    <li><a href="pixel/mouse-shop-page.html">Shop</a></li>
                                     <li><a href="blog-sidebar.html">Blog</a></li>
                                     <li><a href="#">Điều khoản</a></li>
-                                    <li><a href="contact.html">Liên hệ</a></li>
+                                    <li><a href="pixel/contact.html">Liên hệ</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -2299,7 +2328,8 @@
                                     <p><a href="#"></a>Là một Gear store phục vụ bạn nhanh chóng</p>
                                 </div>
                                 <div class="single-tweet">
-                                    <p><a href="#"></a>Là doanh nghiệp chuyên cung cấp thiết bị, giải pháp về máy tính, thiết bị chơi game,
+                                    <p><a href="#"></a>Là doanh nghiệp chuyên cung cấp thiết bị, giải pháp về máy tính,
+                                        thiết bị chơi game,
                                         thiết bị công nghệ cao cấp hàng đầu Việt Nam</p>
                                 </div>
                                 <div class="single-tweet">
@@ -2344,7 +2374,7 @@
                     </div>
                     <div class="col-md-4 col-12">
                         <div class="footer-payment-method">
-                            <a href="#"><img alt="" src="assets/img/icon-img/payment.png"></a>
+                            <a href="#"><img alt="" src="pixel/assets/img/icon-img/payment.png"></a>
                         </div>
                     </div>
                 </div>
@@ -2363,31 +2393,31 @@
                         <div class="quick-view-learg-img">
                             <div class="quick-view-tab-content tab-content">
                                 <div class="tab-pane active show fade" id="modal1" role="tabpanel">
-                                    <img src="assets/img/quick-view/atham1.png" alt="">
+                                    <img src="pixel/assets/img/quick-view/atham1.png" alt="">
                                 </div>
                                 <div class="tab-pane fade" id="modal2" role="tabpanel">
-                                    <img src="assets/img/quick-view/atham2.png" alt="">
+                                    <img src="pixel/assets/img/quick-view/atham2.png" alt="">
                                 </div>
                                 <div class="tab-pane fade" id="modal3" role="tabpanel">
-                                    <img src="assets/img/quick-view/atham3.png" alt="">
+                                    <img src="pixel/assets/img/quick-view/atham3.png" alt="">
                                 </div>
                                 <div class="tab-pane fade" id="modal4" role="tabpanel">
-                                    <img src="assets/img/quick-view/atham4.png" alt="">
+                                    <img src="pixel/assets/img/quick-view/atham4.png" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="quick-view-list nav" role="tablist">
                             <a class="active" href="#modal1" data-toggle="tab" role="tab">
-                                <img src="assets/img/quick-view/ahtam2.png" alt="">
+                                <img src="pixel/assets/img/quick-view/ahtam2.png" alt="">
                             </a>
                             <a href="#modal2" data-toggle="tab" role="tab">
-                                <img src="assets/img/quick-view/atham2.png" alt="">
+                                <img src="pixel/assets/img/quick-view/atham2.png" alt="">
                             </a>
                             <a href="#modal3" data-toggle="tab" role="tab">
-                                <img src="assets/img/quick-view/atham3.png" alt="">
+                                <img src="pixel/assets/img/quick-view/atham3.png" alt="">
                             </a>
                             <a href="#modal4" data-toggle="tab" role="tab">
-                                <img src="assets/img/quick-view/atham4.png" alt="">
+                                <img src="pixel/assets/img/quick-view/atham4.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -2407,25 +2437,27 @@
                                     <i class="fa fa-star reting-color"></i>
                                 </div>
                             </div>
-                            <p>iewSonic VA2418-SH-2 là màn hình máy tính có kích thước 24", độ phân giải Full HD và sử dụng công nghệ tấm nền IPS cùng độ phủ màu lên tới 104% sRGB mang đến sự cân bằng hoàn hảo cho trải nghiệm game sống động ở mọi góc nhìn</p>
+                            <p>iewSonic VA2418-SH-2 là màn hình máy tính có kích thước 24", độ phân giải Full HD và sử
+                                dụng công nghệ tấm nền IPS cùng độ phủ màu lên tới 104% sRGB mang đến sự cân bằng hoàn
+                                hảo cho trải nghiệm game sống động ở mọi góc nhìn</p>
                             <div class="quick-view-select">
                                 <div class="select-option-part">
                                     <label>Kích thước</label>
                                     <select class="select">
                                         <option value="">- Lựa chọn -</option>
                                         <option value="">23.8</option>
-                                 =
+                                        =
                                     </select>
                                 </div>
-<!--                                <div class="select-option-part">-->
-<!--                                    <label>Color*</label>-->
-<!--                                    <select class="select">-->
-<!--                                        <option value="">- Please Select -</option>-->
-<!--                                        <option value="">orange</option>-->
-<!--                                        <option value="">pink</option>-->
-<!--                                        <option value="">yellow</option>-->
-<!--                                    </select>-->
-<!--                                </div>-->
+                                <!--                                <div class="select-option-part">-->
+                                <!--                                    <label>Color*</label>-->
+                                <!--                                    <select class="select">-->
+                                <!--                                        <option value="">- Please Select -</option>-->
+                                <!--                                        <option value="">orange</option>-->
+                                <!--                                        <option value="">pink</option>-->
+                                <!--                                        <option value="">yellow</option>-->
+                                <!--                                    </select>-->
+                                <!--                                </div>-->
                             </div>
                             <div class="quickview-plus-minus">
                                 <div class="cart-plus-minus">
@@ -2447,27 +2479,18 @@
 </div>
 
 
-
-
-
-
-
-
-
-
-
 <!-- all js here -->
-<script src="assets/js/vendor/jquery-1.12.0.min.js"></script>
-<script src="assets/js/popper.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/isotope.pkgd.min.js"></script>
-<script src="assets/js/imagesloaded.pkgd.min.js"></script>
-<script src="assets/js/jquery.counterup.min.js"></script>
-<script src="assets/js/waypoints.min.js"></script>
-<script src="assets/js/ajax-mail.js"></script>
-<script src="assets/js/owl.carousel.min.js"></script>
-<script src="assets/js/plugins.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="pixel/assets/js/vendor/jquery-1.12.0.min.js"></script>
+<script src="pixel/assets/js/popper.js"></script>
+<script src="pixel/assets/js/bootstrap.min.js"></script>
+<script src="pixel/assets/js/isotope.pkgd.min.js"></script>
+<script src="pixel/assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="pixel/assets/js/jquery.counterup.min.js"></script>
+<script src="pixel/assets/js/waypoints.min.js"></script>
+<script src="pixel/assets/js/ajax-mail.js"></script>
+<script src="pixel/assets/js/owl.carousel.min.js"></script>
+<script src="pixel/assets/js/plugins.js"></script>
+<script src="pixel/assets/js/main.js"></script>
 </body>
 </html>
 
