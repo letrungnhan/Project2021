@@ -1,4 +1,6 @@
-package entity;
+package com.example.webpagejsp.control.entity;
+
+import java.io.Serializable;
 
 public class Account {
     private String username;

@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 
-public class DBContext {
+public class DBContextProduct {
 
     /*USE BELOW METHOD FOR YOUR DATABASE CONNECTION FOR BOTH SINGLE AND MULTILPE SQL SERVER INSTANCE(s)*/
     /*DO NOT EDIT THE BELOW METHOD, YOU MUST USE ONLY THIS ONE FOR YOUR DATABASE CONNECTION*/
@@ -28,13 +28,4 @@ public class DBContext {
     private final String userID = "sa";
     private final String password = "1111";
 
-    public static void main(String[] args) {
-        try {
-            System.out.println(new DBContext().getConnection());
-
-
-        } catch (Exception e) {
-
-        }
-    }
 }

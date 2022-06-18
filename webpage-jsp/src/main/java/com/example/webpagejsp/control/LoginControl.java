@@ -1,7 +1,7 @@
-package control;
+package com.example.webpagejsp.control;
 
-import dao.LoginDao;
-import entity.Account;
+import com.example.webpagejsp.control.dao.LoginDao;
+import com.example.webpagejsp.control.entity.Account;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -23,9 +23,11 @@ public class LoginControl extends HttpServlet {
             LoginDao loginDao = new LoginDao();
             Account a = loginDao.checkLogin(username, password);
             if (a == null) {
-                response.sendRedirect("login-register.jsp");
-            } else {
+                request.setAttribute("error", "Thông tin đăng nhập không hợp lệ.");
+                request.getRequestDispatcher("login.jsp").forward(request, response);
 
+            } else {
+                response.sendRedirect("index.jsp");
             }
         } catch (Exception e) {
 
