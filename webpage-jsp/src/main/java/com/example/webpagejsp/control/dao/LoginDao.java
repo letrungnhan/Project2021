@@ -1,6 +1,6 @@
 package com.example.webpagejsp.control.dao;
 
-import com.example.webpagejsp.control.context.DBContextProduct;
+import com.example.webpagejsp.control.context.DBContextLogin;
 import com.example.webpagejsp.control.entity.Account;
 
 import java.sql.Connection;
@@ -15,33 +15,26 @@ public class LoginDao {
     ResultSet rs = null;
 
     public List<Account> getListAccounts() {
-
         try {
-            String query = "select * from useraccount";
-            connection = new DBContextProduct().getConnection();
+            String query = "select * from account";
+            connection = new DBContextLogin().getConnection();
             ps = connection.prepareStatement(query);
             rs = ps.executeQuery();
-            List<Account> accountList = new ArrayList<>();
+            List<Account> list = new ArrayList<>();
             while (rs.next()) {
-                Account a = new Account(rs.getString(1), rs.getString(2));
-                accountList.add(a);
+                Account acc = new Account(rs.getString(1), rs.getString(2));
+                list.add(acc);
             }
+            return list;
         } catch (Exception e) {
-
         }
         return null;
-
     }
 
-
-    public Account checkLogin(String user, String pass) {
+    public Account checkLogin(String user, String pass) throws Exception {
         try {
-            String query =
-                    "select * from useraccount where username = ? and password=?";
-
-
-            connection = new DBContextProduct().getConnection();
-
+            String query = "select * from account where username = ? and password=?";
+            connection = new DBContextLogin().getConnection();
             ps = connection.prepareStatement(query);
             ps.setString(1, user);
             ps.setString(2, pass);
@@ -49,9 +42,8 @@ public class LoginDao {
             while (rs.next()) {
                 Account a = new Account(rs.getString(1), rs.getString(2));
                 return a;
-
             }
-
+            return null;
         } catch (Exception e) {
 
         }
@@ -59,7 +51,7 @@ public class LoginDao {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         LoginDao accountDAO = new LoginDao();
         List<Account> accountList = accountDAO.getListAccounts();
         for (Account a : accountList) {

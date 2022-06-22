@@ -2,7 +2,7 @@ package com.example.webpagejsp.control.entity;
 
 import java.io.Serializable;
 
-public class Account {
+public class Account implements Serializable {
     private String username;
     private String password;
 
@@ -24,6 +24,14 @@ public class Account {
 
     public String getPassword() {
         return password;
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 
     public void setPassword(String password) {

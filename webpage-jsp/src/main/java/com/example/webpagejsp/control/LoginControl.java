@@ -20,17 +20,21 @@ public class LoginControl extends HttpServlet {
         try {
             String username = request.getParameter("user-name");
             String password = request.getParameter("user-password");
+
+            System.out.println(username);
+            System.out.println(username);
+
             LoginDao loginDao = new LoginDao();
             Account a = loginDao.checkLogin(username, password);
-            if (a == null) {
+
+            if (a != null) {
+                response.sendRedirect("index.jsp");
+            } else {
                 request.setAttribute("error", "Thông tin đăng nhập không hợp lệ.");
                 request.getRequestDispatcher("login.jsp").forward(request, response);
-
-            } else {
-                response.sendRedirect("index.jsp");
             }
-        } catch (Exception e) {
 
+        } catch (Exception e) {
 
         }
     }

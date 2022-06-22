@@ -1,6 +1,5 @@
 package com.example.webpagejsp.control.context;
 
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 
@@ -23,7 +22,7 @@ public class DBContextLogin {
     /*Insert your other code right after this comment*/
     /*Change/update information of your database connection, DO NOT change name of instance variables in this class*/
     private final String serverName = "localhost";
-    private final String dbName = "useraccount";
+    private final String dbName = "account";
     private final String portNumber = "1433";
     private final String instance = "";//LEAVE THIS ONE EMPTY IF YOUR SQL IS A SINGLE INSTANCE
     private final String userID = "sa";

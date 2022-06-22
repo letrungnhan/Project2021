@@ -19,7 +19,6 @@ public class HomePageControl extends HttpServlet {
         request.setAttribute("listProduct", listP);
         request.getRequestDispatcher("pc-shop-page.jsp").forward(request, response);
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);

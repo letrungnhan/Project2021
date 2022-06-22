@@ -404,66 +404,6 @@
                     <div class="grid-list-product-wrapper tab-content">
                         <div id="new-product" class="product-grid product-view tab-pane active">
                             <div class="row">
-                                <%--                                <c:forEach items="${listProduct}" var="p">--%>
-                                <%--                                    <div class="product-width col-md-6 col-xl-4 col-lg-6">--%>
-                                <%--                                        <div class="product-wrapper mb-35">--%>
-                                <%--                                            <div class="product-img">--%>
-                                <%--                                                <a href="#">--%>
-                                <%--                                                    <img src="${p.image}" alt="">--%>
-                                <%--                                                </a>--%>
-                                <%--                                                <div class="product-item-dec">--%>
-                                <%--                                                    <ul>--%>
-                                <%--                                                        <li>Máy Bộ</li>--%>
-                                <%--                                                        <li>Intel®</li>--%>
-                                <%--                                                        <li>NUC NUC</li>--%>
-                                <%--                                                        <li>7CJUH</li>--%>
-                                <%--                                                    </ul>--%>
-                                <%--                                                </div>--%>
-                                <%--                                                <div class="product-action">--%>
-                                <%--                                                    <a class="action-plus-2 p-action-none" title="Add To Cart" href="#">--%>
-                                <%--                                                        <i class=" ti-shopping-cart"></i>--%>
-                                <%--                                                    </a>--%>
-                                <%--                                                    <a class="action-cart-2" title="Wishlist" href="#">--%>
-                                <%--                                                        <i class=" ti-heart"></i>--%>
-                                <%--                                                    </a>--%>
-                                <%--                                                    <a class="action-reload" title="Quick View" data-toggle="modal"--%>
-                                <%--                                                       data-target="#exampleModal" href="#">--%>
-                                <%--                                                        <i class=" ti-zoom-in"></i>--%>
-                                <%--                                                    </a>--%>
-                                <%--                                                </div>--%>
-                                <%--                                                <div class="product-content-wrapper">--%>
-                                <%--                                                    <div class="product-title-spreed">--%>
-                                <%--                                                        <h4><a href="#">Intel</a></h4>--%>
-                                <%--                                                        <span>Bảo Hành 36 tháng</span>--%>
-                                <%--                                                    </div>--%>
-                                <%--                                                    <div class="product-price">--%>
-                                <%--                                                        <span>3.390.000</span>--%>
-                                <%--                                                    </div>--%>
-                                <%--                                                </div>--%>
-                                <%--                                            </div>--%>
-                                <%--                                            <div class="product-list-details">--%>
-                                <%--                                                <h2><a href="#">${p.name}</a></h2>--%>
-                                <%--                                                <div class="quick-view-rating">--%>
-                                <%--                                                    <i class="fa fa-star reting-color"></i>--%>
-                                <%--                                                    <i class="fa fa-star reting-color"></i>--%>
-                                <%--                                                    <i class="fa fa-star reting-color"></i>--%>
-                                <%--                                                    <i class="fa fa-star reting-color"></i>--%>
-                                <%--                                                    <i class="fa fa-star reting-color"></i>--%>
-                                <%--                                                </div>--%>
-                                <%--                                                <div class="product-price">--%>
-                                <%--                                                    <span>${p.price}</span>--%>
-                                <%--                                                </div>--%>
-                                <%--                                                <p>${p.description}--%>
-
-                                <%--                                                </p>--%>
-                                <%--                                                <div class="shop-list-cart">--%>
-                                <%--                                                    <a href="cart.html"><i class="ti-shopping-cart"></i> Thêm vào giỏ--%>
-                                <%--                                                        hàng</a>--%>
-                                <%--                                                </div>--%>
-                                <%--                                            </div>--%>
-                                <%--                                        </div>--%>
-                                <%--                                    </div>--%>
-                                <%--                                </c:forEach>--%>
                                 <c:forEach items="${listProduct}" var="p">
                                     <div class="product-width col-md-6 col-xl-4 col-lg-6">
                                         <div class="product-wrapper mb-35">
@@ -476,7 +416,7 @@
                                                         <li>Máy Bộ</li>
                                                         <li>Intel®</li>
                                                         <li>NUC NUC</li>
-                                                        <li>10i5FNH</li>
+                                                        <li>7CJUH</li>
                                                     </ul>
                                                 </div>
                                                 <div class="product-action">
@@ -493,16 +433,16 @@
                                                 </div>
                                                 <div class="product-content-wrapper">
                                                     <div class="product-title-spreed">
-                                                        <h4><a href="product-details.html">Intel</a></h4>
+                                                        <h4><a href="#">Intel</a></h4>
                                                         <span>Bảo Hành 36 tháng</span>
                                                     </div>
                                                     <div class="product-price">
-                                                        <span>${p.price}</span>
+                                                        <span>3.390.000</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="product-list-details">
-                                                <h2><a href="product-details.html">Máy Bộ Intel® NUC NUC10i5FNH</a></h2>
+                                                <h2><a href="#">${p.name}</a></h2>
                                                 <div class="quick-view-rating">
                                                     <i class="fa fa-star reting-color"></i>
                                                     <i class="fa fa-star reting-color"></i>
@@ -513,20 +453,18 @@
                                                 <div class="product-price">
                                                     <span>${p.price}</span>
                                                 </div>
-                                                <p>
-                                                        ${p.description}
+                                                <p>${p.description}
+
                                                 </p>
                                                 <div class="shop-list-cart">
-                                                    <a href="cart.html"><i class="ti-shopping-cart"></i> Thêm vào giỏ
+                                                    <a href="# "><i class="ti-shopping-cart"></i> Thêm vào giỏ
                                                         hàng</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </c:forEach>
-                                    <c:forEach items="${listProduct}" var="e">
-                                      <div>${e.price}</div>
-                                    </c:forEach>
+
 
                                 <%--                                <div class="product-width col-md-6 col-xl-4 col-lg-6">--%>
                                 <%--                                    <div class="product-wrapper mb-35">--%>

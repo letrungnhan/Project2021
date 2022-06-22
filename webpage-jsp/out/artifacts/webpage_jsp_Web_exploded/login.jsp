@@ -272,29 +272,26 @@
                                 <div class="login-form-container">
                                     <div class="login-form">
                                         <form action="doLogin" method="post">
-                                            <%
-                                                if (error != null) {
-                                            %>
+                                            <%if (error != null) { %>
                                             <div class="alert alert-danger" role="alert">
                                                 <%=error%>
                                             </div>
-                                            <%
-                                                }
-                                            %>
+                                            <%} %>
                                             <input
                                                     type="text"
                                                     name="user-name"
                                                     placeholder="Tên đăng nhập "
-                                                <%
-                                                if(request.getParameter("user-name")!=null){
-                                                    %>
+                                                <% if(request.getParameter("user-name")!=null){ %>
                                                     value="<%=request.getParameter("user-name")%>"
-
-                                                <%    }
-                                                    %>
+                                                <%}%>
 
                                             >
-                                            <input type="password" name="user-password" placeholder="Mật khẩu">
+                                            <input
+                                                    type="password"
+                                                    name="user-password"
+                                                    placeholder="Mật khẩu"
+                                            >
+
                                             <div class="button-box">
                                                 <div class="login-toggle-btn">
                                                     <input type="checkbox">
