@@ -1,18 +1,19 @@
 package com.example.webpagejsp.control;
 
-import com.example.webpagejsp.control.dao.LoginDao;
-import com.example.webpagejsp.control.entity.Account;
+import com.example.webpagejsp.dao.LoginDao;
+import com.example.webpagejsp.entity.Account;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.util.Objects;
 
 @WebServlet(name = "LoginControl", value = "/doLogin")
 public class LoginControl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doPost(request, response);
+        doGet(request, response);
     }
 
     @Override
@@ -27,7 +28,7 @@ public class LoginControl extends HttpServlet {
             LoginDao loginDao = new LoginDao();
             Account a = loginDao.checkLogin(username, password);
 
-            if (a != null) {
+            if (a != null && !Objects.equals(a.getUsername(), "admin") && !Objects.equals(a.getPassword(), "admin")) {
                 response.sendRedirect("index.jsp");
             } else {
                 request.setAttribute("error", "Thông tin đăng nhập không hợp lệ.");

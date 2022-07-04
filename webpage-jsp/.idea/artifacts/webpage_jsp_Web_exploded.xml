@@ -7,6 +7,12 @@
         <element id="directory" name="classes">
           <element id="module-output" name="webpage-jsp" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="jstl-1.2" />
+          <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
+          <element id="library" level="project" name="sqljdbc42" />
+          <element id="library" level="project" name="servlet-api" />
+        </element>
       </element>
     </root>
   </artifact>
