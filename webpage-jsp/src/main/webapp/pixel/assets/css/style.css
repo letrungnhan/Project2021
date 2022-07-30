@@ -2729,7 +2729,6 @@ h3.sidebar-widget {
 }
 
 
-
 .single-best-seller {
     display: flex;
     align-items: center;
@@ -2755,7 +2754,6 @@ h3.sidebar-widget {
     font-size: 15px;
     letter-spacing: 0.4px;
 }
-
 
 
 .single-best-seller:last-child {
@@ -2797,6 +2795,11 @@ button.product-filter-toggle:hover,
 .product-list .product-img {
     flex: 0 0 370px;
     margin-right: 50px;
+}
+
+.product-img img {
+    height: 300px;
+    width: 300px;
 }
 
 .product-list.product-list-width-2 .product-img {

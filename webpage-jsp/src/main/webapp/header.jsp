@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: ekko3
+  User: Lê Trung Nhân
   Date: 6/27/2022
   Time: 5:14 PM
   To change this template use File | Settings | File Templates.
@@ -39,7 +39,7 @@
                                         <li><a href="#">Cửa Hàng</a>
                                             <ul>
                                                 <li><a href="pixel/mouse-shop-page.html">Cửa Hàng</a></li>
-                                                <li><a href="pixel/product-details.html">Chi tiết sản phẩm</a></li>
+                                                <li><a href="details.jsp">Chi tiết sản phẩm</a></li>
                                                 <li><a href="pixel/checkout.html">Checkout</a></li>
                                                 <li><a href="pixel/wishlist.html">Danh sách yêu thích</a></li>
                                                 <li><a href="pixel/cart.html">Giỏ hàng</a></li>
@@ -142,7 +142,7 @@
                                 <li><a href="#">cửa hàng</a>
                                     <ul>
                                         <li><a href="pixel/mouse-shop-page.html">cửa hàng</a></li>
-                                        <li><a href="pixel/product-details.html">chi tiết sản phẩm</a></li>
+                                        <li><a href="details.jsp">chi tiết sản phẩm</a></li>
                                         <li><a href="pixel/checkout.html">checkout</a></li>
                                         <li><a href="pixel/wishlist.html">danh sách mong muốn</a></li>
                                         <li><a href="pixel/cart.html">giỏ hàng</a></li>

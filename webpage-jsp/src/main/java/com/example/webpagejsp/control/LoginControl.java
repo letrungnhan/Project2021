@@ -9,7 +9,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.Objects;
 
-@WebServlet(name = "LoginControl", value = "/doLogin")
+@WebServlet(name = "loginControl", value = "/doLogin")
 public class LoginControl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

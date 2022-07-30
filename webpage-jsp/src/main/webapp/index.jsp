@@ -1,30 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!doctype html>
 <html class="no-js" lang="zxx">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>PIXEL</title>
-    <meta name="description" content="Live Preview Of Oswan eCommerce HTML5 Template">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="pixel/assets/img/pix.png">
-
-    <!-- all css here -->
-    <link rel="stylesheet" href="pixel/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="pixel/assets/css/animate.css">
-    <link rel="stylesheet" href="pixel/assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="pixel/assets/css/chosen.min.css">
-    <link rel="stylesheet" href="pixel/assets/css/icofont.css">
-    <link rel="stylesheet" href="pixel/assets/css/themify-icons.css">
-    <link rel="stylesheet" href="pixel/assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="pixel/assets/css/meanmenu.min.css">
-    <link rel="stylesheet" href="pixel/assets/css/bundle.css">
-    <link rel="stylesheet" href="pixel/assets/css/style.css">
-    <link rel="stylesheet" href="pixel/assets/css/responsive.css">
-    <script src="pixel/assets/js/vendor/modernizr-2.8.3.min.js"></script>
-
-</head>
+<jsp:include page="head.jsp"/>
 <body>
 <div class="wrapper">
     <!-- header start -->
@@ -134,12 +111,13 @@
             </div>
         </div>
     </div>
+<%--    banner done--%>
     <div class="banner-area pt-135 pb-120">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-lg-4">
                     <div class="banner-wrapper mb-30">
-                        <a href="laptop-shop-page.jsp"><img src="pixel/assets/img/banner/laptop3cai1.png" alt="image"></a>
+                        <a href="product.jsp"><img src="pixel/assets/img/banner/laptop3cai1.png" alt="image"></a>
                         <div class="banner-content">
                             <h2>MUA LAPTOP MỚI</h2>
                         </div>
@@ -147,8 +125,8 @@
                 </div>
                 <div class="col-md-4 col-lg-4">
                     <div class="banner-wrapper mb-30">
-                        <a href="pc-shop-page.jsp"><img src="pixel/assets/img/banner/XiaomiMiDesktopMonitor 27.jpg"
-                                                        alt="image"></a>
+                        <a href="product.jsp"><img src="pixel/assets/img/banner/XiaomiMiDesktopMonitor 27.jpg"
+                                                   alt="image"></a>
                         <div class="banner-content">
                             <h2>MUA MONITOR MỚI</h2>
                         </div>
@@ -156,7 +134,7 @@
                 </div>
                 <div class="col-md-4 col-lg-4">
                     <div class="banner-wrapper mb-30">
-                        <a href="pixel/shop-keyboard.html"><img src="pixel/assets/img/banner/chuotvabanphim.jpg" alt="image"></a>
+                        <a href="product.jsp"><img src="pixel/assets/img/banner/chuotvabanphim.jpg" alt="image"></a>
                         <div class="banner-content">
                             <h2>MUA BÀN PHÍM VÀ CHUỘT MỚI</h2>
                         </div>
@@ -196,7 +174,7 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/Màn-hình-ViewSonic-VA2418-SH-2-24“-IPS-75Hz.png"
                                              alt="">
                                     </a>
@@ -222,7 +200,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html">ViewSonic</a></h4>
+                                            <h4><a href="details.jsp">ViewSonic</a></h4>
                                             <span>Bảo Hành 36 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -233,7 +211,7 @@
                             </div>
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/MànhìnhLenovoG272027IPS144Hz.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -258,7 +236,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html">Lenovo</a></h4>
+                                            <h4><a href="details.jsp">Lenovo</a></h4>
                                             <span>Bảo Hành 36 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -271,7 +249,7 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/Màn-hình-cong-HKC-M27G3F-27-VA-144Hz.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -296,7 +274,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html">HKC</a></h4>
+                                            <h4><a href="details.jsp">HKC</a></h4>
                                             <span>Bảo Hành 36 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -307,7 +285,7 @@
                             </div>
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/Màn-hình-cong-Samsung-LC27RG50FQE-27-VA-240Hz-Freesync.png "
                                              alt="">
                                     </a>
@@ -333,7 +311,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html">SAMSUNG</a></h4>
+                                            <h4><a href="details.jsp">SAMSUNG</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -346,7 +324,7 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/Màn-hình-ASUS-TUF-GAMING-VG27AQ-27-IPS-2K-165Hz-G-Sync-HDR.png"
                                              alt="">
                                     </a>
@@ -372,7 +350,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html">ASUS</a></h4>
+                                            <h4><a href="details.jsp">ASUS</a></h4>
                                             <span>Bảo Hành 36 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -383,7 +361,7 @@
                             </div>
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/Màn-hình-LG-27GP850-B-UltraGear-27-Nano-IPS-2K-180Hz.png"
                                              alt="">
                                     </a>
@@ -409,7 +387,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html">LG</a></h4>
+                                            <h4><a href="details.jsp">LG</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -422,7 +400,7 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/Màn-hình-HKC-MB24V9-24-IPS-75Hz.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -447,7 +425,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html">HCK</a></h4>
+                                            <h4><a href="details.jsp">HCK</a></h4>
                                             <span>Bảo Thành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -458,7 +436,7 @@
                             </div>
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/Màn-hình-ViewSonic-VX2476-SMHD-24-IPS-75Hz.png"
                                              alt="">
                                     </a>
@@ -484,7 +462,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html">ViewSonic</a></h4>
+                                            <h4><a href="details.jsp">ViewSonic</a></h4>
                                             <span>Bảo Hành 36 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -501,7 +479,7 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/GhostS.png "
                                              alt="">
                                     </a>
@@ -521,7 +499,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html"></a></h4>
+                                            <h4><a href="details.jsp"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -532,7 +510,7 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/PhantomS.png"
                                              alt="">
                                     </a>
@@ -558,7 +536,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html"></a></h4>
+                                            <h4><a href="details.jsp"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -571,7 +549,7 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/volibearS.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -596,7 +574,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html"></a></h4>
+                                            <h4><a href="details.jsp"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -607,7 +585,7 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/garenS.png"
                                              alt="">
                                     </a>
@@ -633,7 +611,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html"></a></h4>
+                                            <h4><a href="details.jsp"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -646,7 +624,7 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/venusS.png"
                                              alt="">
                                     </a>
@@ -672,7 +650,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html"></a></h4>
+                                            <h4><a href="details.jsp"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -683,7 +661,7 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/hextechS.png"
                                              alt="">
                                     </a>
@@ -709,7 +687,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html"></a></h4>
+                                            <h4><a href="details.jsp"></a></h4>
                                             <span>8000 RPM</span>
                                         </div>
                                         <div class="product-price">
@@ -722,7 +700,7 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/dariusS.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -747,7 +725,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html"></a></h4>
+                                            <h4><a href="details.jsp"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -758,7 +736,7 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/pykeS.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -783,7 +761,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html"></a></h4>
+                                            <h4><a href="details.jsp"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -800,7 +778,7 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/laptop1.png"
                                              alt="">
                                     </a>
@@ -826,7 +804,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html"></a></h4>
+                                            <h4><a href="details.jsp"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -837,7 +815,7 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/laptop2.png"
                                              alt="">
                                     </a>
@@ -863,7 +841,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html"></a></h4>
+                                            <h4><a href="details.jsp"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -876,7 +854,7 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/laptop3.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -901,7 +879,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html"></a></h4>
+                                            <h4><a href="details.jsp"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -912,7 +890,7 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/laptop4.png"
                                              alt="">
                                     </a>
@@ -938,7 +916,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html"></a></h4>
+                                            <h4><a href="details.jsp"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -951,7 +929,7 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/laptop5.png"
                                              alt="">
                                     </a>
@@ -977,7 +955,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html"></a></h4>
+                                            <h4><a href="details.jsp"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -988,7 +966,7 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/laptop6.png"
                                              alt="">
                                     </a>
@@ -1014,7 +992,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html"></a></h4>
+                                            <h4><a href="details.jsp"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -1027,7 +1005,7 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/laptop7.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1052,7 +1030,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html"></a></h4>
+                                            <h4><a href="details.jsp"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -1063,7 +1041,7 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/laptop8.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1088,7 +1066,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html"></a></h4>
+                                            <h4><a href="details.jsp"></a></h4>
                                             <span></span>
                                         </div>
                                         <div class="product-price">
@@ -1105,7 +1083,7 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/BànphímRazerBlackwidowGreenSwitch.png"
                                              alt="">
                                     </a>
@@ -1131,7 +1109,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html">Razer</a></h4>
+                                            <h4><a href="details.jsp">Razer</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1142,7 +1120,7 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/BànphímcơMistelX8BumblebeeSilentRedSwitch.png"
                                              alt="">
                                     </a>
@@ -1168,7 +1146,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html">Mistel</a></h4>
+                                            <h4><a href="details.jsp">Mistel</a></h4>
                                             <span>Bào Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1181,7 +1159,7 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/BànphímCorsairK70RGBMK.2SE.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1206,7 +1184,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html">Corsair</a></h4>
+                                            <h4><a href="details.jsp">Corsair</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1217,7 +1195,7 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/BànphímcơLeopoldFC980MPDDarkYellow.png"
                                              alt="">
                                     </a>
@@ -1243,7 +1221,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html">Leopold</a></h4>
+                                            <h4><a href="details.jsp">Leopold</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1256,7 +1234,7 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/BànphímLeopoldFC980CBlackTopreSwitch.png"
                                              alt="">
                                     </a>
@@ -1282,7 +1260,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html">Leopold</a></h4>
+                                            <h4><a href="details.jsp">Leopold</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1293,7 +1271,7 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/BànphímcơCorsairK100RGB.png"
                                              alt="">
                                     </a>
@@ -1319,7 +1297,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html">Corsair</a></h4>
+                                            <h4><a href="details.jsp">Corsair</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1332,7 +1310,7 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/BànphímcơRazerHuntsmanMiniMercury.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1357,7 +1335,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html">Razer</a></h4>
+                                            <h4><a href="details.jsp">Razer</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1368,7 +1346,7 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/BànphímRazerBlackwidowV3.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1393,7 +1371,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html">Razer</a></h4>
+                                            <h4><a href="details.jsp">Razer</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1410,7 +1388,7 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/ChuộtLogitechG102LightsyncRGBBlack.png"
                                              alt="">
                                     </a>
@@ -1436,7 +1414,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html">Logitech</a></h4>
+                                            <h4><a href="details.jsp">Logitech</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1447,7 +1425,7 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/ChuộtLogitechG102LightsyncRGBWhite.png"
                                              alt="">
                                     </a>
@@ -1473,7 +1451,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html">Logitech</a></h4>
+                                            <h4><a href="details.jsp">Logitech</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1486,7 +1464,7 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/ChuộtDareUEM901RGBWirelessBlack.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1511,7 +1489,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html">Dare-U</a></h4>
+                                            <h4><a href="details.jsp">Dare-U</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1522,7 +1500,7 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/ChuộtRazerBasiliskV2.png"
                                              alt="">
                                     </a>
@@ -1548,7 +1526,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html">Razer</a></h4>
+                                            <h4><a href="details.jsp">Razer</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1561,7 +1539,7 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/ChuộtRazerDeathAdderV2Pro.png"
                                              alt="">
                                     </a>
@@ -1587,7 +1565,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html">Razer</a></h4>
+                                            <h4><a href="details.jsp">Razer</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1598,7 +1576,7 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/ChuộtCorsairHarpoonRGBWireless.png"
                                              alt="">
                                     </a>
@@ -1624,7 +1602,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html">Corsair</a></h4>
+                                            <h4><a href="details.jsp">Corsair</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <
@@ -1638,7 +1616,7 @@
                         <div class="product-wrapper-bundle">
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/ChuộtDareUEM908RGBQueen.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1663,7 +1641,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html">Dare-U</a></h4>
+                                            <h4><a href="details.jsp">Dare-U</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1674,7 +1652,7 @@
                             </div>
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
-                                    <a href="pixel/product-details.html">
+                                    <a href="details.jsp">
                                         <img src="pixel/assets/img/product/ChuộtAsusROGChakram.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1699,7 +1677,7 @@
                                     </div>
                                     <div class="product-content-wrapper">
                                         <div class="product-title-spreed">
-                                            <h4><a href="pixel/product-details.html">Asus</a></h4>
+                                            <h4><a href="details.jsp">Asus</a></h4>
                                             <span>Bảo Hành 24 tháng</span>
                                         </div>
                                         <div class="product-price">
@@ -1795,14 +1773,14 @@
                             <div class="product-content-wrapper-2">
                                 <div class="product-title-price-2 text-center">
                                     <span>Giá: 3,820,000d</span>
-                                    <h4><a href="pixel/product-details.html">Màn hình Acer R241YB 24" IPS 75Hz</a></h4>
+                                    <h4><a href="details.jsp">Màn hình Acer R241YB 24" IPS 75Hz</a></h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="product-wrapper">
                         <div class="product-img">
-                            <a href="pixel/product-details.html">
+                            <a href="details.jsp">
                                 <img src="pixel/assets/img/product/banphim4.png" alt="">
                             </a>
                             <div class="product-action">
@@ -1820,14 +1798,14 @@
                             <div class="product-content-wrapper-2">
                                 <div class="product-title-price-2 text-center">
                                     <span>Giá: 2,590,000d</span>
-                                    <h4><a href="pixel/product-details.html">Bàn phím Corsair K63 Wireless</a></h4>
+                                    <h4><a href="details.jsp">Bàn phím Corsair K63 Wireless</a></h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="product-wrapper">
                         <div class="product-img">
-                            <a href="pixel/product-details.html">
+                            <a href="details.jsp">
                                 <img src="pixel/assets/img/product/cap5.png" alt="">
                             </a>
                             <div class="product-action">
@@ -1845,14 +1823,14 @@
                             <div class="product-content-wrapper-2">
                                 <div class="product-title-price-2 text-center">
                                     <span>Giá: 790,000d</span>
-                                    <h4><a href="pixel/product-details.html">Asus AI Noise-Canceling Mic Adapter</a></h4>
+                                    <h4><a href="details.jsp">Asus AI Noise-Canceling Mic Adapter</a></h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="product-wrapper">
                         <div class="product-img">
-                            <a href="pixel/product-details.html">
+                            <a href="details.jsp">
                                 <img src="pixel/assets/img/product/tainghe4.png" alt="">
                             </a>
                             <div class="product-action">
@@ -1870,14 +1848,14 @@
                             <div class="product-content-wrapper-2">
                                 <div class="product-title-price-2 text-center">
                                     <span>Giá:380,000d</span>
-                                    <h4><a href="pixel/product-details.html">Tai nghe DareU EH416 RGB</a></h4>
+                                    <h4><a href="details.jsp">Tai nghe DareU EH416 RGB</a></h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="product-wrapper">
                         <div class="product-img">
-                            <a href="pixel/product-details.html">
+                            <a href="details.jsp">
                                 <img src="pixel/assets/img/product/chip.jpg" alt="">
                             </a>
                             <div class="product-action">
@@ -1895,7 +1873,7 @@
                             <div class="product-content-wrapper-2">
                                 <div class="product-title-price-2 text-center">
                                     <span>Giá: 11,390,000d</span>
-                                    <h4><a href="pixel/product-details.html">Intel Core i9 10850KA / 20MB / 3.6GHz / 10 Nhân
+                                    <h4><a href="details.jsp">Intel Core i9 10850KA / 20MB / 3.6GHz / 10 Nhân
                                         20 Luồng</a></h4>
                                 </div>
                             </div>
@@ -1903,7 +1881,7 @@
                     </div>
                     <div class="product-wrapper">
                         <div class="product-img">
-                            <a href="pixel/product-details.html">
+                            <a href="details.jsp">
                                 <img src="assets/img/product/pc.jpg" alt="">
                             </a>
                             <div class="product-action">
@@ -1921,14 +1899,14 @@
                             <div class="product-content-wrapper-2">
                                 <div class="product-title-price-2 text-center">
                                     <span>Giá: 12,890,000d</span>
-                                    <h4><a href="pixel/product-details.html">GVN Mystic M</a></h4>
+                                    <h4><a href="details.jsp">GVN Mystic M</a></h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="product-wrapper">
                         <div class="product-img">
-                            <a href="pixel/product-details.html">
+                            <a href="details.jsp">
                                 <img src="assets/img/product/laptop.jpg" alt="">
                             </a>
                             <div class="product-action">
@@ -1946,14 +1924,14 @@
                             <div class="product-content-wrapper-2">
                                 <div class="product-title-price-2 text-center">
                                     <span>Giá: 24,390,000d</span>
-                                    <h4><a href="pixel/product-details.html">Laptop Gaming MSI Katana GF66 11UC 676VN</a></h4>
+                                    <h4><a href="details.jsp">Laptop Gaming MSI Katana GF66 11UC 676VN</a></h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="product-wrapper">
                         <div class="product-img">
-                            <a href="pixel/product-details.html">
+                            <a href="details.jsp">
                                 <img src="assets/img/product/ghe.jpeg" alt="">
                             </a>
                             <div class="product-action">
@@ -1971,7 +1949,7 @@
                             <div class="product-content-wrapper-2">
                                 <div class="product-title-price-2 text-center">
                                     <span>Giá:3,690,000d</span>
-                                    <h4><a href="pixel/product-details.html">Ghế chơi game Warrior Raider Series – WGC206 Plus
+                                    <h4><a href="details.jsp">Ghế chơi game Warrior Raider Series – WGC206 Plus
                                         White/Pink</a></h4>
                                 </div>
                             </div>
@@ -1998,21 +1976,21 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-hm-wrapper mb-40">
                         <div class="blog-img">
-                            <a href="pc-shop-page.jsp"><img src="pixel/assets/img/blog/blog-hm-2.jpg" alt="image"></a>
+                            <a href="product2.jsp"><img src="pixel/assets/img/blog/blog-hm-2.jpg" alt="image"></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-hm-wrapper mb-40">
                         <div class="blog-img">
-                            <a href="laptop-shop-page.jsp"><img src="pixel/assets/img/blog/blog-hm-3.jpg" alt="image"></a>
+                            <a href="product.jsp"><img src="pixel/assets/img/blog/blog-hm-3.jpg" alt="image"></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-hm-wrapper mb-40">
                         <div class="blog-img">
-                            <a href="pc-shop-page.jsp"><img src="pixel/assets/img/blog/blog-hm-1a.jpg" alt="image"></a>
+                            <a href="product2.jsp"><img src="pixel/assets/img/blog/blog-hm-1a.jpg" alt="image"></a>
                         </div>
                     </div>
                 </div>
@@ -2026,7 +2004,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-hm-wrapper mb-40">
                         <div class="blog-img">
-                            <a href="pc-shop-page.jsp "><img src="pixel/assets/img/blog/blog-hm-3c.jpg" alt="image"></a>
+                            <a href="product2.jsp "><img src="pixel/assets/img/blog/blog-hm-3c.jpg" alt="image"></a>
                         </div>
                     </div>
                 </div>

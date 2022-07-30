@@ -26,7 +26,7 @@ public class ProductDao {
                 "\tP_ID, P_NAME, P_DESC, PRICE , URL_IMG , CATEGORY_ID\n" +
                 "FROM\n" +
                 "   PRODUCT INNER JOIN IMAGES ON PRODUCT.P_ID = IMAGES.PRODUCT_ID \n" +
-                "WHERE CATEGORY_ID = 'CG001'";
+                "WHERE CATEGORY_ID = '?'";
         try {
             conn = new DBContextProduct().getConnection();//mo ket noi voi sql
             ps = conn.prepareStatement(query);
@@ -116,14 +116,45 @@ public class ProductDao {
         return list;
     }
 
+
+    public Product getProductByID(String pid) {
+
+        String query = "SELECT\n" +
+                "\tP_ID, P_NAME, P_DESC, PRICE , URL_IMG , CATEGORY_ID\n" +
+                "FROM\n" +
+                "   PRODUCT INNER JOIN IMAGES ON PRODUCT.P_ID = IMAGES.PRODUCT_ID \n" +
+                "WHERE P_ID = ?";
+        try {
+            conn = new DBContextProduct().getConnection();//mo ket noi voi sql
+            ps = conn.prepareStatement(query);
+            ps.setString(1, pid);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return new Product(rs.getString(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getDouble(4),
+                        rs.getString(5)
+                );
+
+            }
+
+        } catch (Exception e) {
+        }
+
+        return null;
+
+
+}
+
     public static void main(String[] args) {
         ProductDao dao = new ProductDao();
 
-        List<Product> list = dao.getProductByCategoryID("CG001");
-        for (Product o : list) {
-            System.out.println(o);
+        Product list = dao.getProductByID("PT001");
 
-        }
+        System.out.println(list);
+
+
     }
 
 }

@@ -9,17 +9,19 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "CategoryControl", value = "/CategoryControl")
+@WebServlet(name = "categoryControl", value = "/category")
 public class CategoryControl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String categoryId = request.getParameter("categoryId");
-        System.out.println(categoryId);
         ProductDao productDao = new ProductDao();
-        List<Product> listProduct = productDao.getListProduct();
+        List<Product> listProduct = productDao.getProductByCategoryID(categoryId);
 
-        request.setAttribute("listProd", listProduct);
-        request.getRequestDispatcher("Product").forward(request, response);
+        request.getSession().setAttribute("listProduct", listProduct);
+        request.getSession().setAttribute("tag", categoryId);
+
+
+        request.getRequestDispatcher("/Product").forward(request, response);
 
 
     }
@@ -27,5 +29,6 @@ public class CategoryControl extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
+
     }
 }
