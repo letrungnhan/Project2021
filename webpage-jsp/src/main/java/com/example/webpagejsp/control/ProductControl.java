@@ -9,7 +9,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "Product", value = "/Product")
+@WebServlet(name = "Product", value = "/product")
 
 public class ProductControl extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -17,7 +17,7 @@ public class ProductControl extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ProductDao pDao = new ProductDao();
         List<Product> listProduct = pDao.getListProduct();
-//        request.getSession().setAttribute("listProduct", listProduct);
+        request.getSession().setAttribute("listProduct", listProduct);
         request.getServletContext().getRequestDispatcher("/product.jsp").forward(request, response);
     }
     @Override

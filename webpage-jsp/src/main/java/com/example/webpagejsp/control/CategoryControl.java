@@ -16,12 +16,9 @@ public class CategoryControl extends HttpServlet {
         String categoryId = request.getParameter("categoryId");
         ProductDao productDao = new ProductDao();
         List<Product> listProduct = productDao.getProductByCategoryID(categoryId);
-
         request.getSession().setAttribute("listProduct", listProduct);
         request.getSession().setAttribute("tag", categoryId);
-
-
-        request.getRequestDispatcher("/Product").forward(request, response);
+        request.getRequestDispatcher("/product.jsp").forward(request, response);
 
 
     }

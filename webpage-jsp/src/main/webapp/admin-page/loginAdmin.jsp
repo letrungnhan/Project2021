@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +19,7 @@
 			<div class="login-panel panel panel-default">
 				<div class="panel-heading">Đăng nhập tài khoản</div>
 				<div class="panel-body">
-					<form role="form">
+					<form role="form" action="adminPageControl" method="post">
 						<fieldset>
 							<div class="form-group">
 								<input class="form-control" placeholder="Tên Gmail" name="email" type="email" autofocus="">
@@ -31,7 +32,8 @@
 									<input name="remember" type="checkbox" value="Remember Me">Nhớ tài khoản
 								</label>
 							</div>
-							<a href="adminPage.jsp" class="btn btn-primary">Đăng nhập</a></fieldset>
+							<input type="submit" value="Đăng nhập" class="btn btn-primary">
+						</fieldset>
 					</form>
 				</div>
 			</div>

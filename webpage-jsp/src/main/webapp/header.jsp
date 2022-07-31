@@ -35,7 +35,7 @@
                                 <nav>
                                     <ul>
                                         <li><a href="index.jsp">Trang Chủ</a></li>
-                                        <li class="active"><a href="about-us.html">Về PIXEl</a></li>
+
                                         <li><a href="#">Cửa Hàng</a>
                                             <ul>
                                                 <li><a href="pixel/mouse-shop-page.html">Cửa Hàng</a></li>
@@ -47,21 +47,23 @@
                                         </li>
                                         <li><a href="#">pages</a>
                                             <ul>
-                                                <li><a href="about-us.html">Về PIXEL</a></li>
+
                                                 <li><a href="pixel/cart.html">Giỏ hàng</a></li>
-                                                <li><a href="pixel/checkout.html">Checkout</a></li>
+
                                                 <li><a href="pixel/wishlist.html">Danh sách yêu thích</a></li>
                                                 <li><a href="login.jsp">Đăng nhập</a></li>
                                                 <li><a href="pixel/contact.html">Liên lạc</a></li>
                                             </ul>
                                         </li>
-                                        <!--                                            <li><a href="#">blog</a>-->
-                                        <!--                                                <ul>-->
-                                        <!--                                                    <li><a href="blog.html">blog</a></li>-->
-                                        <!--                                                    <li><a href="blog-details.html">blog chi tiết</a></li>-->
-                                        <!--                                                </ul>-->
-                                        <!--                                            </li>-->
-                                        <li><a href="pixel/contact.html">Contact</a></li>
+                                        <c:if test="${sessionScope.account != null}">
+                                            <li><a href="logout">Log Out</a></li>
+                                            <li><a href="#">Hello ${sessionScope.account.username}</a></li>
+                                        </c:if>
+                                        <c:if test="${sessionScope.account == null}">
+                                            <li><a href="login.jsp">Log In</a></li>
+
+                                        </c:if>
+
                                     </ul>
                                 </nav>
                             </div>
@@ -215,7 +217,7 @@
                         <h4>tổng giá: <span>96.940đ</span></h4>
                     </div>
                     <div class="shopping-cart-btn">
-                        <a class="btn-style cr-btn" href="pixel/cart.html">Thanh toán</a>
+                        <a class="btn-style cr-btn" href="login.jsp">Thanh toán</a>
                     </div>
                 </div>
             </div>

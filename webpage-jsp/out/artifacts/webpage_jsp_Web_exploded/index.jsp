@@ -117,7 +117,7 @@
             <div class="row">
                 <div class="col-md-4 col-lg-4">
                     <div class="banner-wrapper mb-30">
-                        <a href="product.jsp"><img src="pixel/assets/img/banner/laptop3cai1.png" alt="image"></a>
+                        <a href="product" ><img src="pixel/assets/img/banner/laptop3cai1.png" alt="image"></a>
                         <div class="banner-content">
                             <h2>MUA LAPTOP MỚI</h2>
                         </div>
@@ -125,7 +125,7 @@
                 </div>
                 <div class="col-md-4 col-lg-4">
                     <div class="banner-wrapper mb-30">
-                        <a href="product.jsp"><img src="pixel/assets/img/banner/XiaomiMiDesktopMonitor 27.jpg"
+                        <a href="product"><img src="pixel/assets/img/banner/XiaomiMiDesktopMonitor 27.jpg"
                                                    alt="image"></a>
                         <div class="banner-content">
                             <h2>MUA MONITOR MỚI</h2>
@@ -134,7 +134,7 @@
                 </div>
                 <div class="col-md-4 col-lg-4">
                     <div class="banner-wrapper mb-30">
-                        <a href="product.jsp"><img src="pixel/assets/img/banner/chuotvabanphim.jpg" alt="image"></a>
+                        <a href="product"><img src="pixel/assets/img/banner/chuotvabanphim.jpg" alt="image"></a>
                         <div class="banner-content">
                             <h2>MUA BÀN PHÍM VÀ CHUỘT MỚI</h2>
                         </div>
