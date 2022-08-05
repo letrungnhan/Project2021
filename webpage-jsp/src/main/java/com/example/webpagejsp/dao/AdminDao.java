@@ -57,4 +57,10 @@ public class AdminDao implements AdminServices {
         return admin;
 
     }
+
+    public static void main(String[] args) throws Exception {
+        AdminDao adminDao = new AdminDao(new DBContext().getConnection());
+        Admin admin = adminDao.loginAdmin("admin","1");
+        System.out.println(admin);
+    }
 }

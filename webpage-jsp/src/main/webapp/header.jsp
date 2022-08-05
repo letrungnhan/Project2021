@@ -18,7 +18,8 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-4">
                     <div class="logo-small-device">
-                        <a href="index.jsp"><img alt="" src="pixel/assets/img/logo/logo.png"></a>
+                        <a href="index.jsp"><img alt=""
+                                                 src="<%=request.getContextPath()%>/assets/img/logo/logo.png"></a>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-8 col-8">
@@ -28,8 +29,10 @@
                         </div>
                         <div class="menu-wrapper text-center">
                             <button class="menu-toggle">
-                                <img class="s-open" alt="" src="pixel/assets/img/icon-img/menu.png">
-                                <img class="s-close" alt="" src="pixel/assets/img/icon-img/menu-close.png">
+                                <img class="s-open" alt=""
+                                     src="<%=request.getContextPath()%>/assets/img/icon-img/menu.png">
+                                <img class="s-close" alt=""
+                                     src="<%=request.getContextPath()%>/assets/img/icon-img/menu-close.png">
                             </button>
                             <div class="main-menu">
                                 <nav>
@@ -38,31 +41,34 @@
 
                                         <li><a href="#">Cửa Hàng</a>
                                             <ul>
-                                                <li><a href="pixel/mouse-shop-page.html">Cửa Hàng</a></li>
+                                                <li><a href="product">Cửa Hàng</a></li>
                                                 <li><a href="details.jsp">Chi tiết sản phẩm</a></li>
-                                                <li><a href="pixel/checkout.html">Checkout</a></li>
-                                                <li><a href="pixel/wishlist.html">Danh sách yêu thích</a></li>
-                                                <li><a href="pixel/cart.html">Giỏ hàng</a></li>
+                                                <li><a href="#">Checkout</a></li>
+                                                <li><a href="#">Danh sách yêu thích</a></li>
+                                                <li><a href="#">Giỏ hàng</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="#">pages</a>
                                             <ul>
-
-                                                <li><a href="pixel/cart.html">Giỏ hàng</a></li>
-
-                                                <li><a href="pixel/wishlist.html">Danh sách yêu thích</a></li>
-                                                <li><a href="login.jsp">Đăng nhập</a></li>
-                                                <li><a href="pixel/contact.html">Liên lạc</a></li>
+                                                <li><a href="#">Giỏ hàng</a></li>
+                                                <li><a href="#">Danh sách yêu thích</a></li>
+                                                <li><a href="<%=request.getContextPath()%>/login.jsp">Đăng nhập</a></li>
                                             </ul>
                                         </li>
                                         <c:if test="${sessionScope.account != null}">
                                             <li><a href="logout">Log Out</a></li>
                                             <li><a href="#">Hello ${sessionScope.account.username}</a></li>
                                         </c:if>
+
+                                        <c:if test="${sessionScope.account.roleId eq 'R001' && sessionScope.account != null}">
+                                            <li><a href="<%=request.getContextPath()%>/admin/login2.jsp">Quản lý</a>
+                                            </li>
+                                        </c:if>
+
                                         <c:if test="${sessionScope.account == null}">
                                             <li><a href="login.jsp">Log In</a></li>
-
                                         </c:if>
+
 
                                     </ul>
                                 </nav>
@@ -79,7 +85,8 @@
                             <ul>
                                 <li class="single-shopping-cart">
                                     <div class="shopping-cart-img">
-                                        <a href="#"><img alt="" src="pixel/assets/img/cart/img.png"></a>
+                                        <a href="#"><img alt=""
+                                                         src="<%=request.getContextPath()%>/assets/img/cart/img.png"></a>
                                     </div>
                                     <div class="shopping-cart-title">
                                         <h3><a href="#">Asus ROG Strix Hero II </a></h3>
@@ -92,7 +99,8 @@
                                 </li>
                                 <li class="single-shopping-cart">
                                     <div class="shopping-cart-img">
-                                        <a href="#"><img alt="" src="pixel/assets/img/cart/alienware14.png"></a>
+                                        <a href="#"><img alt=""
+                                                         src="<%=request.getContextPath()%>/assets/img/cart/alienware14.png"></a>
                                     </div>
                                     <div class="shopping-cart-title">
                                         <h3><a href="#">Demonissi Gori</a></h3>
@@ -105,7 +113,8 @@
                                 </li>
                                 <li class="single-shopping-cart">
                                     <div class="shopping-cart-img">
-                                        <a href="#"><img alt="" src="pixel/assets/img/cart/cart-3.jpg"></a>
+                                        <a href="#"><img alt=""
+                                                         src="<%=request.getContextPath()%>/assets/img/cart/cart-3.jpg"></a>
                                     </div>
                                     <div class="shopping-cart-title">
                                         <h3><a href="#">Demonissi Gori</a></h3>
@@ -175,7 +184,7 @@
                     <ul>
                         <li class="single-shopping-cart">
                             <div class="shopping-cart-img">
-                                <a href="#"><img alt="" src="pixel/assets/img/cart/img.png"></a>
+                                <a href="#"><img alt="" src="<%=request.getContextPath()%>/assets/img/cart/img.png"></a>
                             </div>
                             <div class="shopping-cart-title">
                                 <h3><a href="#">Asus ROG Strix Hero II </a></h3>
@@ -188,7 +197,8 @@
                         </li>
                         <li class="single-shopping-cart">
                             <div class="shopping-cart-img">
-                                <a href="#"><img alt="" src="pixel/assets/img/cart/alienware14.png"></a>
+                                <a href="#"><img alt=""
+                                                 src="<%=request.getContextPath()%>/assets/img/cart/alienware14.png"></a>
                             </div>
                             <div class="shopping-cart-title">
                                 <h3><a href="#">Dell Alienware 14</a></h3>
@@ -201,7 +211,8 @@
                         </li>
                         <li class="single-shopping-cart">
                             <div class="shopping-cart-img">
-                                <a href="#"><img alt="" src="pixel/assets/img/cart/msi-gamin-gf65.png"></a>
+                                <a href="#"><img alt=""
+                                                 src="<%=request.getContextPath()%>/assets/img/cart/msi-gamin-gf65.png"></a>
                             </div>
                             <div class="shopping-cart-title">
                                 <h3><a href="#">MSI Gaming GF65</a></h3>

@@ -1,53 +1,52 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!doctype html>
+
+
 <html class="no-js" lang="zxx">
 <jsp:include page="head.jsp"/>
 <body>
 <div class="wrapper">
     <!-- header start -->
     <jsp:include page="header.jsp"/>
-
-
     <div class="slider-area">
         <div class="slider-active owl-carousel">
-            <div class="single-slider slider-1" style="background-image: url(pixel/assets/img/slider/img_3.png)">
+            <div class="single-slider slider-1" style="background-image: url(<%=request.getContextPath()%>/assets/img/slider/img_3.png)">
                 <div class="container">
                     <div class="slider-content slider-animated-1">
                         <div class="slider-img text-center">
-                            <img class="animated" src="pixel/assets/img/slider/alieware14.png" alt="slider images">
+                            <img class="animated" src="<%=request.getContextPath()%>/assets/img/slider/alieware14.png" alt="slider images">
                         </div>
                         <div class="slider-text-img">
                             <h6 class="animated">HÃY ĐẶT MẶT HÀNG CỦA BẠN VỚI GIÁ mắc</h6>
-                            <img class="animated" src="pixel/assets/img/icon-img/iconlaptop.png" alt="slider images">
+                            <img class="animated" src="<%=request.getContextPath()%>/assets/img/icon-img/iconlaptop.png" alt="slider images">
                         </div>
                         <h2 class="animated">LAPTOP</h2>
                     </div>
                 </div>
             </div>
-            <div class="single-slider slider-1" style="background-image: url(pixel/assets/img/slider/img_3.png)">
+            <div class="single-slider slider-1" style="background-image: url(<%=request.getContextPath()%>/assets/img/slider/img_3.png)">
                 <div class="container">
                     <div class="slider-content slider-animated-1">
                         <div class="slider-img text-center">
-                            <img class="animated" src="pixel/assets/img/slider/Asus-ROG-Strix-Hero-II.png"
+                            <img class="animated" src="<%=request.getContextPath()%>/assets/img/slider/Asus-ROG-Strix-Hero-II.png"
                                  alt="slider images">
                         </div>
                         <div class="slider-text-img">
                             <h6 class="animated">HÃY ĐẶT MẶT HÀNG CỦA BẠN VỚI GIÁ RẺ</h6>
-                            <img class="animated" src="pixel/assets/img/icon-img/iconlaptop.png" alt="slider images">
+                            <img class="animated" src="<%=request.getContextPath()%>/assets/img/icon-img/iconlaptop.png" alt="slider images">
                         </div>
                         <h2 class="animated">LAPTOP</h2>
                     </div>
                 </div>
             </div>
-            <div class="single-slider slider-1" style="background-image: url(pixel/assets/img/slider/img_3.png)">
+            <div class="single-slider slider-1" style="background-image: url(<%=request.getContextPath()%>/assets/img/slider/img_3.png)">
                 <div class="container">
                     <div class="slider-content slider-animated-1">
                         <div class="slider-img text-center">
-                            <img class="animated" src="pixel/assets/img/slider/msi-gamin-gf65.png" alt="slider images">
+                            <img class="animated" src="<%=request.getContextPath()%>/assets/img/slider/msi-gamin-gf65.png" alt="slider images">
                         </div>
                         <div class="slider-text-img">
                             <h6 class="animated">HÃY ĐẶT MẶT HÀNG CỦA BẠN VỚI GIÁ Rẻ</h6>
-                            <img class="animated" src="pixel/assets/img/icon-img/iconlaptop.png" alt="slider images">
+                            <img class="animated" src="<%=request.getContextPath()%>/assets/img/icon-img/iconlaptop.png" alt="slider images">
                         </div>
                         <h2 class="animated">LAPTOP</h2>
                     </div>
@@ -85,9 +84,9 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12">
                     <div class="overview-content">
-                        <h1><span>PIXEL</span> HÀNG ĐẦU THẾ GIỚI </h1>
+                        <h1><span><%=request.getContextPath()%></span> HÀNG ĐẦU THẾ GIỚI </h1>
                         <h2>CỬA HÀNG <span>LINH KIỆN BÁN CHẠY NHẤT</span></h2>
-                        <p><span>PIXEL</span> cửa hàng bán các loại gear lớn nhất thế giới có thể phục vụ bạn những mẫu
+                        <p><span><%=request.getContextPath()%></span> cửa hàng bán các loại gear lớn nhất thế giới có thể phục vụ bạn những mẫu
                             linh kiện, laptop, case máy tính mới nhất. Ngoài ra bạn còn thể đặt hàng online với chi phí
                             rẻ và hợp lý. </p>
                         <div class="question-area">
@@ -105,19 +104,19 @@
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="overview-img">
-                        <img class="tilter" src="pixel/assets/img/banner/RTX3606.jpg" alt="">
+                        <img class="tilter" src="<%=request.getContextPath()%>/assets/img/banner/RTX3606.jpg" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-<%--    banner done--%>
+    <%--    banner done--%>
     <div class="banner-area pt-135 pb-120">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-lg-4">
                     <div class="banner-wrapper mb-30">
-                        <a href="product" ><img src="pixel/assets/img/banner/laptop3cai1.png" alt="image"></a>
+                        <a href="product"><img src="<%=request.getContextPath()%>/assets/img/banner/laptop3cai1.png" alt="image"></a>
                         <div class="banner-content">
                             <h2>MUA LAPTOP MỚI</h2>
                         </div>
@@ -125,8 +124,8 @@
                 </div>
                 <div class="col-md-4 col-lg-4">
                     <div class="banner-wrapper mb-30">
-                        <a href="product"><img src="pixel/assets/img/banner/XiaomiMiDesktopMonitor 27.jpg"
-                                                   alt="image"></a>
+                        <a href="product"><img src="<%=request.getContextPath()%>/assets/img/banner/XiaomiMiDesktopMonitor 27.jpg"
+                                               alt="image"></a>
                         <div class="banner-content">
                             <h2>MUA MONITOR MỚI</h2>
                         </div>
@@ -134,7 +133,7 @@
                 </div>
                 <div class="col-md-4 col-lg-4">
                     <div class="banner-wrapper mb-30">
-                        <a href="product"><img src="pixel/assets/img/banner/chuotvabanphim.jpg" alt="image"></a>
+                        <a href="product"><img src="<%=request.getContextPath()%>/assets/img/banner/chuotvabanphim.jpg" alt="image"></a>
                         <div class="banner-content">
                             <h2>MUA BÀN PHÍM VÀ CHUỘT MỚI</h2>
                         </div>
@@ -175,7 +174,7 @@
                             <div class="product-wrapper">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/Màn-hình-ViewSonic-VA2418-SH-2-24“-IPS-75Hz.png"
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/Màn-hình-ViewSonic-VA2418-SH-2-24“-IPS-75Hz.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -212,7 +211,7 @@
                             <div class="product-wrapper">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/MànhìnhLenovoG272027IPS144Hz.png" alt="">
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/MànhìnhLenovoG272027IPS144Hz.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -250,7 +249,8 @@
                             <div class="product-wrapper">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/Màn-hình-cong-HKC-M27G3F-27-VA-144Hz.png" alt="">
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/Màn-hình-cong-HKC-M27G3F-27-VA-144Hz.png"
+                                             alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -286,7 +286,7 @@
                             <div class="product-wrapper">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/Màn-hình-cong-Samsung-LC27RG50FQE-27-VA-240Hz-Freesync.png "
+                                        <img src="${pageContext.request.contextPath}/assets/img/product/Màn-hình-cong-Samsung-LC27RG50FQE-27-VA-240Hz-Freesync.png "
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -325,7 +325,7 @@
                             <div class="product-wrapper">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/Màn-hình-ASUS-TUF-GAMING-VG27AQ-27-IPS-2K-165Hz-G-Sync-HDR.png"
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/Màn-hình-ASUS-TUF-GAMING-VG27AQ-27-IPS-2K-165Hz-G-Sync-HDR.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -362,7 +362,7 @@
                             <div class="product-wrapper">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/Màn-hình-LG-27GP850-B-UltraGear-27-Nano-IPS-2K-180Hz.png"
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/Màn-hình-LG-27GP850-B-UltraGear-27-Nano-IPS-2K-180Hz.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -401,7 +401,7 @@
                             <div class="product-wrapper">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/Màn-hình-HKC-MB24V9-24-IPS-75Hz.png" alt="">
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/Màn-hình-HKC-MB24V9-24-IPS-75Hz.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -437,7 +437,7 @@
                             <div class="product-wrapper">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/Màn-hình-ViewSonic-VX2476-SMHD-24-IPS-75Hz.png"
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/Màn-hình-ViewSonic-VX2476-SMHD-24-IPS-75Hz.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -480,7 +480,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/GhostS.png "
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/GhostS.png "
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -511,7 +511,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/PhantomS.png"
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/PhantomS.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -550,7 +550,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/volibearS.png" alt="">
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/volibearS.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -586,7 +586,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/garenS.png"
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/garenS.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -625,7 +625,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/venusS.png"
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/venusS.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -662,7 +662,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/hextechS.png"
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/hextechS.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -701,7 +701,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/dariusS.png" alt="">
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/dariusS.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -737,7 +737,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/pykeS.png" alt="">
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/pykeS.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -779,7 +779,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/laptop1.png"
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/laptop1.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -816,7 +816,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/laptop2.png"
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/laptop2.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -855,7 +855,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/laptop3.png" alt="">
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/laptop3.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -891,7 +891,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/laptop4.png"
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/laptop4.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -930,7 +930,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/laptop5.png"
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/laptop5.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -967,7 +967,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/laptop6.png"
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/laptop6.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1006,7 +1006,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/laptop7.png" alt="">
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/laptop7.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -1042,7 +1042,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/laptop8.png" alt="">
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/laptop8.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -1084,7 +1084,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/BànphímRazerBlackwidowGreenSwitch.png"
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/BànphímRazerBlackwidowGreenSwitch.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1121,7 +1121,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/BànphímcơMistelX8BumblebeeSilentRedSwitch.png"
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/BànphímcơMistelX8BumblebeeSilentRedSwitch.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1160,7 +1160,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/BànphímCorsairK70RGBMK.2SE.png" alt="">
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/BànphímCorsairK70RGBMK.2SE.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -1196,7 +1196,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/BànphímcơLeopoldFC980MPDDarkYellow.png"
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/BànphímcơLeopoldFC980MPDDarkYellow.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1235,7 +1235,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/BànphímLeopoldFC980CBlackTopreSwitch.png"
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/BànphímLeopoldFC980CBlackTopreSwitch.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1272,7 +1272,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/BànphímcơCorsairK100RGB.png"
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/BànphímcơCorsairK100RGB.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1311,7 +1311,8 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/BànphímcơRazerHuntsmanMiniMercury.png" alt="">
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/BànphímcơRazerHuntsmanMiniMercury.png"
+                                             alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -1347,7 +1348,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/BànphímRazerBlackwidowV3.png" alt="">
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/BànphímRazerBlackwidowV3.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -1389,7 +1390,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/ChuộtLogitechG102LightsyncRGBBlack.png"
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/ChuộtLogitechG102LightsyncRGBBlack.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1426,7 +1427,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/ChuộtLogitechG102LightsyncRGBWhite.png"
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/ChuộtLogitechG102LightsyncRGBWhite.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1465,7 +1466,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/ChuộtDareUEM901RGBWirelessBlack.png" alt="">
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/ChuộtDareUEM901RGBWirelessBlack.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -1501,7 +1502,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/ChuộtRazerBasiliskV2.png"
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/ChuộtRazerBasiliskV2.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1540,7 +1541,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/ChuộtRazerDeathAdderV2Pro.png"
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/ChuộtRazerDeathAdderV2Pro.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1577,7 +1578,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/ChuộtCorsairHarpoonRGBWireless.png"
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/ChuộtCorsairHarpoonRGBWireless.png"
                                              alt="">
                                     </a>
                                     <div class="product-item-dec">
@@ -1617,7 +1618,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/ChuộtDareUEM908RGBQueen.png" alt="">
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/ChuộtDareUEM908RGBQueen.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -1653,7 +1654,7 @@
                             <div class="product-wrapper mb-30">
                                 <div class="product-img">
                                     <a href="details.jsp">
-                                        <img src="pixel/assets/img/product/ChuộtAsusROGChakram.png" alt="">
+                                        <img src="<%=request.getContextPath()%>/assets/img/product/ChuộtAsusROGChakram.png" alt="">
                                     </a>
                                     <div class="product-item-dec">
                                         <ul>
@@ -1692,14 +1693,15 @@
             </div>
         </div>
     </div>
-    <div class="latest-product-area pt-205 pb-145 bg-img" style="background-image: url(pixel/assets/img/banner/geomatry.jpg)">
+    <div class="latest-product-area pt-205 pb-145 bg-img"
+         style="background-image: url(pixel/assets/img/banner/geomatry.jpg)">
         <div class="container-fluid">
             <div class="latest-product-slider owl-carousel">
                 <div class="single-latest-product slider-animated-2">
                     <div class="row">
                         <div class="col-lg-7 col-md-12 col-12">
                             <div class="latest-product-img">
-                                <img class="animated" src="pixel/assets/img/banner/nitro5 (1).png" alt="image">
+                                <img class="animated" src="<%=request.getContextPath()%>/assets/img/banner/nitro5 (1).png" alt="image">
                             </div>
                         </div>
                         <div class="col-lg-5 col-md-12 col-12">
@@ -1722,7 +1724,7 @@
                     <div class="row">
                         <div class="col-lg-7 col-col-12 col-12">
                             <div class="latest-product-img">
-                                <img class="animated" src="pixel/assets/img/banner/dsd.png" alt="image">
+                                <img class="animated" src="<%=request.getContextPath()%>/assets/img/banner/dsd.png" alt="image">
                             </div>
                         </div>
                         <div class="col-lg-5 col-col-12 col-12">
@@ -1756,7 +1758,7 @@
                     <div class="product-wrapper">
                         <div class="product-img">
                             <a href="#">
-                                <img src="pixel/assets/img/product/manhinh4.png" alt="">
+                                <img src="<%=request.getContextPath()%>/assets/img/product/manhinh4.png" alt="">
                             </a>
                             <div class="product-action">
                                 <a class="action-plus-2" title="Thêm vào giỏ hàng" href="#">
@@ -1781,7 +1783,7 @@
                     <div class="product-wrapper">
                         <div class="product-img">
                             <a href="details.jsp">
-                                <img src="pixel/assets/img/product/banphim4.png" alt="">
+                                <img src="<%=request.getContextPath()%>/assets/img/product/banphim4.png" alt="">
                             </a>
                             <div class="product-action">
                                 <a class="action-plus-2" title="Thêm vào giỏ hàng" href="#">
@@ -1806,7 +1808,7 @@
                     <div class="product-wrapper">
                         <div class="product-img">
                             <a href="details.jsp">
-                                <img src="pixel/assets/img/product/cap5.png" alt="">
+                                <img src="<%=request.getContextPath()%>/assets/img/product/cap5.png" alt="">
                             </a>
                             <div class="product-action">
                                 <a class="action-plus-2" title="Thêm vào giỏ hàng" href="#">
@@ -1831,7 +1833,7 @@
                     <div class="product-wrapper">
                         <div class="product-img">
                             <a href="details.jsp">
-                                <img src="pixel/assets/img/product/tainghe4.png" alt="">
+                                <img src="<%=request.getContextPath()%>/assets/img/product/tainghe4.png" alt="">
                             </a>
                             <div class="product-action">
                                 <a class="action-plus-2" title="Thêm vào giỏ hàng" href="#">
@@ -1856,7 +1858,7 @@
                     <div class="product-wrapper">
                         <div class="product-img">
                             <a href="details.jsp">
-                                <img src="pixel/assets/img/product/chip.jpg" alt="">
+                                <img src="<%=request.getContextPath()%>/assets/img/product/chip.jpg" alt="">
                             </a>
                             <div class="product-action">
                                 <a class="action-plus-2" title="Thêm vào giỏ hàng" href="#">
@@ -1969,42 +1971,44 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-hm-wrapper mb-40">
                         <div class="blog-img">
-                            <a href="pixel/mouse-shop-page.html"><img src="pixel/assets/img/blog/blog-hm-1.jpg" alt="image"></a>
+                            <a href="pixel/mouse-shop-page.html"><img src="<%=request.getContextPath()%>/assets/img/blog/blog-hm-1.jpg"
+                                                                      alt="image"></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-hm-wrapper mb-40">
                         <div class="blog-img">
-                            <a href="product2.jsp"><img src="pixel/assets/img/blog/blog-hm-2.jpg" alt="image"></a>
+                            <a href="product2.jsp"><img src="<%=request.getContextPath()%>/assets/img/blog/blog-hm-2.jpg" alt="image"></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-hm-wrapper mb-40">
                         <div class="blog-img">
-                            <a href="product.jsp"><img src="pixel/assets/img/blog/blog-hm-3.jpg" alt="image"></a>
+                            <a href="product.jsp"><img src="<%=request.getContextPath()%>/assets/img/blog/blog-hm-3.jpg" alt="image"></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-hm-wrapper mb-40">
                         <div class="blog-img">
-                            <a href="product2.jsp"><img src="pixel/assets/img/blog/blog-hm-1a.jpg" alt="image"></a>
+                            <a href="product2.jsp"><img src="<%=request.getContextPath()%>/assets/img/blog/blog-hm-1a.jpg" alt="image"></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-hm-wrapper mb-40">
                         <div class="blog-img">
-                            <a href="pixel/gaming-chair.html"><img src="pixel/assets/img/blog/blog-hm-2b.jpg" alt="image"></a>
+                            <a href="pixel/gaming-chair.html"><img src="<%=request.getContextPath()%>/assets/img/blog/blog-hm-2b.jpg"
+                                                                   alt="image"></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-hm-wrapper mb-40">
                         <div class="blog-img">
-                            <a href="product2.jsp "><img src="pixel/assets/img/blog/blog-hm-3c.jpg" alt="image"></a>
+                            <a href="product2.jsp "><img src="<%=request.getContextPath()%>/assets/img/blog/blog-hm-3c.jpg" alt="image"></a>
                         </div>
                     </div>
                 </div>
@@ -2017,17 +2021,17 @@
 
 
 <!-- all js here -->
-<script src="pixel/assets/js/vendor/jquery-1.12.0.min.js"></script>
-<script src="pixel/assets/js/popper.js"></script>
-<script src="pixel/assets/js/bootstrap.min.js"></script>
-<script src="pixel/assets/js/isotope.pkgd.min.js"></script>
-<script src="pixel/assets/js/imagesloaded.pkgd.min.js"></script>
-<script src="pixel/assets/js/jquery.counterup.min.js"></script>
-<script src="pixel/assets/js/waypoints.min.js"></script>
-<script src="pixel/assets/js/ajax-mail.js"></script>
-<script src="pixel/assets/js/owl.carousel.min.js"></script>
-<script src="pixel/assets/js/plugins.js"></script>
-<script src="pixel/assets/js/main.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/vendor/jquery-1.12.0.min.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/popper.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/bootstrap.min.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/isotope.pkgd.min.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/jquery.counterup.min.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/waypoints.min.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/ajax-mail.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/owl.carousel.min.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/plugins.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/main.js"></script>
 </body>
 </html>
 

@@ -16,6 +16,7 @@ public class LoginControl extends HttpServlet {
 
 
     }
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("user-name");
@@ -29,9 +30,12 @@ public class LoginControl extends HttpServlet {
                 request.setAttribute("error", "Thông tin đăng nhập không hợp lệ.");
                 request.getRequestDispatcher("/login.jsp").forward(request, response);
 
+            } else if (account != null && username.equals("ADMIN") && password.equals("ADMIN") && account.getRoleId().equalsIgnoreCase("R001") && account.getRoleName().equalsIgnoreCase("admin")) {
+                response.sendRedirect("adminHome");
+
             } else {
                 HttpSession session = request.getSession();
-                session.setAttribute("account",account);
+                session.setAttribute("account", account);
                 response.sendRedirect("home");
             }
         } catch (Exception e) {
