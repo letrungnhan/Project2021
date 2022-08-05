@@ -35,48 +35,48 @@
                                 <h4> Đăng nhập </h4>
                             </a>
 
-                            <a  href="register.jsp">
+                            <a href="register.jsp">
                                 <h4> Đăng ký </h4>
                             </a>
 
                         </div>
                         <div class="tab-content">
 
-                                <div class="login-form-container">
-                                    <div class="login-form">
-                                        <form action="login" method="post">
-                                            <%if (error != null) { %>
-                                            <div class="alert alert-danger" role="alert">
-                                                <%=error%>
+                            <div class="login-form-container">
+                                <div class="login-form">
+                                    <form action="<%=request.getContextPath()%>/login" method="post">
+                                        <%if (error != null) { %>
+                                        <div class="alert alert-danger" role="alert">
+                                            <%=error%>
+                                        </div>
+                                        <%
+                                            }
+                                        %>
+                                        <input type="text"
+                                               name="user-name"
+                                               placeholder="Tên đăng nhập "
+
+                                            <% if(request.getParameter("user-name")!=null){ %>
+                                               value="<%=request.getParameter("user-name")%>"
+                                            <%}%>
+
+                                        >
+                                        <input type="password"
+                                               name="user-password"
+                                               placeholder="Mật khẩu">
+
+                                        <div class="button-box">
+                                            <div class="login-toggle-btn">
+                                                <input type="checkbox">
+                                                <label>Lưu đăng nhập</label>
+                                                <a href="#">Quên mật khẩu?</a>
                                             </div>
-                                            <%
-                                                }
-                                            %>
-                                            <input type="text"
-                                                   name="user-name"
-                                                   placeholder="Tên đăng nhập "
-
-                                                <% if(request.getParameter("user-name")!=null){ %>
-                                                   value="<%=request.getParameter("user-name")%>"
-                                                <%}%>
-
-                                            >
-                                            <input type="password"
-                                                   name="user-password"
-                                                   placeholder="Mật khẩu">
-
-                                            <div class="button-box">
-                                                <div class="login-toggle-btn">
-                                                    <input type="checkbox">
-                                                    <label>Lưu đăng nhập</label>
-                                                    <a href="#">Quên mật khẩu?</a>
-                                                </div>
-                                                <button type="submit" class="btn-style cr-btn"><span>Đăng nhập</span>
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
+                                            <button type="submit" class="btn-style cr-btn"><span>Đăng nhập</span>
+                                            </button>
+                                        </div>
+                                    </form>
                                 </div>
+                            </div>
 
 
                         </div>
