@@ -43,9 +43,7 @@
                                             <ul>
                                                 <li><a href="product">Cửa Hàng</a></li>
                                                 <li><a href="details.jsp">Chi tiết sản phẩm</a></li>
-                                                <li><a href="#">Checkout</a></li>
-                                                <li><a href="#">Danh sách yêu thích</a></li>
-                                                <li><a href="#">Giỏ hàng</a></li>
+
                                             </ul>
                                         </li>
                                         <li><a href="#">pages</a>
