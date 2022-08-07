@@ -18,9 +18,7 @@
                                  alt="slider images">
                         </div>
                         <div class="slider-text-img">
-                            <h6 class="animated">HÃY ĐẶT MẶT HÀNG CỦA BẠN VỚI GIÁ mắc</h6>
-                            <img class="animated" src="<%=request.getContextPath()%>/assets/img/icon-img/iconlaptop.png"
-                                 alt="slider images">
+                            <h6 class="animated">HÃY ĐẶT MẶT HÀNG CỦA BẠN VỚI GIÁ RẺ</h6>
                         </div>
                         <h2 class="animated">LAPTOP</h2>
                     </div>
@@ -37,8 +35,6 @@
                         </div>
                         <div class="slider-text-img">
                             <h6 class="animated">HÃY ĐẶT MẶT HÀNG CỦA BẠN VỚI GIÁ RẺ</h6>
-                            <img class="animated" src="<%=request.getContextPath()%>/assets/img/icon-img/iconlaptop.png"
-                                 alt="slider images">
                         </div>
                         <h2 class="animated">LAPTOP</h2>
                     </div>
@@ -55,36 +51,10 @@
                         </div>
                         <div class="slider-text-img">
                             <h6 class="animated">HÃY ĐẶT MẶT HÀNG CỦA BẠN VỚI GIÁ Rẻ</h6>
-                            <img class="animated" src="<%=request.getContextPath()%>/assets/img/icon-img/iconlaptop.png"
-                                 alt="slider images">
+
                         </div>
                         <h2 class="animated">LAPTOP</h2>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="slider-social">
-            <ul>
-                <li class="facebook"><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
-                <li class="twitter"><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
-                <li class="pinterest"><a href="#"><i class="icofont icofont-social-pinterest"></i></a></li>
-            </ul>
-        </div>
-        <div class="language-currency-wrapper">
-            <div class="language-currency">
-                <div class="language">
-                    <select class="select-header orderby">
-                        <option value="">VN</option>
-                        <option value="">ENG</option>
-                        <option value="">HINDI</option>
-                    </select>
-                </div>
-                <div class="currency">
-                    <select class="select-header orderby">
-                        <option value="">$ VND</option>
-                        <option value="">$ US</option>
-                        <option value="">$ EURO</option>
-                    </select>
                 </div>
             </div>
         </div>
@@ -94,9 +64,11 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12">
                     <div class="overview-content">
-                        <h1><span><%=request.getContextPath()%></span> HÀNG ĐẦU THẾ GIỚI </h1>
+                        <h1><span><img src="<%=request.getContextPath()%>/assets/img/logo/logo.png"
+                                       style="height: 60px"></span> CỬA HÀNG LINH KIỆN HÀNG ĐẦU </h1>
                         <h2>CỬA HÀNG <span>LINH KIỆN BÁN CHẠY NHẤT</span></h2>
-                        <p><span><%=request.getContextPath()%></span> cửa hàng bán các loại gear lớn nhất thế giới có
+                        <p><span><img src="<%=request.getContextPath()%>/assets/img/logo/logo.png" style="height: 60px"></span>
+                            cửa hàng bán các loại gear lớn nhất thế giới có
                             thể phục vụ bạn những mẫu
                             linh kiện, laptop, case máy tính mới nhất. Ngoài ra bạn còn thể đặt hàng online với chi phí
                             rẻ và hợp lý. </p>
@@ -127,9 +99,8 @@
             <div class="row">
                 <div class="col-md-4 col-lg-4">
                     <div class="banner-wrapper mb-30">
-                        <a href="<%=request.getContextPath()%>/product"><img
-                                src="<%=request.getContextPath()%>/assets/img/banner/laptop3cai1.png"
-                                alt="image"></a>
+                        <a href="product">
+                            <img src="<%=request.getContextPath()%>/assets/img/banner/laptop3cai1.png" alt="image"></a>
                         <div class="banner-content">
                             <h2>MUA LAPTOP MỚI</h2>
                         </div>
@@ -1717,7 +1688,7 @@
         </div>
     </div>
     <div class="latest-product-area pt-205 pb-145 bg-img"
-         style="background-image: url(<%=request.getContextPath()%>/img/banner/geomatry.jpg)">
+         style="background-image: url(<%=request.getContextPath()%>/assets/img/banner/geomatry.jpg)">
         <div class="container-fluid">
             <div class="latest-product-slider owl-carousel">
                 <div class="single-latest-product slider-animated-2">
@@ -1725,7 +1696,7 @@
                         <div class="col-lg-7 col-md-12 col-12">
                             <div class="latest-product-img">
                                 <img class="Sirv animated"
-                                     data-src="https://tmajawat.sirv.com/quanlygear/banner-index/banner-laptop.jpeg"
+                                     data-src="https://tmajawat.sirv.com/quanlygear/banner-index/banner-mac-1.png"
                                      alt=""/>
                             </div>
                         </div>
@@ -1765,220 +1736,6 @@
                                 </div>
                                 <div class="latext-btn">
                                     <a class="animated" href="#">Chọn Phụ Kiện</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="accessories-area pt-152 pb-130">
-        <div class="container-fluid">
-            <div class="section-title section-fluid text-center mb-60">
-                <h2>PHỤ KIỆN</h2>
-                <p><span>PIXEL</span> Cửa Hàng điện tử tốt nhất ở Viêt Nam hiện nay</p>
-            </div>
-            <div class="accessories-wrapper">
-                <div class="product-accessories-active owl-carousel">
-                    <div class="product-wrapper">
-                        <div class="product-img">
-                            <a href="#">
-                                <img src="<%=request.getContextPath()%>/assets/img/product/manhinh4.png" alt="">
-                            </a>
-                            <div class="product-action">
-                                <a class="action-plus-2" title="Thêm vào giỏ hàng" href="#">
-                                    <i class=" ti-shopping-cart"></i>
-                                </a>
-                                <a class="action-cart-2" title="Danh sách yêu thích" href="#">
-                                    <i class=" ti-heart"></i>
-                                </a>
-                                <a class="action-reload" title="Xem lướt qua" data-toggle="modal"
-                                   data-target="#exampleModal" href="#">
-                                    <i class=" ti-zoom-in"></i>
-                                </a>
-                            </div>
-                            <div class="product-content-wrapper-2">
-                                <div class="product-title-price-2 text-center">
-                                    <span>Giá: 3,820,000d</span>
-                                    <h4><a href="details.jsp">Màn hình Acer R241YB 24" IPS 75Hz</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-wrapper">
-                        <div class="product-img">
-                            <a href="details.jsp">
-                                <img src="<%=request.getContextPath()%>/assets/img/product/banphim4.png" alt="">
-                            </a>
-                            <div class="product-action">
-                                <a class="action-plus-2" title="Thêm vào giỏ hàng" href="#">
-                                    <i class=" ti-shopping-cart"></i>
-                                </a>
-                                <a class="action-cart-2" title="Danh sách yêu thích" href="#">
-                                    <i class=" ti-heart"></i>
-                                </a>
-                                <a class="action-reload" title="Xem lướt qua" data-toggle="modal"
-                                   data-target="#exampleModal" href="#">
-                                    <i class=" ti-zoom-in"></i>
-                                </a>
-                            </div>
-                            <div class="product-content-wrapper-2">
-                                <div class="product-title-price-2 text-center">
-                                    <span>Giá: 2,590,000d</span>
-                                    <h4><a href="details.jsp">Bàn phím Corsair K63 Wireless</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-wrapper">
-                        <div class="product-img">
-                            <a href="details.jsp">
-                                <img src="<%=request.getContextPath()%>/assets/img/product/cap5.png" alt="">
-                            </a>
-                            <div class="product-action">
-                                <a class="action-plus-2" title="Thêm vào giỏ hàng" href="#">
-                                    <i class=" ti-shopping-cart"></i>
-                                </a>
-                                <a class="action-cart-2" title="Danh sách yêu thích" href="#">
-                                    <i class=" ti-heart"></i>
-                                </a>
-                                <a class="action-reload" title="Xem lướt qua" data-toggle="modal"
-                                   data-target="#exampleModal" href="#">
-                                    <i class=" ti-zoom-in"></i>
-                                </a>
-                            </div>
-                            <div class="product-content-wrapper-2">
-                                <div class="product-title-price-2 text-center">
-                                    <span>Giá: 790,000d</span>
-                                    <h4><a href="details.jsp">Asus AI Noise-Canceling Mic Adapter</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-wrapper">
-                        <div class="product-img">
-                            <a href="details.jsp">
-                                <img src="<%=request.getContextPath()%>/assets/img/product/tainghe4.png" alt="">
-                            </a>
-                            <div class="product-action">
-                                <a class="action-plus-2" title="Thêm vào giỏ hàng" href="#">
-                                    <i class=" ti-shopping-cart"></i>
-                                </a>
-                                <a class="action-cart-2" title="Danh sách yêu thích" href="#">
-                                    <i class=" ti-heart"></i>
-                                </a>
-                                <a class="action-reload" title="Xem lướt qua" data-toggle="modal"
-                                   data-target="#exampleModal" href="#">
-                                    <i class=" ti-zoom-in"></i>
-                                </a>
-                            </div>
-                            <div class="product-content-wrapper-2">
-                                <div class="product-title-price-2 text-center">
-                                    <span>Giá:380,000d</span>
-                                    <h4><a href="details.jsp">Tai nghe DareU EH416 RGB</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-wrapper">
-                        <div class="product-img">
-                            <a href="details.jsp">
-                                <img src="<%=request.getContextPath()%>/assets/img/product/chip.jpg" alt="">
-                            </a>
-                            <div class="product-action">
-                                <a class="action-plus-2" title="Thêm vào giỏ hàng" href="#">
-                                    <i class=" ti-shopping-cart"></i>
-                                </a>
-                                <a class="action-cart-2" title="Danh sách yêu thích" href="#">
-                                    <i class=" ti-heart"></i>
-                                </a>
-                                <a class="action-reload" title="Xem lướt qua" data-toggle="modal"
-                                   data-target="#exampleModal" href="#">
-                                    <i class=" ti-zoom-in"></i>
-                                </a>
-                            </div>
-                            <div class="product-content-wrapper-2">
-                                <div class="product-title-price-2 text-center">
-                                    <span>Giá: 11,390,000d</span>
-                                    <h4><a href="details.jsp">Intel Core i9 10850KA / 20MB / 3.6GHz / 10 Nhân
-                                        20 Luồng</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-wrapper">
-                        <div class="product-img">
-                            <a href="details.jsp">
-                                <img src="assets/img/product/pc.jpg" alt="">
-                            </a>
-                            <div class="product-action">
-                                <a class="action-plus-2" title="Thêm vào giỏ hàng" href="#">
-                                    <i class=" ti-shopping-cart"></i>
-                                </a>
-                                <a class="action-cart-2" title="Danh sách yêu thích" href="#">
-                                    <i class=" ti-heart"></i>
-                                </a>
-                                <a class="action-reload" title="Xem lướt qua" data-toggle="modal"
-                                   data-target="#exampleModal" href="#">
-                                    <i class=" ti-zoom-in"></i>
-                                </a>
-                            </div>
-                            <div class="product-content-wrapper-2">
-                                <div class="product-title-price-2 text-center">
-                                    <span>Giá: 12,890,000d</span>
-                                    <h4><a href="details.jsp">GVN Mystic M</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-wrapper">
-                        <div class="product-img">
-                            <a href="details.jsp">
-                                <img src="assets/img/product/laptop.jpg" alt="">
-                            </a>
-                            <div class="product-action">
-                                <a class="action-plus-2" title="Thêm vào giỏ hàng" href="#">
-                                    <i class=" ti-shopping-cart"></i>
-                                </a>
-                                <a class="action-cart-2" title="Danh sách yêu thích" href="#">
-                                    <i class=" ti-heart"></i>
-                                </a>
-                                <a class="action-reload" title="Xem lướt qua" data-toggle="modal"
-                                   data-target="#exampleModal" href="#">
-                                    <i class=" ti-zoom-in"></i>
-                                </a>
-                            </div>
-                            <div class="product-content-wrapper-2">
-                                <div class="product-title-price-2 text-center">
-                                    <span>Giá: 24,390,000d</span>
-                                    <h4><a href="details.jsp">Laptop Gaming MSI Katana GF66 11UC 676VN</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-wrapper">
-                        <div class="product-img">
-                            <a href="details.jsp">
-                                <img src="assets/img/product/ghe.jpeg" alt="">
-                            </a>
-                            <div class="product-action">
-                                <a class="action-plus-2" title="Thêm vào giỏ hàng" href="#">
-                                    <i class=" ti-shopping-cart"></i>
-                                </a>
-                                <a class="action-cart-2" title="Danh sách yêu thích" href="#">
-                                    <i class=" ti-heart"></i>
-                                </a>
-                                <a class="action-reload" title="Xem lướt qua" data-toggle="modal"
-                                   data-target="#exampleModal" href="#">
-                                    <i class=" ti-zoom-in"></i>
-                                </a>
-                            </div>
-                            <div class="product-content-wrapper-2">
-                                <div class="product-title-price-2 text-center">
-                                    <span>Giá:3,690,000d</span>
-                                    <h4><a href="details.jsp">Ghế chơi game Warrior Raider Series – WGC206 Plus
-                                        White/Pink</a></h4>
                                 </div>
                             </div>
                         </div>
