@@ -3,7 +3,7 @@
  *
  */
 
-package com.example.webpagejsp.control.admin;
+package com.example.webpagejsp.control.admin.auth;
 
 import com.example.webpagejsp.dao.admin.AdminDao;
 import com.example.webpagejsp.entity.Admin;

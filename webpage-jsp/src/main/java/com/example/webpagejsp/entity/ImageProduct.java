@@ -7,12 +7,12 @@ package com.example.webpagejsp.entity;
 
 public class ImageProduct {
     String productID;
-    String imageProduct;
+    String imageProductID;
     String urlImage;
 
     public ImageProduct(String productID, String imageProduct, String urlImage) {
         this.productID = productID;
-        this.imageProduct = imageProduct;
+        this.imageProductID = imageProduct;
         this.urlImage = urlImage;
     }
 
@@ -20,7 +20,7 @@ public class ImageProduct {
     public String toString() {
         return "ImageProduct{" +
                 "productID=" + productID +
-                ", imageProduct='" + imageProduct + '\'' +
+                ", imageProduct='" + imageProductID + '\'' +
                 ", urlImage='" + urlImage + '\'' +
                 '}';
     }
@@ -34,11 +34,11 @@ public class ImageProduct {
     }
 
     public String getImageProduct() {
-        return imageProduct;
+        return imageProductID;
     }
 
     public void setImageProduct(String imageProduct) {
-        this.imageProduct = imageProduct;
+        this.imageProductID = imageProduct;
     }
 
     public String getUrlImage() {

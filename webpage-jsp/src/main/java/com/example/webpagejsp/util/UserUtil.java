@@ -30,7 +30,7 @@ public class UserUtil {
 
     public static void main(String[] args) {
         UserUtil ust = new UserUtil();
-        System.out.println(ust.generateId());
+        System.out.println("PT"+ust.generateId());
         ;
     }
 

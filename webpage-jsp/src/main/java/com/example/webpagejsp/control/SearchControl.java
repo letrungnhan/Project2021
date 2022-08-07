@@ -5,7 +5,7 @@
 
 package com.example.webpagejsp.control;
 
-import com.example.webpagejsp.dao.ProductDao;
+import com.example.webpagejsp.dao.web.ProductDao;
 import com.example.webpagejsp.entity.Product;
 
 import javax.servlet.*;

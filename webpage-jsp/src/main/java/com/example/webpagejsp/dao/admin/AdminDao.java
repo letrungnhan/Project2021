@@ -10,6 +10,7 @@ import com.example.webpagejsp.entity.Admin;
 import com.example.webpagejsp.entity.AdminProduct;
 import com.example.webpagejsp.entity.ImageProduct;
 import com.example.webpagejsp.services.AdminServices;
+import com.example.webpagejsp.util.UserUtil;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -59,10 +60,31 @@ public class AdminDao implements AdminServices {
     }
 
     @Override
-    public AdminProduct createProduct(AdminProduct product, ImageProduct imageProduct) {
-        return null;
-    }
+    public void createProduct(AdminProduct product) {
+        String query = "INSERT INTO dbo.PRODUCT (P_ID, P_NAME,P_DESC,SKU,CATEGORY_ID,INVENTORY_ID,PRICE,DISCOUNT_ID)\n" +
+                " values (?,?,?,?,?,?,?,?)";
 
+        try {
+            UserUtil userUtil = new UserUtil();
+            String productID = "PT" + userUtil.generateId();
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, productID);
+            ps.setString(2, product.getProductName());
+            ps.setString(3, product.getProductDesc());
+            ps.setString(4, product.getSKU());
+            ps.setString(5, product.getCategoryID());
+            ps.setString(6, product.getInventoryID());
+            ps.setDouble(7, product.getPrice());
+            ps.setString(8, product.getDiscountID());
+            ps.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+    }
 
     public List<AdminProduct> getAllProduct() {
         List<AdminProduct> list = new ArrayList<>();
@@ -119,6 +141,11 @@ public class AdminDao implements AdminServices {
         return null;
     }
 
+    public List<ImageProduct> getAllProductImage() {
+        List<ImageProduct> imageProduct = new ArrayList<>();
+
+        return imageProduct;
+    }
 
     @Override
     public Admin updateProduct(String username, String password) {
@@ -132,7 +159,6 @@ public class AdminDao implements AdminServices {
 
     public static void main(String[] args) throws Exception {
         AdminDao adminDao = new AdminDao();
-        List<AdminProduct> admin = adminDao.pagingAdmin(1);
-        System.out.println(admin);
+        adminDao.createProduct(new AdminProduct("b", "c", "CG006", "IT164", 100000, "DC045"));
     }
 }

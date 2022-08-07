@@ -1,6 +1,6 @@
 package com.example.webpagejsp.control;
 
-import com.example.webpagejsp.dao.UserDao;
+import com.example.webpagejsp.dao.web.UserDao;
 import com.example.webpagejsp.entity.User;
 
 import javax.servlet.*;

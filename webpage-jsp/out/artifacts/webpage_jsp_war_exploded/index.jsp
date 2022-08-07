@@ -1724,8 +1724,9 @@
                     <div class="row">
                         <div class="col-lg-7 col-md-12 col-12">
                             <div class="latest-product-img">
-                                <img class="animated"
-                                     src="<%=request.getContextPath()%>/assets/img/banner/nitro5 (1).png" alt="image">
+                                <img class="Sirv animated"
+                                     data-src="https://tmajawat.sirv.com/quanlygear/banner-index/banner-laptop.jpeg"
+                                     alt=""/>
                             </div>
                         </div>
                         <div class="col-lg-5 col-md-12 col-12">

@@ -127,7 +127,7 @@
                         <div class="product-categories">
                             <h5 class="pd-sub-title">Thể loại</h5>
                             <ul>
-                                <jsp:useBean id="category" class="com.example.webpagejsp.dao.ProductDao"
+                                <jsp:useBean id="category" class="com.example.webpagejsp.dao.web.ProductDao"
                                              scope="request"/>
                                 <c:forEach items="${category.productCategory}" var="category">
                                     <li>

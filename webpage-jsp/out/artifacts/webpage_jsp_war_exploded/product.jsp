@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--<jsp:useBean id="listProduct" class="com.example.webpagejsp.dao.ProductDao" scope="request"/>--%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%--<jsp:useBean id="listProduct" class="com.example.webpagejsp.dao.web.ProductDao" scope="request"/>--%>
 
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -42,7 +43,7 @@
                             <h3 class="sidebar-widget">Danh mục sản phẩm</h3>
                             <div class="widget-categories">
                                 <ul>
-                                    <jsp:useBean id="categoryID" class="com.example.webpagejsp.dao.ProductDao"
+                                    <jsp:useBean id="categoryID" class="com.example.webpagejsp.dao.web.ProductDao"
                                                  scope="request"/>
                                     <c:forEach items="${categoryID.productCategory}" var="object">
                                         <li class="list-group-item text-white ${tag == object.categoryID ? "active bg-warning":""}">
@@ -113,7 +114,7 @@
                         <div class="sidebar-widget">
                             <h3 class="sidebar-widget">Sản phẩm bán chạy nhất tháng</h3>
                             <div class="best-seller">
-                                <jsp:useBean id="hotProduct" class="com.example.webpagejsp.dao.ProductDao">
+                                <jsp:useBean id="hotProduct" class="com.example.webpagejsp.dao.web.ProductDao">
                                     <c:forEach var="hotProduct" items="${hotProduct.listProductHot}">
                                         <div class="single-best-seller">
                                             <div class="best-seller-img">
@@ -192,7 +193,11 @@
                                                             <a href="details?pid=${items.id}">
                                                                     ${items.name}</a></h4>
                                                         <div class="product-price">
-                                                            <span>${items.price}</span>
+
+                                                            <span>
+                                                                <fmt:setLocale value="vi_Vn"/>
+                                                                <fmt:formatNumber value=" ${items.price}"/>
+                                                            </span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1626,11 +1631,14 @@
                     </div>
                     <div class="paginations text-center mt-20">
                         <ul>
+
                             <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li class="active"><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                            <c:forEach begin="1" end="${endPage}" var="i">
+                                <li class="${tagPage == i ? "active":""}"><a
+                                        href="<%=request.getContextPath()%>/product?index=${i}">${i}</a></li>
+                            </c:forEach>
+                            <li class=""><a href="#"><i class="fa fa-angle-right"></i></a></li>
+
                         </ul>
                     </div>
                 </div>
@@ -1644,16 +1652,16 @@
 
 </div>
 <!-- all js here -->
-<script src="pixel/assets/js/vendor/jquery-1.12.0.min.js"></script>
-<script src="pixel/assets/js/popper.js"></script>
-<script src="pixel/assets/js/bootstrap.min.js"></script>
-<script src="pixel/assets/js/isotope.pkgd.min.js"></script>
-<script src="pixel/assets/js/imagesloaded.pkgd.min.js"></script>
-<script src="pixel/assets/js/jquery.counterup.min.js"></script>
-<script src="pixel/assets/js/waypoints.min.js"></script>
-<script src="pixel/assets/js/ajax-mail.js"></script>
-<script src="pixel/assets/js/owl.carousel.min.js"></script>
-<script src="pixel/assets/js/plugins.js"></script>
-<script src="pixel/assets/js/main.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/vendor/jquery-1.12.0.min.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/popper.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/bootstrap.min.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/isotope.pkgd.min.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/jquery.counterup.min.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/waypoints.min.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/ajax-mail.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/owl.carousel.min.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/plugins.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/main.js"></script>
 </body>
 </html>

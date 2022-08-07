@@ -1,7 +1,7 @@
 
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<jsp:useBean id="listProduct" class="com.example.webpagejsp.dao.ProductDao" scope="request"/>
+<jsp:useBean id="listProduct" class="com.example.webpagejsp.dao.web.ProductDao" scope="request"/>
 
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -65,7 +65,7 @@
                             <h3 class="sidebar-widget">Danh mục sản phẩm</h3>
                             <div class="widget-categories">
                                 <ul>
-                                    <jsp:useBean id="categoryID" class="com.example.webpagejsp.dao.ProductDao"
+                                    <jsp:useBean id="categoryID" class="com.example.webpagejsp.dao.web.ProductDao"
                                                  scope="request"/>
                                     <c:forEach items="${categoryID.productCategory}" var="object">
                                         <li><a href="category?categoryId=${object.categoryID}"><i
@@ -135,7 +135,7 @@
                         <div class="sidebar-widget">
                             <h3 class="sidebar-widget">Sản phẩm bán chạy nhất tháng</h3>
                             <div class="best-seller">
-                                <jsp:useBean id="hotProduct" class="com.example.webpagejsp.dao.ProductDao">
+                                <jsp:useBean id="hotProduct" class="com.example.webpagejsp.dao.web.ProductDao">
                                     <c:forEach var="hotProduct" items="${hotProduct.listProductHot}">
                                         <div class="single-best-seller">
                                             <div class="best-seller-img">

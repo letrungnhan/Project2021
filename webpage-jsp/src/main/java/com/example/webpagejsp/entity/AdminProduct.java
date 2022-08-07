@@ -18,6 +18,15 @@ public class AdminProduct {
     private String discountID;
     private ImageProduct imageProduct;
 
+    public AdminProduct(String productName, String productDesc, String categoryID, String inventoryID, double price, String discountID) {
+        this.productName = productName;
+        this.productDesc = productDesc;
+        this.categoryID = categoryID;
+        this.inventoryID = inventoryID;
+        this.price = price;
+        this.discountID = discountID;
+    }
+
     public AdminProduct(String productId, String productName, String productDesc, String SKU, String categoryID, String inventoryID, double price, String discountID) {
         this.productId = productId;
         this.productName = productName;
@@ -127,4 +136,5 @@ public class AdminProduct {
                 ", imageProduct=" + imageProduct +
                 '}';
     }
+
 }

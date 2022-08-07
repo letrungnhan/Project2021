@@ -1,4 +1,9 @@
-package com.example.webpagejsp.dao;
+/*
+ * Copyright (c) 2022.
+ *
+ */
+
+package com.example.webpagejsp.dao.web;
 
 import com.example.webpagejsp.context.DBContext;
 import com.example.webpagejsp.entity.User;
@@ -10,7 +15,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 
 public class UserDao {
@@ -124,7 +128,6 @@ public class UserDao {
         }
 
     }
-
 
     public static void main(String[] args) throws Exception {
         UserDao accountDAO = new UserDao();

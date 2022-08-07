@@ -1,6 +1,6 @@
 package com.example.webpagejsp.control;
 
-import com.example.webpagejsp.dao.ProductDao;
+import com.example.webpagejsp.dao.web.ProductDao;
 import com.example.webpagejsp.entity.Product;
 
 import javax.servlet.*;
@@ -13,13 +13,27 @@ import java.util.List;
 
 public class ProductControl extends HttpServlet {
     private static final long serialVersionUID = 1L;
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String indexPage = request.getParameter("index");
+        if (indexPage == null) {
+            indexPage = "1";
+        }
+        int index = Integer.parseInt(indexPage);
         ProductDao pDao = new ProductDao();
-        List<Product> listProduct = pDao.getListProduct();
+        List<Product> listProduct = pDao.pagingProduct(index);
+        int count = pDao.getTotalCount();
+        int endPage = count / 10;
+        if (count % 10 != 0) {
+            endPage++;
+        }
+        request.getSession().setAttribute("endPage", endPage);
         request.getSession().setAttribute("listProduct", listProduct);
+        request.getSession().setAttribute("tagPage", indexPage);
         request.getServletContext().getRequestDispatcher("/product.jsp").forward(request, response);
     }
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doGet(request, response);

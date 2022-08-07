@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/style.css">
     <link rel="stylesheet" href="<%=request.getContextPath()%>/assets/css/responsive.css">
     <script src="<%=request.getContextPath()%>/assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://scripts.sirv.com/sirv.js"></script>
+
 </head>
 
 

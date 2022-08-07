@@ -1,5 +1,10 @@
 
-package com.example.webpagejsp.dao;
+/*
+ * Copyright (c) 2022.
+ *
+ */
+
+package com.example.webpagejsp.dao.web;
 
 
 import com.example.webpagejsp.context.DBContext;
