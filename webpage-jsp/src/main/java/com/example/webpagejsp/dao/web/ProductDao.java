@@ -3,10 +3,7 @@ package com.example.webpagejsp.dao;
 
 
 import com.example.webpagejsp.context.DBContext;
-import com.example.webpagejsp.entity.Category;
-import com.example.webpagejsp.entity.Discount;
-import com.example.webpagejsp.entity.Inventory;
-import com.example.webpagejsp.entity.Product;
+import com.example.webpagejsp.entity.*;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -225,6 +222,33 @@ public class ProductDao {
             }
             return list;
         } catch (Exception e) {
+        }
+        return null;
+    }
+
+    public List<Product> pagingProduct(int index) {
+        List<Product> list = new ArrayList<>();
+        String query = "SELECT P_ID, P_NAME, P_DESC, PRICE , URL_IMG , CATEGORY_ID\n" +
+                "FROM\n" +
+                "PRODUCT INNER JOIN IMAGES ON PRODUCT.P_ID = IMAGES.PRODUCT_ID\n" +
+                "ORDER BY PRODUCT.P_ID\n" +
+                " OFFSET ? ROWS FETCH NEXT 10 ROWS ONLY";
+        try {
+            conn = new DBContext().getConnection();//mo ket noi voi sql
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, (index - 1) * 10);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                list.add(new Product(rs.getString(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getDouble(4),
+                        rs.getString(5)
+                ));
+            }
+            return list;
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return null;
     }
