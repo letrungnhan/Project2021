@@ -13,7 +13,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 
 @WebServlet(name = "ListProduct", value = "/listProduct")
-public class ListProduct extends HttpServlet {
+public class ListProductControl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ProductDao productDao = new ProductDao();

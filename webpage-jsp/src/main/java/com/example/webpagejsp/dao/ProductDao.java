@@ -4,6 +4,8 @@ package com.example.webpagejsp.dao;
 
 import com.example.webpagejsp.context.DBContext;
 import com.example.webpagejsp.entity.Category;
+import com.example.webpagejsp.entity.Discount;
+import com.example.webpagejsp.entity.Inventory;
 import com.example.webpagejsp.entity.Product;
 
 import java.sql.Connection;
@@ -172,15 +174,65 @@ public class ProductDao {
         return null;
     }
 
+    public int getTotalCount() {
+        String query = "SELECT COUNT(*) FROM PRODUCT";
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return rs.getInt(1);
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    public List<Inventory> getInventoryList() {
+        List<Inventory> list = new ArrayList<>();
+        String query = "select * from INVENTORY";
+        try {
+            conn = new DBContext().getConnection();//mo ket noi voi sql
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                list.add(new Inventory(rs.getString(1),
+                        rs.getInt(2)
+                ));
+            }
+            return list;
+        } catch (Exception e) {
+        }
+        return null;
+    }
+
+    public List<Discount> getDiscountList() {
+        List<Discount> list = new ArrayList<>();
+        String query = "select * from DISCOUNT";
+        try {
+            conn = new DBContext().getConnection();//mo ket noi voi sql
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                list.add(new Discount(rs.getString(1),
+                        rs.getString(2),
+                        rs.getFloat(3),
+                        rs.getString(4)));
+
+            }
+            return list;
+        } catch (Exception e) {
+        }
+        return null;
+    }
+
     public static void main(String[] args) {
         ProductDao dao = new ProductDao();
-
-        List<Product> list = dao.searchByName("ghế");
-
-
-        for (Product p : list) {
-            System.out.println(p);
-        }
+        List<Product> list = dao.getListProduct();
+        System.out.println(list);
 
 
     }

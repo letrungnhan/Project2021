@@ -3,7 +3,7 @@
  *
  */
 
-package com.example.webpagejsp.dao;
+package com.example.webpagejsp.dao.admin;
 
 import com.example.webpagejsp.context.DBContext;
 import com.example.webpagejsp.entity.Admin;
@@ -90,6 +90,34 @@ public class AdminDao implements AdminServices {
         return null;
     }
 
+    public List<AdminProduct> pagingAdmin(int index) {
+        List<AdminProduct> list = new ArrayList<>();
+        String query = "SELECT * FROM PRODUCT\n" +
+                "ORDER BY PRODUCT.P_ID\n" +
+                "OFFSET ? ROWS FETCH NEXT 10 ROWS ONLY";
+        try {
+            conn = new DBContext().getConnection();//mo ket noi voi sql
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, (index - 1) * 10);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                AdminProduct a = new AdminProduct(
+                        rs.getString("P_ID"),
+                        rs.getString("P_NAME"),
+                        rs.getString("P_DESC"),
+                        rs.getString("SKU"),
+                        rs.getString("CATEGORY_ID"),
+                        rs.getString("INVENTORY_ID"),
+                        rs.getDouble("PRICE"),
+                        rs.getString("DISCOUNT_ID"));
+                list.add(a);
+            }
+            return list;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
 
     @Override
@@ -104,7 +132,7 @@ public class AdminDao implements AdminServices {
 
     public static void main(String[] args) throws Exception {
         AdminDao adminDao = new AdminDao();
-        List<AdminProduct> admin = adminDao.getAllProduct();
+        List<AdminProduct> admin = adminDao.pagingAdmin(1);
         System.out.println(admin);
     }
 }

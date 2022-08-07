@@ -9,7 +9,8 @@
 <div class="wrapper">
     <!-- header start -->
     <jsp:include page="header.jsp"/>
-    <div class="breadcrumb-area pt-230 pb-126" style="background-image: url(pixel/assets/img/banner/banner-4.png)">
+    <div class="breadcrumb-area pt-230 pb-126"
+         style="background-image: url(<%=request.getContextPath()%>/img/banner/banner-4.png)">
         <div class="container-fluid">
             <div class="breadcrumb-content text-center">
                 <h2>Shop Page</h2>
@@ -31,7 +32,8 @@
                             <h3 class="sidebar-widget">Tìm kiếm</h3>
                             <div class="sidebar-search">
                                 <form action="search" method="get">
-                                    <input value="${textSearch}" name="text" type="text" placeholder="Tìm kiếm sản phầm...">
+                                    <input value="${textSearch}" name="text" type="text"
+                                           placeholder="Tìm kiếm sản phầm...">
                                     <button type="submit"><i class="ti-search"></i></button>
                                 </form>
                             </div>

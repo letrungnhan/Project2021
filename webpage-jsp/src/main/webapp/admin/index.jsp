@@ -1,9 +1,4 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%--
-  ~ Copyright (c) 2022.
-  ~
-  --%>
-
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -17,10 +12,9 @@
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 <body class="sb-nav-fixed">
-<jsp:include page="../nav-admin.jsp"/>
+<jsp:include page="nav-admin.jsp"/>
 <div id="layoutSidenav">
-    <jsp:include page="left-menu.jsp"/>
-
+    <jsp:include page="teamplates/left-menu.jsp"/>
     <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid px-4">
@@ -34,7 +28,7 @@
                             <div class="card-body">Thêm sản phẩm</div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
                                 <a class="small text-white stretched-link"
-                                   href="<%=request.getContextPath()%>/admin/manager-product.jsp">Xem chi tiết</a>
+                                   href="<%=request.getContextPath()%>/adminProduct">Xem chi tiết</a>
                                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                             </div>
                         </div>

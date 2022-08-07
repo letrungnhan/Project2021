@@ -1,4 +1,9 @@
-package com.example.webpagejsp.control;
+/*
+ * Copyright (c) 2022.
+ *
+ */
+
+package com.example.webpagejsp.control.admin;
 
 
 import javax.servlet.*;

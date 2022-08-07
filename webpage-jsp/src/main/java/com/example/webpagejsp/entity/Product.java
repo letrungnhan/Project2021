@@ -10,7 +10,6 @@ public class Product implements Serializable {
     private double price;
     private String image;
 
-
     public Product() {
     }
 

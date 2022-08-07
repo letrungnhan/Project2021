@@ -1,15 +1,17 @@
-package com.example.webpagejsp.control;
+/*
+ * Copyright (c) 2022.
+ *
+ */
 
-import com.example.webpagejsp.context.DBContext;
-import com.example.webpagejsp.dao.AdminDao;
+package com.example.webpagejsp.control.admin;
+
+import com.example.webpagejsp.dao.admin.AdminDao;
 import com.example.webpagejsp.entity.Admin;
-import com.example.webpagejsp.services.AdminServices;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.sql.Connection;
 
 @WebServlet(name = "AdminLoginControl", value = "/adminLoginControl")
 public class AdminLoginControl extends HttpServlet {

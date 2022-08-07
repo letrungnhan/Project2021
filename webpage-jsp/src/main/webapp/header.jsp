@@ -41,7 +41,7 @@
 
                                         <li><a href="#">Cửa Hàng</a>
                                             <ul>
-                                                <li><a href="product">Cửa Hàng</a></li>
+                                                <li><a href="<%=request.getContextPath()%>/product">Cửa Hàng</a></li>
                                                 <li><a href="details.jsp">Chi tiết sản phẩm</a></li>
 
                                             </ul>

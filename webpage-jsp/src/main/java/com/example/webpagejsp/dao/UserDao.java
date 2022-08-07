@@ -2,6 +2,7 @@ package com.example.webpagejsp.dao;
 
 import com.example.webpagejsp.context.DBContext;
 import com.example.webpagejsp.entity.User;
+import com.example.webpagejsp.util.UserUtil;
 
 
 import java.sql.Connection;
@@ -101,16 +102,16 @@ public class UserDao {
         return null;
     }
 
-    public void register(String username,String password,String email,String address,int phoneNumber) {
-
+    public void register(String username, String password, String email, String address, int phoneNumber) {
         String query = "INSERT INTO USERS (ID, USERNAME,PASS_WORD , ROLE_ID, EMAIL,ADDRESSS,TELEPHONE)\n" +
                 "values (?,?,?,'R001',?,?, ?)";
 
         try {
-            Random random = new Random();
+            UserUtil userUtil = new UserUtil();
+            String userId = "US" + userUtil.generateId();
             connection = new DBContext().getConnection();
             ps = connection.prepareStatement(query);
-            ps.setString(1, "US"+ random.nextInt(900)+100);
+            ps.setString(1, userId);
             ps.setString(2, username);
             ps.setString(3, password);
             ps.setString(4, email);
@@ -125,10 +126,9 @@ public class UserDao {
     }
 
 
-//    public static void main(String[] args) throws Exception {
-//        UserDao accountDAO = new UserDao();
-//        User usersList = accountDAO.checkLogin("NHAN789", "789");
-//        accountDAO.register("testmain1", "12345", "testMain@gmail.com", "Dĩ An", 1234567);
-//
-//    }
+    public static void main(String[] args) throws Exception {
+        UserDao accountDAO = new UserDao();
+        accountDAO.register("testmain5", "12345", "testMain@gmail.com", "Dĩ An", 1234567);
+
+    }
 }
