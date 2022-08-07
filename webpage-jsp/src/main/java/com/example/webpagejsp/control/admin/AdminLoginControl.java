@@ -20,7 +20,7 @@ public class AdminLoginControl extends HttpServlet {
         System.out.println(username);
         System.out.println(password);
         try {
-            AdminDao adminDao = new AdminDao(new DBContext().getConnection());
+            AdminDao adminDao = new AdminDao();
             Admin admin = adminDao.loginAdmin(username, password);
             if (admin != null && username.equals("ADMIN") && password.equals("ADMIN")) {
                 response.sendRedirect("adminHome");
