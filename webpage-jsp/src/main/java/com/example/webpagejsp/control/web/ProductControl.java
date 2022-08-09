@@ -23,7 +23,7 @@ public class ProductControl extends HttpServlet {
         int index = Integer.parseInt(indexPage);
         ProductDao pDao = new ProductDao();
         List<Product> listProduct = pDao.pagingProduct(index);
-        int count = pDao.getTotalCount();
+        int count = pDao.getTotalCountProduct();
         int endPage = count / 10;
         if (count % 10 != 0) {
             endPage++;

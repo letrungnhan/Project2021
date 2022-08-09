@@ -21,7 +21,7 @@ public class CategoryControl extends HttpServlet {
         int index = Integer.parseInt(indexPage);
         ProductDao productDao = new ProductDao();
         List<Product> listProduct = productDao.getProductByCategoryID(categoryId);
-        int count = productDao.getTotalCount();
+        int count = productDao.getTotalCountProduct();
         int endPage = count / 10;
         if (count % 10 != 0) {
             endPage++;
