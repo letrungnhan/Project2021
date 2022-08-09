@@ -20,7 +20,7 @@
 <jsp:include page="nav-admin.jsp"/>
 <div id="layoutSidenav">
     <jsp:include page="teamplates/left-menu.jsp"/>
-    <jsp:include page="/admin/CRUD/product-create.jsp"/>
+    <jsp:include page="/admin/CRUD/user-create.jsp"/>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>

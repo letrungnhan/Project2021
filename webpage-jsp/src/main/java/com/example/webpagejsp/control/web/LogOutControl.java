@@ -3,7 +3,7 @@
  *
  */
 
-package com.example.webpagejsp.control;
+package com.example.webpagejsp.control.web;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

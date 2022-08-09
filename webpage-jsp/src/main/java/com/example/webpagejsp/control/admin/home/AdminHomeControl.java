@@ -3,7 +3,7 @@
  *
  */
 
-package com.example.webpagejsp.control.admin;
+package com.example.webpagejsp.control.admin.home;
 
 
 import javax.servlet.*;

@@ -1,10 +1,5 @@
-/*
- * Copyright (c) 2022.
- *
- */
 
 package com.example.webpagejsp.dao.web;
-
 import com.example.webpagejsp.context.DBContext;
 import com.example.webpagejsp.entity.User;
 import com.example.webpagejsp.util.UserUtil;
@@ -108,8 +103,7 @@ public class UserDao {
 
     public void register(String username, String password, String email, String address, int phoneNumber) {
         String query = "INSERT INTO USERS (ID, USERNAME,PASS_WORD , ROLE_ID, EMAIL,ADDRESSS,TELEPHONE)\n" +
-                "values (?,?,?,'R001',?,?, ?)";
-
+                "values (?,?,?,'R002',?,?, ?)";
         try {
             UserUtil userUtil = new UserUtil();
             String userId = "US" + userUtil.generateId();

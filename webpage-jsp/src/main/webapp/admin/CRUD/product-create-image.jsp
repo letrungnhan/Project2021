@@ -327,7 +327,7 @@
                             </div>
                             <div class="col-xs-6">
                                 <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i
-                                        class="material-icons">&#xE147;</i> <span>Add New Product</span></a>
+                                        class="material-icons">&#xE147;</i> <span>Add New Product Image</span></a>
                                 <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i
                                         class="material-icons">&#xE15C;</i> <span>Delete</span></a>
                             </div>
@@ -342,14 +342,16 @@
 									<label for="selectAll"></label>
 								</span>
                             </th>
-                            <th>IMAGE_ID</th>
                             <th>PRODUCT_NAME</th>
+                            <th>IMAGE_ID</th>
                             <th>PRODUCT_ID</th>
                             <th>URL_IMAGE</th>
+                            <th>OPTIONS</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <c:forEach items="${listPage}" var="object">
+
+                        <c:forEach items="${listPageImage}" var="object">
                             <tr>
                                 <td>
 								<span class="custom-checkbox">
@@ -357,9 +359,14 @@
 									<label for="checkbox1"></label>
 								</span>
                                 </td>
-                                <td>${object.productId}</td>
                                 <td>${object.productName}</td>
-                                <td>${object.productDesc}</td>
+                                <td>${object.imageProductID}</td>
+                                <td>${object.productID}</td>
+                                <td>
+
+                                    <img src="${object.urlImage}" style="width: 50px" height="50px">
+
+                                </td>
                                 <td>
                                     <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
                                             class="material-icons"
@@ -376,7 +383,7 @@
                         <ul class="pagination">
                             <c:forEach begin="1" end="${endPage}" var="i">
                                 <li class="page-item ${tag == i ? "active":""}"><a
-                                        href="<%=request.getContextPath()%>/adminProduct?index=${i}"
+                                        href="<%=request.getContextPath()%>/createImagePage?index=${i}"
                                         class="page-link">${i}</a></li>
                             </c:forEach>
                         </ul>
@@ -388,72 +395,72 @@
         <div id="addEmployeeModal" class="modal fade">
             <div class="modal-dialog d-flex">
                 <div class="modal-content">
-                    <form action="<%=request.getContextPath()%>/createProduct" method="post">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Add Product</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <%--                    <form action="<%=request.getContextPath()%>/createProduct" method="post">--%>
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add Product</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input name="name" type="text" class="form-control" required>
                         </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Name</label>
-                                <input name="name" type="text" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Description</label>
-                                <textarea name="description" type="text" class="form-control" required> </textarea>
-                            </div>
-                            <%--                            <div class="form-group">--%>
-                            <%--                                <label>SKUD</label>--%>
-                            <%--                                <input name="SKU" type="text" class="form-control" required/>--%>
-                            <%--                            </div>--%>
-                            <div class="form-group">
-                                <label>Category</label>
-                                <select name="category" class="form-control" aria-label="Default select example">
-                                    <jsp:useBean id="categoryID" class="com.example.webpagejsp.dao.web.ProductDao"
-                                                 scope="request"/>
-                                    <c:forEach items="${categoryID.productCategory}" var="object">
-                                        <option value="${object.categoryID}">
-                                                ${object.categoryName}
-                                        </option>
-                                    </c:forEach>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Inventory</label>
-                                <select name="inventory-id" class="form-control" aria-label="Default select example">
-                                    <jsp:useBean id="inventoryID" class="com.example.webpagejsp.dao.web.ProductDao"
-                                                 scope="request"/>
-                                    <c:forEach items="${inventoryID.inventoryList}" var="object">
-                                        <option value="${object.inventoryID}">
-                                                ${object.inventoryID}
-                                        </option>
-                                    </c:forEach>
-                                </select>
-                            </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea name="description" type="text" class="form-control" required> </textarea>
+                        </div>
+                        <%--                            <div class="form-group">--%>
+                        <%--                                <label>SKUD</label>--%>
+                        <%--                                <input name="SKU" type="text" class="form-control" required/>--%>
+                        <%--                            </div>--%>
+                        <div class="form-group">
+                            <label>Category</label>
+                            <select name="category" class="form-control" aria-label="Default select example">
+                                <jsp:useBean id="categoryID" class="com.example.webpagejsp.dao.web.ProductDao"
+                                             scope="request"/>
+                                <c:forEach items="${categoryID.productCategory}" var="object">
+                                    <option value="${object.categoryID}">
+                                            ${object.categoryName}
+                                    </option>
+                                </c:forEach>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Inventory</label>
+                            <select name="inventory-id" class="form-control" aria-label="Default select example">
+                                <jsp:useBean id="inventoryID" class="com.example.webpagejsp.dao.web.ProductDao"
+                                             scope="request"/>
+                                <c:forEach items="${inventoryID.inventoryList}" var="object">
+                                    <option value="${object.inventoryID}">
+                                            ${object.inventoryID}
+                                    </option>
+                                </c:forEach>
+                            </select>
+                        </div>
 
-                            <div class="form-group d-flex justify-content-between">
-                                <div class="ml-5" style="width: 47%">
-                                    <label>Price</label>
-                                    <input name="price" type="number" class="form-control" required>
-                                </div>
-                                <div class="" style="width: 47%">
-                                    <label>Discount</label>
-                                    <select name="discount" class="form-control" aria-label="Default select example">
-                                        <jsp:useBean id="discount" class="com.example.webpagejsp.dao.web.ProductDao"
-                                                     scope="request"/>
-                                        <c:forEach items="${discount.discountList}" var="object">
-                                            <option value="${object.discountID}">
-                                                    ${object.discountName}
-                                            </option>
-                                        </c:forEach>
-                                    </select>
-                                </div>
+                        <div class="form-group d-flex justify-content-between">
+                            <div class="ml-5" style="width: 47%">
+                                <label>Price</label>
+                                <input name="price" type="number" class="form-control" required>
+                            </div>
+                            <div class="" style="width: 47%">
+                                <label>Discount</label>
+                                <select name="discount" class="form-control" aria-label="Default select example">
+                                    <jsp:useBean id="discount" class="com.example.webpagejsp.dao.web.ProductDao"
+                                                 scope="request"/>
+                                    <c:forEach items="${discount.discountList}" var="object">
+                                        <option value="${object.discountID}">
+                                                ${object.discountName}
+                                        </option>
+                                    </c:forEach>
+                                </select>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-success" value="Add">
-                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                        <input type="submit" class="btn btn-success" value="Add">
+                    </div>
                     </form>
                 </div>
 

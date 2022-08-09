@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <div id="layoutSidenav_nav">
     <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
@@ -29,7 +30,8 @@
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="login2.jsp">Login</a>
                                 <a class="nav-link" href="register.html">Register</a>
-                                <a class="nav-link" href="password.html">Forgot Password</a>
+                                <a class="nav-link" href="<%=request.getContextPath()%>/manageUserControl">Manage
+                                    User</a>
                             </nav>
                         </div>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
@@ -42,8 +44,11 @@
                              data-bs-parent="#sidenavAccordionPages">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link"
-                                   href="<%=request.getContextPath()%>/admin/manager-product.jsp">LisProduct</a>
-                                <a class="nav-link" href="register.html">Update Image Product</a>
+                                   href="<%=request.getContextPath()%>/adminProduct">List Product</a>
+                                <a class="nav-link"
+                                   href="<%=request.getContextPath()%>/createImagePage">Update
+                                    Image
+                                    Product</a>
 
                             </nav>
                         </div>
@@ -75,8 +80,14 @@
             </div>
         </div>
         <div class="sb-sidenav-footer">
+
+
+            <jsp:useBean id="adminName" class="com.example.webpagejsp.dao.admin.AdminDao"/>
             <div class="small">Logged in as:</div>
-            Start Bootstrap
+            <c:if test="${adminName.loginAdmin('ADMIN','ADMIN') ne null}">
+                ADMIN
+            </c:if>
+
         </div>
     </nav>
 </div>

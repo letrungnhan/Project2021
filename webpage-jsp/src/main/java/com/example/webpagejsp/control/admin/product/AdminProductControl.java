@@ -26,8 +26,8 @@ public class AdminProductControl extends HttpServlet {
         int index = Integer.parseInt(indexPage);
         AdminDao adminDao = new AdminDao();
         ProductDao productDao = new ProductDao();
-        List<AdminProduct> listPage = adminDao.pagingAdmin(index);
-        int count = productDao.getTotalCount();
+        List<AdminProduct> listPage = adminDao.pagingAdminProduct(index);
+        int count = productDao.getTotalCountProduct();
         int endPage = count / 10;
         if (count % 10 != 0) {
             endPage++;

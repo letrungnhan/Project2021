@@ -9,6 +9,7 @@ import com.example.webpagejsp.context.DBContext;
 import com.example.webpagejsp.entity.Admin;
 import com.example.webpagejsp.entity.AdminProduct;
 import com.example.webpagejsp.entity.ImageProduct;
+import com.example.webpagejsp.entity.User;
 import com.example.webpagejsp.services.AdminServices;
 import com.example.webpagejsp.util.UserUtil;
 
@@ -23,7 +24,7 @@ public class AdminDao implements AdminServices {
     PreparedStatement ps = null;
     ResultSet rs = null;
 
-
+    //Manage User
     @Override
     public Admin loginAdmin(String user, String pass) {
         Admin admin = null;
@@ -59,6 +60,64 @@ public class AdminDao implements AdminServices {
 
     }
 
+    public List<User> pagingManagerUser(int index) {
+        List<User> listUser = new ArrayList<>();
+        try {
+            String query = "SELECT USERS.ID, USERNAME, PASS_WORD , ROLE_ID, EMAIL,ADDRESSS,TELEPHONE, ROLE_NAME, ROLE_DESC\n" +
+                    "from [QUANLYGEAR].[dbo].[USERS] INNER JOIN [QUANLYGEAR].[dbo].[USER_ROLES] ON USERS.ROLE_ID = USER_ROLES.ID\n" +
+                    "ORDER BY USERS.ROLE_ID  OFFSET ? ROWS FETCH NEXT 10 ROWS ONLY";
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, (index - 1) * 10);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                User acc = new User(rs.getString(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getString(6),
+                        rs.getInt(7),
+                        rs.getString(8),
+                        rs.getString(9));
+                listUser.add(acc);
+            }
+            return listUser;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public List<User> getListAccounts() {
+        try {
+            String query = "SELECT USERS.ID, USERNAME, PASS_WORD , ROLE_ID, EMAIL,ADDRESSS,TELEPHONE, ROLE_NAME, ROLE_DESC \n" +
+                    "from [QUANLYGEAR].[dbo].[USERS] INNER JOIN [QUANLYGEAR].[dbo].[USER_ROLES] ON USERS.ROLE_ID = USER_ROLES.ID\n";
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            List<User> list = new ArrayList<>();
+            while (rs.next()) {
+                User acc = new User(rs.getString(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getString(6),
+                        rs.getInt(7),
+                        rs.getString(8),
+                        rs.getString(9));
+                list.add(acc);
+            }
+            return list;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+    //    Manage Product
     @Override
     public void createProduct(AdminProduct product) {
         String query = "INSERT INTO dbo.PRODUCT (P_ID, P_NAME,P_DESC,SKU,CATEGORY_ID,INVENTORY_ID,PRICE,DISCOUNT_ID)\n" +
@@ -112,7 +171,7 @@ public class AdminDao implements AdminServices {
         return null;
     }
 
-    public List<AdminProduct> pagingAdmin(int index) {
+    public List<AdminProduct> pagingAdminProduct(int index) {
         List<AdminProduct> list = new ArrayList<>();
         String query = "SELECT * FROM PRODUCT\n" +
                 "ORDER BY PRODUCT.P_ID\n" +
@@ -141,11 +200,53 @@ public class AdminDao implements AdminServices {
         return null;
     }
 
-    public List<ImageProduct> getAllProductImage() {
-        List<ImageProduct> imageProduct = new ArrayList<>();
+    public List<ImageProduct> pagingAdminProductImage(int index) {
+        List<ImageProduct> listImage = new ArrayList<>();
 
-        return imageProduct;
+        try {
+            String query = "SELECT P_NAME , ID, PRODUCT_ID, URL_IMG FROM PRODUCT INNER JOIN IMAGES ON IMAGES.PRODUCT_ID = PRODUCT.P_ID\n" +
+                    "ORDER BY IMAGES.PRODUCT_ID  OFFSET ? ROWS FETCH NEXT 10 ROWS ONLY\n";
+            conn = new DBContext().getConnection();//mo ket noi voi sql
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, (index - 1) * 10);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                ImageProduct a = new ImageProduct(
+                        rs.getString("P_NAME"),
+                        rs.getString("ID"),
+                        rs.getString("PRODUCT_ID"),
+                        rs.getString("URL_IMG"));
+                listImage.add(a);
+            }
+            return listImage;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
+
+    public List<ImageProduct> getAllProductImage() {
+        List<ImageProduct> list = new ArrayList<>();
+        String query = "SELECT DISTINCT P_NAME , ID, PRODUCT_ID, URL_IMG FROM PRODUCT INNER JOIN IMAGES ON IMAGES.PRODUCT_ID = PRODUCT.P_ID";
+        try {
+            conn = new DBContext().getConnection();//mo ket noi voi sql
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                ImageProduct a = new ImageProduct(
+                        rs.getString("P_NAME"),
+                        rs.getString("ID"),
+                        rs.getString("PRODUCT_ID"),
+                        rs.getString("URL_IMG"));
+                list.add(a);
+            }
+            return list;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 
     @Override
     public Admin updateProduct(String username, String password) {
@@ -153,12 +254,14 @@ public class AdminDao implements AdminServices {
     }
 
     @Override
-    public Admin deleteProduct(String username, String password) {
-        return null;
+    public void deleteProduct(String productID) {
+
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         AdminDao adminDao = new AdminDao();
-        adminDao.createProduct(new AdminProduct("b", "c", "CG006", "IT164", 100000, "DC045"));
+
+
+        System.out.println(adminDao.pagingAdminProductImage(1));
     }
 }

@@ -6,15 +6,16 @@
 <body>
 <div class="wrapper">
     <jsp:include page="header.jsp"/>
-    <div class="breadcrumb-area pt-255 pb-170" style="background-image: url(pixel/assets/img/banner/geomatry.jpg)">
+    <div class="breadcrumb-area pt-255 pb-170"
+         style="background-image: url(<%=request.getContextPath()%>/assets/img/banner/geomatry.jpg)">
         <div class="container-fluid">
             <div class="breadcrumb-content text-center">
                 <h2>product details </h2>
                 <ul>
                     <li>
-                        <a href="index.jsp">home</a>
+                        <a href="home">home</a>
                     </li>
-                    <li>product details</li>
+                    <li>Product Details</li>
                 </ul>
             </div>
         </div>
@@ -36,29 +37,32 @@
                                 </div>
                                 <div class="tab-pane" id="pro-details2">
                                     <div class="easyzoom easyzoom--overlay">
-                                        <a href="pixel/assets/img/product-details/b1.jpg">
+                                        <a href="<%=request.getContextPath()%>/assets/img/product-details/b1.jpg">
                                             <img src="${detail.image}" alt="">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="tab-pane" id="pro-details3">
                                     <div class="easyzoom easyzoom--overlay">
-                                        <a href="pixel/assets/img/product-details/c1.jpg">
-                                            <img src="pixel/assets/img/product-details/c2.jpg" alt="">
+                                        <a href="<%=request.getContextPath()%>/assets/img/product-details/c1.jpg">
+                                            <img src="<%=request.getContextPath()%>/assets/img/product-details/c2.jpg"
+                                                 alt="">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="tab-pane" id="pro-details4">
                                     <div class="easyzoom easyzoom--overlay">
-                                        <a href="pixel/assets/img/product-details/tn1.jpg">
-                                            <img src="pixel/assets/img/product-details/tn2.jpg" alt="">
+                                        <a href="<%=request.getContextPath()%>/assets/img/product-details/tn1.jpg">
+                                            <img src="<%=request.getContextPath()%>/assets/img/product-details/tn2.jpg"
+                                                 alt="">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="tab-pane" id="pro-details5">
                                     <div class="easyzoom easyzoom--overlay">
-                                        <a href="pixel/assets/img/product-details/minipc1.jpg">
-                                            <img src="pixel/assets/img/product-details/minipc2.jpg" alt="">
+                                        <a href="<%=request.getContextPath()%>/assets/img/product-details/minipc1.jpg">
+                                            <img src="<%=request.getContextPath()%>/assets/img/product-details/minipc2.jpg"
+                                                 alt="">
                                         </a>
                                     </div>
                                 </div>
@@ -68,16 +72,17 @@
                                     <img src="${detail.image}" alt="">
                                 </a>
                                 <a href="#pro-details2">
-                                    <img src="pixel/assets/img/product-details/b3.png" alt="">
+                                    <img src="<%=request.getContextPath()%>/assets/img/product-details/b3.png" alt="">
                                 </a>
                                 <a href="#pro-details3">
-                                    <img src="pixel/assets/img/product-details/c3.jpg" alt="">
+                                    <img src="<%=request.getContextPath()%>/assets/img/product-details/c3.jpg" alt="">
                                 </a>
                                 <a href="#pro-details4">
-                                    <img src="pixel/assets/img/product-details/tn3.jpg" alt="">
+                                    <img src="<%=request.getContextPath()%>/assets/img/product-details/tn3.jpg" alt="">
                                 </a>
                                 <a href="#pro-details5">
-                                    <img src="pixel/assets/img/product-details/minipc3.jpg" alt="">
+                                    <img src="<%=request.getContextPath()%>/assets/img/product-details/minipc3.jpg"
+                                         alt="">
                                 </a>
                             </div>
                         </div>
@@ -102,7 +107,7 @@
                             <p>${detail.description}</p>
                         </div>
                         <div class="product-color">
-                            <h5 class="pd-sub-title">Màu sản phẩm</h5>
+                            <h5 class="pd-sub-title">Mã sản phẩm</h5>
                             <ul>
                                 <li class="red">b</li>
                                 <li class="pink">p</li>
@@ -165,16 +170,16 @@
 
 
 <!-- all js here -->
-<script src="pixel/assets/js/vendor/jquery-1.12.0.min.js"></script>
-<script src="pixel/assets/js/popper.js"></script>
-<script src="pixel/assets/js/bootstrap.min.js"></script>
-<script src="pixel/assets/js/isotope.pkgd.min.js"></script>
-<script src="pixel/assets/js/imagesloaded.pkgd.min.js"></script>
-<script src="pixel/assets/js/jquery.counterup.min.js"></script>
-<script src="pixel/assets/js/waypoints.min.js"></script>
-<script src="pixel/assets/js/ajax-mail.js"></script>
-<script src="pixel/assets/js/owl.carousel.min.js"></script>
-<script src="pixel/assets/js/plugins.js"></script>
-<script src="pixel/assets/js/main.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/vendor/jquery-1.12.0.min.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/popper.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/bootstrap.min.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/isotope.pkgd.min.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/jquery.counterup.min.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/waypoints.min.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/ajax-mail.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/owl.carousel.min.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/plugins.js"></script>
+<script src="<%=request.getContextPath()%>/assets/js/main.js"></script>
 </body>
 </html>

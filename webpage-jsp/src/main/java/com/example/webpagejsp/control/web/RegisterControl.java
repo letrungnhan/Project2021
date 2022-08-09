@@ -3,7 +3,7 @@
  *
  */
 
-package com.example.webpagejsp.control;
+package com.example.webpagejsp.control.web;
 
 import com.example.webpagejsp.dao.web.UserDao;
 import com.example.webpagejsp.entity.User;

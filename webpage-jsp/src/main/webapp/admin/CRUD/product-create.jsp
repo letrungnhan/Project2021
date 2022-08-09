@@ -81,7 +81,7 @@
         }
 
         table.table tr th:first-child {
-            width: 60px;
+            width: 50px;
         }
 
         table.table tr th:last-child {
@@ -118,7 +118,7 @@
             display: inline-block;
             text-decoration: none;
             outline: none !important;
-            font-size: 20px;
+
         }
 
         table.table td a:hover {
@@ -364,7 +364,20 @@
                                 </td>
                                 <td>${object.productId}</td>
                                 <td>${object.productName}</td>
-                                <td>${object.productDesc}</td>
+                                <td>
+                                    <div class="panel-group" id="accordion">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading px-lg-2 py-lg-2">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#${object.productId}">Description ${object.productId}</a>
+                                            </h4>
+                                        </div>
+                                        <div id="${object.productId}" class="panel-collapse collapse">
+                                            <div class="panel-body"> ${object.productDesc}</div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </td>
                                 <td>${object.SKU}</td>
                                 <td>${object.categoryID}</td>
                                 <td>${object.inventoryID}</td>

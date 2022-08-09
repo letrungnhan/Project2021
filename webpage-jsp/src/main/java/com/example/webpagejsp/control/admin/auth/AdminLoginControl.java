@@ -8,9 +8,12 @@ package com.example.webpagejsp.control.admin.auth;
 import com.example.webpagejsp.dao.admin.AdminDao;
 import com.example.webpagejsp.entity.Admin;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet(name = "AdminLoginControl", value = "/adminLoginControl")
@@ -19,6 +22,9 @@ public class AdminLoginControl extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        HttpSession session = request.getSession();
+        session.setAttribute("account", username);
+        session.setAttribute("password", password);
         System.out.println(username);
         System.out.println(password);
         try {

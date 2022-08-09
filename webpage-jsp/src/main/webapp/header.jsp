@@ -18,8 +18,8 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-4">
                     <div class="logo-small-device">
-                        <a href="index.jsp"><img alt=""
-                                                 src="<%=request.getContextPath()%>/assets/img/logo/logo.png"></a>
+                        <a href="home"><img alt=""
+                                            src="<%=request.getContextPath()%>/assets/img/logo/logo.png"></a>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-8 col-8">
@@ -137,33 +137,22 @@
                     <div class="mobile-menu">
                         <nav id="mobile-menu-active">
                             <ul class="menu-overflow">
-                                <li><a href="index.jsp">TRANG CHỦ</a></li>
+                                <li><a href="home">TRANG CHỦ</a></li>
                                 <li><a href="#">pages</a>
                                     <ul>
-                                        <li><a href="about-us.html">về chúng tôi</a></li>
                                         <li><a href="pixel/cart.html">trang giỏ hàng</a></li>
                                         <li><a href="pixel/checkout.html">checkout</a></li>
                                         <li><a href="pixel/wishlist.html">danh sách mong muốn</a></li>
                                         <li><a href="login.jsp">đăng nhập</a></li>
-                                        <li><a href="pixel/contact.html">liên lạc</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">cửa hàng</a>
                                     <ul>
-                                        <li><a href="pixel/mouse-shop-page.html">cửa hàng</a></li>
-                                        <li><a href="details.jsp">chi tiết sản phẩm</a></li>
+                                        <li><a href="product">cửa hàng</a></li>
                                         <li><a href="pixel/checkout.html">checkout</a></li>
                                         <li><a href="pixel/wishlist.html">danh sách mong muốn</a></li>
                                         <li><a href="pixel/cart.html">giỏ hàng</a></li>
                                     </ul>
                                 </li>
-                                <!--                                    <li><a href="#">BLOG</a>-->
-                                <!--                                        <ul>-->
-                                <!--                                            <li><a href="blog.html">trang blog</a></li>-->
-                                <!--                                            <li><a href="blog-details.html">chi tiết blog</a></li>-->
-                                <!--                                        </ul>-->
-                                <!--                                    </li>-->
-                                <li><a href="pixel/contact.html"> Liên Lạc Với Chúng Tôi</a></li>
                             </ul>
                         </nav>
                     </div>

@@ -6,9 +6,17 @@
 package com.example.webpagejsp.entity;
 
 public class ImageProduct {
-    String productID;
+    String productName;
     String imageProductID;
+    String productID;
     String urlImage;
+
+    public ImageProduct(String productName, String imageProductID, String productID, String urlImage) {
+        this.productName = productName;
+        this.imageProductID = imageProductID;
+        this.productID = productID;
+        this.urlImage = urlImage;
+    }
 
     public ImageProduct(String productID, String imageProduct, String urlImage) {
         this.productID = productID;
@@ -19,8 +27,9 @@ public class ImageProduct {
     @Override
     public String toString() {
         return "ImageProduct{" +
-                "productID=" + productID +
-                ", imageProduct='" + imageProductID + '\'' +
+                "productName='" + productName + '\'' +
+                ", imageProductID='" + imageProductID + '\'' +
+                ", productID='" + productID + '\'' +
                 ", urlImage='" + urlImage + '\'' +
                 '}';
     }
@@ -43,6 +52,22 @@ public class ImageProduct {
 
     public String getUrlImage() {
         return urlImage;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public String getImageProductID() {
+        return imageProductID;
+    }
+
+    public void setImageProductID(String imageProductID) {
+        this.imageProductID = imageProductID;
     }
 
     public void setUrlImage(String urlImage) {

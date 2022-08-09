@@ -15,8 +15,8 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "AdminCreateProductImageControl", value = "/createImage")
-public class AdminCreateProductImageControl extends HttpServlet {
+@WebServlet(name = "AdminCreateProductImageControl", value = "/createImagePage")
+public class AdminProductImageControl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String indexPageImage = request.getParameter("index");
@@ -33,7 +33,7 @@ public class AdminCreateProductImageControl extends HttpServlet {
             endPageImage++;
         }
         request.getSession().setAttribute("endPage", endPageImage);
-        request.getSession().setAttribute("listPage", listPage);
+        request.getSession().setAttribute("listPageImage", listPage);
         request.getSession().setAttribute("tag", indexPageImage);
         request.getRequestDispatcher("/admin/manager-product-image.jsp").forward(request, response);
     }

@@ -2737,10 +2737,10 @@ h3.sidebar-widget {
 
 .single-best-seller {
     display: flex;
-    align-items: center;
-    justify-content: center;
+
     flex-direction: column;
-    text-align: center;
+
+
 }
 
 .best-seller-text > h3 {
@@ -2762,6 +2762,7 @@ h3.sidebar-widget {
 }
 
 .best-seller-text {
+    font-size: 20px;
 
 }
 

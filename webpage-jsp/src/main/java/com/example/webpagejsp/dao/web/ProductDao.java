@@ -176,8 +176,25 @@ public class ProductDao {
         return null;
     }
 
-    public int getTotalCount() {
-        String query = "SELECT COUNT(*) FROM PRODUCT";
+    public int getTotalCountProduct() {
+        String query = "SELECT COUNT(*) FROM PRODUCT    ";
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return rs.getInt(1);
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    public int getTotalCountProductImage() {
+        String query = "SELECT COUNT(*) FROM IMAGES  ";
         try {
             conn = new DBContext().getConnection();
             ps = conn.prepareStatement(query);
@@ -266,4 +283,20 @@ public class ProductDao {
 
     }
 
+    public int getTotalCountUser() {
+        String query = "SELECT COUNT(*) FROM USERS   ";
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return rs.getInt(1);
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
 }
