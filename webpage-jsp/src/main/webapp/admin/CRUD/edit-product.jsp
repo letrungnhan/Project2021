@@ -1,7 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -318,131 +317,44 @@
 </head>
 <div id="layoutSidenav_content">
     <main>
-        <div class="container-fluid">
-            <div class="table-responsive">
-                <div class="table-wrapper">
-                    <div class="table-title">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <h2>Manage<b>Product</b></h2>
-                            </div>
-                            <div class="col-xs-6">
-                                <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i
-                                        class="material-icons">&#xE147;</i> <span>Add New Product</span></a>
-                                <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i
-                                        class="material-icons">&#xE15C;</i> <span>Delete</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <table class="table table-striped table-hover">
-                        <thead>
-                        <tr>
-                            <th>
-								<span class="custom-checkbox">
-									<input type="checkbox" id="selectAll">
-									<label for="selectAll"></label>
-								</span>
-                            </th>
-                            <th>P_ID</th>
-                            <th>P_NAME</th>
-                            <th>P_DESC</th>
-                            <th>SKU</th>
-                            <th>CATEGORY_ID</th>
-                            <th>INVENTORY_ID</th>
-                            <th>PRICE</th>
-                            <th>DISCOUNT_ID</th>
-                            <th>OPTIONS</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <c:forEach items="${listPage}" var="object">
-                            <tr>
-                                <td>
-								<span class="custom-checkbox">
-									<input type="checkbox" id="checkbox1" name="options[]" value="1">
-									<label for="checkbox1"></label>
-								</span>
-                                </td>
-                                <td>${object.productId}</td>
-                                <td>${object.productName}</td>
-                                <td>
-                                    <div class="panel-group" id="accordion">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading px-lg-2 py-lg-2">
-                                            <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion" href="#${object.productId}">Description ${object.productId}</a>
-                                            </h4>
-                                        </div>
-                                        <div id="${object.productId}" class="panel-collapse collapse">
-                                            <div class="panel-body"> ${object.productDesc}</div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </td>
-                                <td>${object.SKU}</td>
-                                <td>${object.categoryID}</td>
-                                <td>${object.inventoryID}</td>
-                                <td><fmt:setLocale value="vi_Vn"/>
-                                    <fmt:formatNumber value="${object.price}"/>
-                                </td>
-                                <td>${object.discountID}</td>
-                                <td>
-                                    <c:if test="">
-
-                                    </c:if>
-                                    <a href="<%=request.getContextPath()%>/loadInforProduct?pid=${object.productId}"
-                                       class="edit" data-toggle="modal">
-                                        <i class="material-icons"
-                                           data-toggle="tooltip"
-                                           title="Edit">&#xE254;</i></a>
-                                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
-                                            class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                                </td>
-                            </tr>
-                        </c:forEach>
-                        </tbody>
-                    </table>
-                    <div class="clearfix">
-                        <ul class="pagination">
-                            <c:forEach begin="1" end="${endPage}" var="i">
-                                <li class="page-item ${tag == i ? "active":""}"><a
-                                        href="<%=request.getContextPath()%>/adminProduct?index=${i}"
-                                        class="page-link">${i}</a></li>
-                            </c:forEach>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Add Product -->
-        <div id="addEmployeeModal" class="modal fade">
-            <div class="modal-dialog d-flex">
+        <!-- Edit Modal HTML -->
+        <div class="edit--product">
+            <div class="d-flex">
                 <div class="modal-content">
-                    <form action="<%=request.getContextPath()%>/createProduct" method="post">
+                    <form action="editProduct" method="post">
                         <div class="modal-header">
-                            <h4 class="modal-title">Add Product</h4>
+                            <h4 class="modal-title">Edit Product</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
+                                <label>Product ID</label>
+                                <input value="${sessionScope.editProduct.productId}" type="text" class="form-control"
+                                       name="productID" readonly>
+                            </div>
+                            <div class="form-group">
                                 <label>Name</label>
-                                <input name="name" type="text" class="form-control" required>
+                                <input value="${sessionScope.editProduct.productName}" type="text" class="form-control"
+                                       name="name" required>
                             </div>
                             <div class="form-group">
                                 <label>Description</label>
-                                <textarea name="description" type="text" class="form-control" required> </textarea>
+                                <textarea name="description"
+                                          type="text"
+                                          class="form-control"
+                                          required> ${sessionScope.editProduct.productDesc}</textarea>
                             </div>
-                            <%--                            <div class="form-group">--%>
-                            <%--                                <label>SKUD</label>--%>
-                            <%--                                <input name="SKU" type="text" class="form-control" required/>--%>
-                            <%--                            </div>--%>
+                            <div class="form-group">
+                                <label>SKUD</label>
+                                <input value="${sessionScope.editProduct.SKU}" name="SKU" type="text"
+                                       class="form-control" readonly required/>
+                            </div>
                             <div class="form-group">
                                 <label>Category</label>
                                 <select name="category" class="form-control" aria-label="Default select example">
-                                    <jsp:useBean id="categoryID" class="com.example.webpagejsp.dao.web.ProductDao"
-                                                 scope="request"/>
-                                    <c:forEach items="${categoryID.productCategory}" var="object">
-                                        <option value="${object.categoryID}">
+                                    <jsp:useBean id="category" class="com.example.webpagejsp.dao.admin.AdminDao"/>
+                                    <c:forEach items="${category.listCategory}" var="object">
+                                        <option value="${sessionScope.editProduct.categoryID}" ${object.categoryID eq sessionScope.editProduct.categoryID ? "selected" : "" }>
                                                 ${object.categoryName}
                                         </option>
                                     </c:forEach>
@@ -451,10 +363,9 @@
                             <div class="form-group">
                                 <label>Inventory</label>
                                 <select name="inventory-id" class="form-control" aria-label="Default select example">
-                                    <jsp:useBean id="inventoryID" class="com.example.webpagejsp.dao.web.ProductDao"
-                                                 scope="request"/>
-                                    <c:forEach items="${inventoryID.inventoryList}" var="object">
-                                        <option value="${object.inventoryID}">
+                                    <jsp:useBean id="inventory" class="com.example.webpagejsp.dao.web.ProductDao"/>
+                                    <c:forEach items="${inventory.inventoryList}" var="object">
+                                        <option value="${sessionScope.editProduct.inventoryID}" ${object.inventoryID eq sessionScope.editProduct.inventoryID ? "selected" : "" }>
                                                 ${object.inventoryID}
                                         </option>
                                     </c:forEach>
@@ -463,15 +374,17 @@
                             <div class="form-group d-flex justify-content-between">
                                 <div class="ml-5" style="width: 47%">
                                     <label>Price</label>
-                                    <input name="price" type="number" class="form-control" required>
+                                    <fmt:setLocale value="vi_VN"/>
+                                    <input value="${sessionScope.editProduct.price}" name="price" type="text"
+                                           class="form-control"
+                                           required>
                                 </div>
                                 <div class="" style="width: 47%">
                                     <label>Discount</label>
                                     <select name="discount" class="form-control" aria-label="Default select example">
-                                        <jsp:useBean id="discount" class="com.example.webpagejsp.dao.web.ProductDao"
-                                                     scope="request"/>
+                                        <jsp:useBean id="discount" class="com.example.webpagejsp.dao.web.ProductDao"/>
                                         <c:forEach items="${discount.discountList}" var="object">
-                                            <option value="${object.discountID}">
+                                            <option value="${sessionScope.editProduct.discountID}" ${object.discountID eq sessionScope.editProduct.discountID ? "selected" : "" }>
                                                     ${object.discountName}
                                             </option>
                                         </c:forEach>
@@ -480,30 +393,8 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-success" value="Add">
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-        <!-- Delete Modal HTML -->
-        <div id="deleteEmployeeModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <form>
-                        <div class="modal-header">
-                            <h4 class="modal-title">Delete Employee</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <p>Are you sure you want to delete these Records?</p>
-                            <p class="text-warning"><small>This action cannot be undone.</small></p>
-                        </div>
-                        <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-danger" value="Delete">
+                            <a class="small" href="<%=request.getContextPath()%>/adminHome">Back to ADMIN Page</a>
+                            <input type="submit" class="btn btn-success" value="Edit"/>
                         </div>
                     </form>
                 </div>

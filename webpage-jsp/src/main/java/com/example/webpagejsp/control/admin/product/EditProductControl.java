@@ -15,23 +15,32 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "AdminCreateProductControl", value = "/createProduct")
-public class AdminCreateProductControl extends HttpServlet {
+@WebServlet(name = "EditProductControl", value = "/editProduct")
+public class EditProductControl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
+        String productID = request.getParameter("productID");
         String productName = request.getParameter("name");
         String productDesc = request.getParameter("description");
         String productCategory = request.getParameter("category");
         String productInventoryID = request.getParameter("inventory-id");
         double productPrice = Double.parseDouble(request.getParameter("price"));
         String productDiscount = request.getParameter("discount");
-
-        AdminDao adminDao = new AdminDao();
-        adminDao.createProduct(new AdminProduct(productName, productDesc, productCategory, productInventoryID, productPrice, productDiscount));
-        response.sendRedirect("adminProduct");
-
+        try {
+            AdminDao adminDao = new AdminDao();
+            adminDao.updateProduct(new AdminProduct(productName,
+                    productDesc,
+                    productCategory,
+                    productInventoryID,
+                    productPrice,
+                    productDiscount),
+                    productID);
+            response.sendRedirect("adminProduct");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

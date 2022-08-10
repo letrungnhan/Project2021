@@ -10,7 +10,7 @@ public interface AdminServices {
 
     public void createProduct(AdminProduct product);
 
-    public Admin updateProduct(String username, String password);
+    public void updateProduct(AdminProduct product ,String productID);
 
     public void deleteProduct(String productID);
 }

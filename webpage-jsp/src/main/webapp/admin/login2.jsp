@@ -40,11 +40,10 @@
                                         <a class="small" href="password.html">Forgot Password?</a>
                                         <button class="btn btn-primary" type="submit">Login</button>
                                     </div>
+                                    <a class="small" href="<%=request.getContextPath()%>/home">Back to Home Page</a>
                                 </form>
                             </div>
-                            <div class="card-footer text-center py-3">
-                                <div class="small"><a href="register.html">Need an account? Sign up!</a></div>
-                            </div>
+
                         </div>
                     </div>
                 </div>

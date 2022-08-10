@@ -690,7 +690,8 @@
   width: 500px;
 }
 .header-cart.cart-small-device {
-  display: inline-block;
+    display: inline-block;
+    float: right;
 }   
 .slider-active.owl-carousel .owl-item .slider-text-img img {
   width: auto;
@@ -1349,7 +1350,15 @@
      display: none;
     }
     .icon-cart {
-     padding: 7px 12px 4px;
+        padding: 9px 30px 5px;
+        width: 120%;
+        outline: none;
+        border: none;
+        background-color: #ffb52f;
+        /* border: medium none; */
+        cursor: pointer;
+
+        position: relative;
     }  
     .header-cart.cart-small-device {
      display: block;

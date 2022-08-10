@@ -29,10 +29,8 @@
                              data-bs-parent="#sidenavAccordionPages">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="login2.jsp">Login</a>
-                                <a class="nav-link" href="register.html">Register</a>
                                 <a class="nav-link" href="<%=request.getContextPath()%>/manageUserControl">Manage
                                     User</a>
-                            </nav>
                         </div>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                            data-bs-target="#pagesCollapseProduct" aria-expanded="false"
@@ -46,10 +44,9 @@
                                 <a class="nav-link"
                                    href="<%=request.getContextPath()%>/adminProduct">List Product</a>
                                 <a class="nav-link"
-                                   href="<%=request.getContextPath()%>/createImagePage">Update
-                                    Image
-                                    Product</a>
-
+                                   href="<%=request.getContextPath()%>/createImagePage">Update Image Product</a>
+                                <a class="nav-link"
+                                   href="<%=request.getContextPath()%>/adminProductCategoryControl">Category</a>
                             </nav>
                         </div>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"

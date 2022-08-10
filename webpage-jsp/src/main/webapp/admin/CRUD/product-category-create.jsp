@@ -1,7 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -82,11 +81,11 @@
         }
 
         table.table tr th:first-child {
-            width: 50px;
+            width: 40px;
         }
 
         table.table tr th:last-child {
-            width: 50px;
+            width: 70px;
         }
 
         table.table-striped tbody tr:nth-of-type(odd) {
@@ -104,7 +103,7 @@
         }
 
         table.table td:last-child {
-            width: 100px;
+            width: 120px;
         }
 
         table.table td:last-child i {
@@ -324,7 +323,7 @@
                     <div class="table-title">
                         <div class="row">
                             <div class="col-xs-6">
-                                <h2>Manage<b>Product</b></h2>
+                                <h2>Manage<b>Category</b></h2>
                             </div>
                             <div class="col-xs-6">
                                 <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i
@@ -343,19 +342,13 @@
 									<label for="selectAll"></label>
 								</span>
                             </th>
-                            <th>P_ID</th>
-                            <th>P_NAME</th>
-                            <th>P_DESC</th>
-                            <th>SKU</th>
-                            <th>CATEGORY_ID</th>
-                            <th>INVENTORY_ID</th>
-                            <th>PRICE</th>
-                            <th>DISCOUNT_ID</th>
-                            <th>OPTIONS</th>
+                            <th>ID</th>
+                            <th>CATEGORY_NAME</th>
+                            <th>OPTION</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <c:forEach items="${listPage}" var="object">
+                        <c:forEach items="${listCategory}" var="object">
                             <tr>
                                 <td>
 								<span class="custom-checkbox">
@@ -363,38 +356,13 @@
 									<label for="checkbox1"></label>
 								</span>
                                 </td>
-                                <td>${object.productId}</td>
-                                <td>${object.productName}</td>
-                                <td>
-                                    <div class="panel-group" id="accordion">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading px-lg-2 py-lg-2">
-                                            <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion" href="#${object.productId}">Description ${object.productId}</a>
-                                            </h4>
-                                        </div>
-                                        <div id="${object.productId}" class="panel-collapse collapse">
-                                            <div class="panel-body"> ${object.productDesc}</div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </td>
-                                <td>${object.SKU}</td>
                                 <td>${object.categoryID}</td>
-                                <td>${object.inventoryID}</td>
-                                <td><fmt:setLocale value="vi_Vn"/>
-                                    <fmt:formatNumber value="${object.price}"/>
-                                </td>
-                                <td>${object.discountID}</td>
+                                <td>${object.categoryName}</td>
                                 <td>
-                                    <c:if test="">
-
-                                    </c:if>
-                                    <a href="<%=request.getContextPath()%>/loadInforProduct?pid=${object.productId}"
-                                       class="edit" data-toggle="modal">
-                                        <i class="material-icons"
-                                           data-toggle="tooltip"
-                                           title="Edit">&#xE254;</i></a>
+                                    <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
+                                            class="material-icons"
+                                            data-toggle="tooltip"
+                                            title="Edit">&#xE254;</i></a>
                                     <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
                                             class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                 </td>
@@ -402,15 +370,15 @@
                         </c:forEach>
                         </tbody>
                     </table>
-                    <div class="clearfix">
-                        <ul class="pagination">
-                            <c:forEach begin="1" end="${endPage}" var="i">
-                                <li class="page-item ${tag == i ? "active":""}"><a
-                                        href="<%=request.getContextPath()%>/adminProduct?index=${i}"
-                                        class="page-link">${i}</a></li>
-                            </c:forEach>
-                        </ul>
-                    </div>
+<%--                    <div class="clearfix">--%>
+<%--                        <ul class="pagination">--%>
+<%--                            <c:forEach begin="1" end="${endPage}" var="i">--%>
+<%--                                <li class="page-item ${tag == i ? "active":""}"><a--%>
+<%--                                        href="<%=request.getContextPath()%>/manageUserControl?index=${i}"--%>
+<%--                                        class="page-link">${i}</a></li>--%>
+<%--                            </c:forEach>--%>
+<%--                        </ul>--%>
+<%--                    </div>--%>
                 </div>
             </div>
         </div>
@@ -460,6 +428,7 @@
                                     </c:forEach>
                                 </select>
                             </div>
+
                             <div class="form-group d-flex justify-content-between">
                                 <div class="ml-5" style="width: 47%">
                                     <label>Price</label>
@@ -488,6 +457,80 @@
 
             </div>
         </div>
+
+        <!-- Edit Modal HTML -->
+        <div id="editEmployeeModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form action="">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Add Product</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <textarea type="text" class="form-control" required> </textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>SKUD</label>
+                                <input type="text" class="form-control" required/>
+                            </div>
+                            <div class="form-group">
+                                <label>Category</label>
+                                <select name="category" class="form-control" aria-label="Default select example">
+                                    <c:forEach items="${categoryID.productCategory}" var="object">
+                                        <option>
+                                                ${object.categoryName}
+                                        </option>
+                                    </c:forEach>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>INVENTORY_ID</label>
+                                <jsp:useBean id="inventory" class="com.example.webpagejsp.dao.web.ProductDao"/>
+                                <select name="inventory" class="form-control" aria-label="Default select example">
+                                    <c:forEach items="${inventory.inventoryList}" var="object">
+                                    <option>
+                                            ${object.inventoryID}
+                                    </option>
+                                    </c:forEach>
+                            </div>
+
+                            <div class="form-group d-flex justify-content-between">
+                                <div class="ml-5" style="width: 47%">
+                                    <label>Price</label>
+                                    <input type="number" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="" style="width: 47%">
+                                <label>Discount</label>
+                                <select name="discount" class="form-control" aria-label="Default select example">
+                                    <c:forEach items="${discount.discountList}" var="object">
+                                        <option>
+                                                ${object.discountID}
+                                        </option>
+
+                                    </c:forEach>
+
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                            <input type="submit" class="btn btn-success" value="Add">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
         <!-- Delete Modal HTML -->
         <div id="deleteEmployeeModal" class="modal fade">
             <div class="modal-dialog">
@@ -510,5 +553,4 @@
             </div>
         </div>
     </main>
-
 </div>

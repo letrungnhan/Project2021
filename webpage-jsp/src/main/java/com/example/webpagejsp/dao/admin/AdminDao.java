@@ -6,10 +6,7 @@
 package com.example.webpagejsp.dao.admin;
 
 import com.example.webpagejsp.context.DBContext;
-import com.example.webpagejsp.entity.Admin;
-import com.example.webpagejsp.entity.AdminProduct;
-import com.example.webpagejsp.entity.ImageProduct;
-import com.example.webpagejsp.entity.User;
+import com.example.webpagejsp.entity.*;
 import com.example.webpagejsp.services.AdminServices;
 import com.example.webpagejsp.util.UserUtil;
 
@@ -51,9 +48,10 @@ public class AdminDao implements AdminServices {
 
 
             }
+            return admin;
 
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
 
         return admin;
@@ -142,6 +140,34 @@ public class AdminDao implements AdminServices {
             e.printStackTrace();
         }
 
+
+    }
+
+    @Override
+    public void updateProduct(AdminProduct product, String productID) {
+        String query = " UPDATE PRODUCT SET P_NAME =?\n" +
+                "                  , P_DESC =?\n" +
+                "                  , CATEGORY_ID=?\n" +
+                "                  ,INVENTORY_ID=?\n" +
+                "\t\t\t\t   ,PRICE=?\n" +
+                "                  ,DISCOUNT_ID=?\n" +
+                "                WHERE P_ID=?";
+
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, product.getProductName());
+            ps.setString(2, product.getProductDesc());
+            ps.setString(3, product.getCategoryID());
+            ps.setString(4, product.getInventoryID());
+            ps.setDouble(5, product.getPrice());
+            ps.setString(6, product.getDiscountID());
+            ps.setString(7, productID);
+            ps.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -247,21 +273,65 @@ public class AdminDao implements AdminServices {
         return null;
     }
 
-
-    @Override
-    public Admin updateProduct(String username, String password) {
+    public List<Category> getListCategory() {
+        List<Category> list = new ArrayList<>();
+        String query = "SELECT * FROM CATEGORY";
+        try {
+            conn = new DBContext().getConnection();//mo ket noi voi sql
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                Category a = new Category(
+                        rs.getString("ID"),
+                        rs.getString("C_NAME"));
+                list.add(a);
+            }
+            return list;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return null;
     }
+
 
     @Override
     public void deleteProduct(String productID) {
 
     }
 
+
+    public AdminProduct loadProductByID(String pid) {
+
+        String query = "SELECT * FROM PRODUCT \n" +
+                "WHERE P_ID = ?";
+        try {
+            conn = new DBContext().getConnection();//mo ket noi voi sql
+            ps = conn.prepareStatement(query);
+            ps.setString(1, pid);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return new AdminProduct(
+                        rs.getString("P_ID"),
+                        rs.getString("P_NAME"),
+                        rs.getString("P_DESC"),
+                        rs.getString("SKU"),
+                        rs.getString("CATEGORY_ID"),
+                        rs.getString("INVENTORY_ID"),
+                        rs.getDouble("PRICE"),
+                        rs.getString("DISCOUNT_ID"));
+            }
+        } catch (Exception e) {
+        }
+
+        return null;
+
+    }
+
     public static void main(String[] args) {
         AdminDao adminDao = new AdminDao();
-
-
-        System.out.println(adminDao.pagingAdminProductImage(1));
+        adminDao.updateProduct(new AdminProduct("update", "Cđáadfasdfd", "CG006", "IT164", 10900000, "DC045"), "PT100669");
+//        System.out.println(adminDao.loadProductByID("PT100236"));
+//        System.out.println(adminDao.pagingAdminProductImage(1));
     }
+
 }

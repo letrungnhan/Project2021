@@ -1,4 +1,9 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%--
+  ~ Copyright (c) 2022.
+  ~
+  --%>
+
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -15,7 +20,7 @@
 <jsp:include page="nav-admin.jsp"/>
 <div id="layoutSidenav">
     <jsp:include page="teamplates/side-nav.jsp"/>
-    <jsp:include page="/admin/CRUD/product-create.jsp"/>
+    <jsp:include page="/admin/CRUD/edit-product.jsp"/>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>

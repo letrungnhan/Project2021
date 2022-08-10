@@ -36,6 +36,7 @@ public class AdminLoginControl extends HttpServlet {
                 request.getRequestDispatcher("/admin/login2.jsp").forward(request, response);
             }
         } catch (Exception e) {
+            response.sendRedirect("/admin/401.jsp");
             e.printStackTrace();
         }
     }
