@@ -1,12 +1,5 @@
-/*
- * Copyright (c) 2022.
- *
- */
 
 package com.example.webpagejsp.entity;
-
-import java.util.Date;
-
 public class AdminProduct {
     private String productId;
     private String productName;

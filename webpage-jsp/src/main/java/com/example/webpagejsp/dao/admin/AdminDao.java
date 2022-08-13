@@ -293,10 +293,56 @@ public class AdminDao implements AdminServices {
         return null;
     }
 
-
     @Override
     public void deleteProduct(String productID) {
+        String query = "DELETE FROM PRODUCT WHERE P_ID=?";
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, productID);
+            ps.executeUpdate();
 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Override
+    public Category loadProductCategory(String categoryID) {
+        String query = "  SELECT * FROM CATEGORY WHERE ID= ?";
+        try {
+            conn = new DBContext().getConnection();//mo ket noi voi sql
+            ps = conn.prepareStatement(query);
+            ps.setString(1, categoryID);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return new Category(
+                        rs.getString("ID"),
+                        rs.getString("C_NAME"));
+
+            }
+        } catch (Exception e) {
+        }
+
+        return null;
+    }
+
+    @Override
+    public void updateCategory(Category category, String categoryID) {
+        String query = " UPDATE CATEGORY SET C_NAME =?\n" +
+                "                WHERE ID=?";
+
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, category.getCategoryName());
+            ps.setString(2, categoryID);
+            ps.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 
@@ -334,4 +380,41 @@ public class AdminDao implements AdminServices {
 //        System.out.println(adminDao.pagingAdminProductImage(1));
     }
 
+    public ImageProduct loadImageProductByID(String imageID) {
+        String query = "SELECT P_NAME , ID, PRODUCT_ID, URL_IMG FROM PRODUCT INNER JOIN IMAGES ON IMAGES.PRODUCT_ID = PRODUCT.P_ID\n" +
+                "  WHERE IMAGES.ID = ?";
+        try {
+            conn = new DBContext().getConnection();//mo ket noi voi sql
+            ps = conn.prepareStatement(query);
+            ps.setString(1, imageID);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return new ImageProduct(
+                        rs.getString(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4));
+
+            }
+        } catch (Exception e) {
+        }
+
+        return null;
+    }
+
+    public void updateProductImage(ImageProduct imageProduct, String imageId) {
+        String query = " UPDATE IMAGES SET URL_IMG =?\n" +
+                "                WHERE ID=?";
+
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, imageProduct.getUrlImage());
+            ps.setString(2, imageId);
+            ps.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

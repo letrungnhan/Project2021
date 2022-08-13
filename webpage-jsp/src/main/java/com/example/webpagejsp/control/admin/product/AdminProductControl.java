@@ -9,9 +9,11 @@ import com.example.webpagejsp.dao.admin.AdminDao;
 import com.example.webpagejsp.dao.web.ProductDao;
 import com.example.webpagejsp.entity.AdminProduct;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
@@ -19,7 +21,14 @@ import java.util.List;
 public class AdminProductControl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        this.doPost(request, response);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String indexPage = request.getParameter("index");
+
+
         if (indexPage == null) {
             indexPage = "1";
         }
@@ -32,14 +41,10 @@ public class AdminProductControl extends HttpServlet {
         if (count % 10 != 0) {
             endPage++;
         }
+
         request.getSession().setAttribute("endPage", endPage);
         request.getSession().setAttribute("listPage", listPage);
         request.getSession().setAttribute("tag", indexPage);
         request.getRequestDispatcher("/admin/manager-product.jsp").forward(request, response);
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        this.doGet(request, response);
     }
 }

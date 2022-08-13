@@ -24,6 +24,12 @@ public class ImageProduct {
         this.urlImage = urlImage;
     }
 
+    public ImageProduct(String imageId, String imageURl) {
+        this.imageProductID = imageId;
+        this.urlImage = imageURl;
+    }
+
+
     @Override
     public String toString() {
         return "ImageProduct{" +
