@@ -52,7 +52,7 @@
                             <div class="card-body">Quản lý người dùng</div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
                                 <a class="small text-white stretched-link"
-                                   href="<%=request.getContextPath()%>/manageUserControl">Xem chi
+                                   href="<%=request.getContextPath()%>/manageUser">Xem chi
                                     tiết</a>
                                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                             </div>
@@ -63,7 +63,7 @@
                             <div class="card-body">Category</div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
                                 <a class="small text-white stretched-link"
-                                   href="<%=request.getContextPath()%>/adminProductCategoryControl">Xem chi tiết</a>
+                                   href="<%=request.getContextPath()%>/adminProductCategory">Xem chi tiết</a>
                                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                             </div>
                         </div>

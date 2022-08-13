@@ -1,9 +1,10 @@
 
 package com.example.webpagejsp.dao.web;
+
 import com.example.webpagejsp.context.DBContext;
+import com.example.webpagejsp.entity.RoleUser;
 import com.example.webpagejsp.entity.User;
 import com.example.webpagejsp.util.UserUtil;
-
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -121,6 +122,28 @@ public class UserDao {
             e.printStackTrace();
         }
 
+    }
+
+    public List<RoleUser> getListRole() {
+        try {
+            String query = "SELECT * FROM USER_ROLES";
+            connection = new DBContext().getConnection();
+            ps = connection.prepareStatement(query);
+            rs = ps.executeQuery();
+            List<RoleUser> list = new ArrayList<>();
+            while (rs.next()) {
+                RoleUser acc = new RoleUser(rs.getString(1),
+                        rs.getString(2),
+                        rs.getString(3));
+
+
+                list.add(acc);
+            }
+            return list;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public static void main(String[] args) throws Exception {

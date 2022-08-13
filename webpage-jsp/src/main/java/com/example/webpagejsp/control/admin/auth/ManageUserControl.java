@@ -16,7 +16,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "ManageUserControl", value = "/manageUserControl")
+@WebServlet(name = "ManageUserControl", value = "/manageUser")
 public class ManageUserControl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

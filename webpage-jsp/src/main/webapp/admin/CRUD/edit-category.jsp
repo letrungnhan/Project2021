@@ -44,27 +44,38 @@
         <div class="edit--product">
             <div class="d-flex">
                 <div class="modal-content">
-                    <form action="<%=request.getContextPath()%>/EditCategory">
+                    <form action="<%=request.getContextPath()%>/editImageProduct">
                         <div class="modal-header">
                             <h4 class="modal-title">Edit Category</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
-                                <label>Category ID</label>
-                                <input value="${sessionScope.categoryInfor.categoryID}" type="text" class="form-control"
-                                       name="categoryID" readonly>
+                                <label>Product Name</label>
+                                <input value="${sessionScope.productImageInfor.productName}" type="text" class="form-control"
+                                       name="product-name" readonly>
                             </div>
                             <div class="form-group">
-                                <label>Category Name</label>
-                                <input value="${sessionScope.categoryInfor.categoryName}" type="text"
+                                <label>image ID</label>
+                                <input value="${sessionScope.productImageInfor.imageProductID}" type="text"
                                        class="form-control"
-                                       name="categoryName" required>
+                                       name="imageID" required>
                             </div>
-
+                            <div class="form-group">
+                                <label>Product ID</label>
+                                <input value="${sessionScope.productImageInfor.productID}" type="text"
+                                       class="form-control"
+                                       name="productID" required readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>URL Images</label>
+                                <input value="${sessionScope.productImageInfor.urlImage}" type="text"
+                                       class="form-control"
+                                       name="imageURL" required>
+                            </div>
                         </div>
                         <div class="modal-footer mr-10">
-                            <a class="small" href="<%=request.getContextPath()%>/adminProduct">Back </a>
+                            <a class="small" href="<%=request.getContextPath()%>/adminProduct">Back </a> &nbsp;
                             <input type="submit" class="btn btn-success" value="Edit"/>
                         </div>
                     </form>

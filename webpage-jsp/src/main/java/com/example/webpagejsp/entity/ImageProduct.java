@@ -24,9 +24,9 @@ public class ImageProduct {
         this.urlImage = urlImage;
     }
 
-    public ImageProduct(String imageId, String imageURl) {
-        this.imageProductID = imageId;
-        this.urlImage = imageURl;
+    public ImageProduct(String productID, String imageURL) {
+        this.productID = productID;
+        this.urlImage = imageURL;
     }
 
 

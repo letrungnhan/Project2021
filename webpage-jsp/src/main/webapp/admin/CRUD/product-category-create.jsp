@@ -36,6 +36,12 @@
                 }
             });
         });
+        function showConfirm(id) {
+            var option = confirm('Bạn có muốn xóa category ' + id);
+            if (option === true) {
+                window.location.href = 'deleteCategory?categoryID=' + id;
+            }
+        }
     </script>
 </head>
 <div id="layoutSidenav_content">
@@ -88,22 +94,14 @@
                                             class="material-icons"
                                             data-toggle="tooltip"
                                             title="Edit">&#xE254;</i></a>
-                                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
+                                    <a href="#" onclick="showConfirm('${object.categoryID}')" class="delete" data-toggle="modal"><i
                                             class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                 </td>
                             </tr>
                         </c:forEach>
                         </tbody>
                     </table>
-<%--                    <div class="clearfix">--%>
-<%--                        <ul class="pagination">--%>
-<%--                            <c:forEach begin="1" end="${endPage}" var="i">--%>
-<%--                                <li class="page-item ${tag == i ? "active":""}"><a--%>
-<%--                                        href="<%=request.getContextPath()%>/manageUserControl?index=${i}"--%>
-<%--                                        class="page-link">${i}</a></li>--%>
-<%--                            </c:forEach>--%>
-<%--                        </ul>--%>
-<%--                    </div>--%>
+
                 </div>
             </div>
         </div>
@@ -111,64 +109,20 @@
         <div id="addEmployeeModal" class="modal fade">
             <div class="modal-dialog d-flex">
                 <div class="modal-content">
-                    <form action="<%=request.getContextPath()%>/createProduct" method="post">
+                    <form action="<%=request.getContextPath()%>/addCategory" method="post">
                         <div class="modal-header">
                             <h4 class="modal-title">Add Product</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
-                                <label>Name</label>
-                                <input name="name" type="text" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Description</label>
-                                <textarea name="description" type="text" class="form-control" required> </textarea>
-                            </div>
-                            <%--                            <div class="form-group">--%>
-                            <%--                            </div>--%>
-                            <div class="form-group">
-                                <label>Category</label>
-                                <select name="category" class="form-control" aria-label="Default select example">
-                                    <jsp:useBean id="categoryID" class="com.example.webpagejsp.dao.web.ProductDao"
-                                                 scope="request"/>
-                                    <c:forEach items="${categoryID.productCategory}" var="object">
-                                        <option value="${object.categoryID}">
-                                                ${object.categoryName}
-                                        </option>
-                                    </c:forEach>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Inventory</label>
-                                <select name="inventory-id" class="form-control" aria-label="Default select example">
-                                    <jsp:useBean id="inventoryID" class="com.example.webpagejsp.dao.web.ProductDao"
-                                                 scope="request"/>
-                                    <c:forEach items="${inventoryID.inventoryList}" var="object">
-                                        <option value="${object.inventoryID}">
-                                                ${object.inventoryID}
-                                        </option>
-                                    </c:forEach>
-                                </select>
+                                <label>Category ID</label>
+                                <input name="categoryID" type="text" class="form-control" required>
                             </div>
 
-                            <div class="form-group d-flex justify-content-between">
-                                <div class="ml-5" style="width: 47%">
-                                    <label>Price</label>
-                                    <input name="price" type="number" class="form-control" required>
-                                </div>
-                                <div class="" style="width: 47%">
-                                    <label>Discount</label>
-                                    <select name="discount" class="form-control" aria-label="Default select example">
-                                        <jsp:useBean id="discount" class="com.example.webpagejsp.dao.web.ProductDao"
-                                                     scope="request"/>
-                                        <c:forEach items="${discount.discountList}" var="object">
-                                            <option value="${object.discountID}">
-                                                    ${object.discountName}
-                                            </option>
-                                        </c:forEach>
-                                    </select>
-                                </div>
+                            <div class="form-group">
+                                <label>Category Name</label>
+                                <input name="categoryName" type="text" class="form-control" required>
                             </div>
                         </div>
                         <div class="modal-footer">

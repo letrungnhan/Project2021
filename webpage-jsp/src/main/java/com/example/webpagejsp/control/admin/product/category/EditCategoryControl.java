@@ -3,7 +3,7 @@
  *
  */
 
-package com.example.webpagejsp.control.admin.product;
+package com.example.webpagejsp.control.admin.product.category;
 
 import com.example.webpagejsp.dao.admin.AdminDao;
 import com.example.webpagejsp.entity.Category;
@@ -14,19 +14,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
-@WebServlet(name = "AdminProductCategoryControl", value = "/adminProductCategoryControl")
-public class AdminProductCategoryControl extends HttpServlet {
+@WebServlet(name = "EditCategory", value = "/EditCategory")
+public class EditCategoryControl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        AdminDao adminDao = new AdminDao();
-        List<Category> categoryList = adminDao.getListCategory();
-
-
-
-        request.getSession().setAttribute("listCategory", categoryList);
-        request.getRequestDispatcher("/admin/manager-category.jsp").forward(request, response);
+        String categoryID = request.getParameter("categoryID");
+        String categoryName = request.getParameter("categoryName");
+        try {
+            AdminDao adminDao = new AdminDao();
+            adminDao.updateCategory(new Category(categoryID, categoryName), categoryID);
+            response.sendRedirect("adminProductCategory");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

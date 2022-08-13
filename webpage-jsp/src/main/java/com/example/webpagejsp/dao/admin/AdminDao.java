@@ -144,6 +144,31 @@ public class AdminDao implements AdminServices {
     }
 
     @Override
+    public void createUser(User user) {
+        String query = "INSERT INTO dbo.USERS (ID, USERNAME,PASS_WORD,ROLE_ID,EMAIL,ADDRESSS,TELEPHONE)\n" +
+                " values (?,?,?,?,?,?,?)";
+
+        try {
+            UserUtil userUtil = new UserUtil();
+            String userID = "US" + userUtil.generateId();
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, userID);
+            ps.setString(2, user.getUsername());
+            ps.setString(3, user.getPassword());
+            ps.setString(4, user.getRoleId());
+            ps.setString(5, user.getEmail());
+            ps.setString(6, user.getAddress());
+            ps.setInt(7, user.getPhoneNumber());
+            ps.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Override
     public void updateProduct(AdminProduct product, String productID) {
         String query = " UPDATE PRODUCT SET P_NAME =?\n" +
                 "                  , P_DESC =?\n" +
@@ -173,7 +198,7 @@ public class AdminDao implements AdminServices {
 
     public List<AdminProduct> getAllProduct() {
         List<AdminProduct> list = new ArrayList<>();
-        String query = "SELECT TOP 10 * FROM PRODUCT";
+        String query = "SELECT  * FROM PRODUCT";
         try {
             conn = new DBContext().getConnection();//mo ket noi voi sql
             ps = conn.prepareStatement(query);
@@ -308,6 +333,20 @@ public class AdminDao implements AdminServices {
 
     }
 
+    public void deleteImageProduct(String imageProductID) {
+        String query = "DELETE FROM IMAGES WHERE ID=?";
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, imageProductID);
+            ps.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
     @Override
     public Category loadProductCategory(String categoryID) {
         String query = "  SELECT * FROM CATEGORY WHERE ID= ?";
@@ -345,6 +384,22 @@ public class AdminDao implements AdminServices {
         }
     }
 
+    @Override
+    public void deleteUser(String userID) {
+        String query = "DELETE FROM USERS WHERE ID=?";
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, userID);
+            ps.executeUpdate();
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+        }
+
+    }
+
 
     public AdminProduct loadProductByID(String pid) {
 
@@ -375,9 +430,11 @@ public class AdminDao implements AdminServices {
 
     public static void main(String[] args) {
         AdminDao adminDao = new AdminDao();
-        adminDao.updateProduct(new AdminProduct("update", "Cđáadfasdfd", "CG006", "IT164", 10900000, "DC045"), "PT100669");
+//        adminDao.updateProduct(new AdminProduct("update", "Cđáadfasdfd", "CG006", "IT164", 10900000, "DC045"), "PT100669");
 //        System.out.println(adminDao.loadProductByID("PT100236"));
 //        System.out.println(adminDao.pagingAdminProductImage(1));
+
+        System.out.println(adminDao.loadUserByID("US001"));
     }
 
     public ImageProduct loadImageProductByID(String imageID) {
@@ -416,5 +473,78 @@ public class AdminDao implements AdminServices {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void createImageProduct(ImageProduct imageProduct) {
+        String query = " INSERT INTO IMAGES (ID , PRODUCT_ID, URL_IMG)\n" +
+                " VALUES (?,?,?)\n";
+
+        try {
+            UserUtil userUtil = new UserUtil();
+            String imageProductID = "IMG" + userUtil.generateId();
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, imageProductID);
+            ps.setString(2, imageProduct.getProductID());
+            ps.setString(3, imageProduct.getUrlImage());
+            ps.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void createCategoryProduct(Category category) {
+        String query = " INSERT INTO CATEGORY (ID , C_NAME)\n" +
+                " VALUES (?,?)\n";
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, category.getCategoryID());
+            ps.setString(2, category.getCategoryName());
+
+            ps.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void deleteCategoryProduct(String categoryID) {
+        String query = "DELETE FROM CATEGORY WHERE ID=?";
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, categoryID);
+            ps.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public User loadUserByID(String userID) {
+        String query = "  SELECT * FROM USERS  WHERE ID =?";
+        try {
+            conn = new DBContext().getConnection();//mo ket noi voi sql
+            ps = conn.prepareStatement(query);
+            ps.setString(1, userID);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return new User(
+                        rs.getString("USERNAME"),
+                        rs.getString("PASS_WORD"),
+                        rs.getString("ROLE_ID"),
+                        rs.getString("EMAIL"),
+                        rs.getString("ADDRESSS"),
+                        rs.getInt("TELEPHONE"));
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 }

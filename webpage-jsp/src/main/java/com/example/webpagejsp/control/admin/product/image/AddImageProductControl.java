@@ -3,7 +3,7 @@
  *
  */
 
-package com.example.webpagejsp.control.admin.product;
+package com.example.webpagejsp.control.admin.product.image;
 
 import com.example.webpagejsp.dao.admin.AdminDao;
 import com.example.webpagejsp.entity.ImageProduct;
@@ -15,24 +15,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "EditImageProduct", value = "/editImageProduct")
-public class EditImageProductControl extends HttpServlet {
+@WebServlet(name = "AddImageProdcutControl", value = "/addImageProduct")
+public class AddImageProductControl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
-        String imageId = request.getParameter("imageID");
-        String imageURl = request.getParameter("imageURL");
         String productID = request.getParameter("productID");
+        String imageURL = request.getParameter("imageURL");
 
-        try {
-            AdminDao adminDao = new AdminDao();
-            adminDao.updateProductImage(new ImageProduct(imageId, productID, imageURl), imageId);
-            response.sendRedirect("createImagePage");
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        AdminDao adminDao = new AdminDao();
+        adminDao.createImageProduct(new ImageProduct(productID, imageURL));
+        response.sendRedirect("createImagePage");
 
     }
 

@@ -41,47 +41,67 @@
 <div id="layoutSidenav_content">
     <main>
         <!-- Edit Modal HTML -->
-        <div class="edit--product">
+        <div id="edit-user">
             <div class="d-flex">
                 <div class="modal-content">
-                    <form action="<%=request.getContextPath()%>/editImageProduct">
+                    <form action="">
                         <div class="modal-header">
-                            <h4 class="modal-title">Edit Category</h4>
+                            <h4 class="modal-title">Add User System</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
-                                <label>Product Name</label>
-                                <input value="${sessionScope.productImageInfor.productName}" type="text" class="form-control"
-                                       name="product-name" readonly>
+                                <label>Username</label>
+                                <input name="username" value="${sessionScope.userInfor.username}" type="text"
+                                       class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label>image ID</label>
-                                <input value="${sessionScope.productImageInfor.imageProductID}" type="text"
-                                       class="form-control"
-                                       name="imageID" required>
+                                <label>Password</label>
+                                <input name="password" value="${sessionScope.userInfor.password}" type="text"
+                                       class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label>Product ID</label>
-                                <input value="${sessionScope.productImageInfor.productID}" type="text"
-                                       class="form-control"
-                                       name="productID" required readonly>
+                                <label>Role</label>
+                                <select name="role" class="form-control" aria-label="Default select example">
+                                    <jsp:useBean id="listRole" class="com.example.webpagejsp.dao.web.UserDao"/>
+                                    <c:forEach items="${listRole.listRole}" var="object">
+                                        <option value="${sessionScope.userInfor.roleId}" ${object.ID eq sessionScope.userInfor.roleId ? "selected" : "" }>
+                                                ${object.roleName}
+                                        </option>
+                                    </c:forEach>
+                                </select>
                             </div>
                             <div class="form-group">
-                                <label>URL Images</label>
-                                <input value="${sessionScope.productImageInfor.urlImage}" type="text"
-                                       class="form-control"
-                                       name="imageURL" required>
+                                <label>Email</label>
+                                <input value="${sessionScope.userInfor.email}" name="email" type="email"
+                                       class="form-control" required>
                             </div>
+                            <div class="form-group">
+                                <label>ADDRESS</label>
+                                <input value="${sessionScope.userInfor.address}" name="address" type="text"
+                                       class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>PHONE_NUMBER</label>
+                                <input value="${sessionScope.userInfor.phoneNumber}" name="phoneNumber"
+                                       type="text" class="form-control" required>
+                            </div>
+
+
                         </div>
-                        <div class="modal-footer mr-10">
-                            <a class="small" href="<%=request.getContextPath()%>/adminProduct">Back </a> &nbsp;
-                            <input type="submit" class="btn btn-success" value="Edit"/>
+
+                        <div class="modal-footer">
+                            <a class="medium" href="<%=request.getContextPath()%>/manageUserControl">Back </a> &nbsp;&nbsp;
+                            <input type="submit" class="btn btn-success" value="Edit">
                         </div>
                     </form>
                 </div>
             </div>
+
+
         </div>
+
+
     </main>
 
 </div>

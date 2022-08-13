@@ -36,6 +36,21 @@
                 }
             });
         });
+        function showConfirm(id) {
+            var option = confirm('Bạn có muốn  xóa user ' + id);
+            if (option === true) {
+                window.location.href = 'deleteUser?userID=' + id;
+                window.alert("đã xóa user " + id);
+            }else{
+
+            }
+        }
+        function  showConfirmCheckbox(id){
+            var option = confirm('Bạn có muốn  xóa user ' + id);
+            if(option === true){
+            }
+        }
+
     </script>
 </head>
 <div id="layoutSidenav_content">
@@ -82,7 +97,7 @@
                             <tr>
                                 <td>
 								<span class="custom-checkbox">
-									<input type="checkbox" id="checkbox1" name="options[]" value="1">
+									<input type="checkbox" id="checkbox1" name="userID" value="${object.id}">
 									<label for="checkbox1"></label>
 								</span>
                                 </td>
@@ -96,11 +111,12 @@
                                 <td>${object.roleName}</td>
                                 <td>${object.roleDescription}</td>
                                 <td>
-                                    <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i
+                                    <a href="<%=request.getContextPath()%>/loadInforUser?userID=${object.id}"
+                                       class="edit" data-toggle="modal"><i
                                             class="material-icons"
                                             data-toggle="tooltip"
                                             title="Edit">&#xE254;</i></a>
-                                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
+                                    <a href="#" onclick="showConfirm('${object.id}')" class="delete" data-toggle="modal"><i
                                             class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                 </td>
                             </tr>
@@ -111,7 +127,7 @@
                         <ul class="pagination">
                             <c:forEach begin="1" end="${endPage}" var="i">
                                 <li class="page-item ${tag == i ? "active":""}"><a
-                                        href="<%=request.getContextPath()%>/manageUserControl?index=${i}"
+                                        href="<%=request.getContextPath()%>/manageUser?index=${i}"
                                         class="page-link">${i}</a></li>
                             </c:forEach>
                         </ul>
@@ -120,143 +136,51 @@
             </div>
         </div>
         <!-- Add Product -->
+
         <div id="addEmployeeModal" class="modal fade">
-            <div class="modal-dialog d-flex">
-                <div class="modal-content">
-                    <form action="<%=request.getContextPath()%>/createProduct" method="post">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Add Product</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Name</label>
-                                <input name="name" type="text" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Description</label>
-                                <textarea name="description" type="text" class="form-control" required> </textarea>
-                            </div>
-                            <%--                            <div class="form-group">--%>
-                            <%--                                <label>SKUD</label>--%>
-                            <%--                                <input name="SKU" type="text" class="form-control" required/>--%>
-                            <%--                            </div>--%>
-                            <div class="form-group">
-                                <label>Category</label>
-                                <select name="category" class="form-control" aria-label="Default select example">
-                                    <jsp:useBean id="categoryID" class="com.example.webpagejsp.dao.web.ProductDao"
-                                                 scope="request"/>
-                                    <c:forEach items="${categoryID.productCategory}" var="object">
-                                        <option value="${object.categoryID}">
-                                                ${object.categoryName}
-                                        </option>
-                                    </c:forEach>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Inventory</label>
-                                <select name="inventory-id" class="form-control" aria-label="Default select example">
-                                    <jsp:useBean id="inventoryID" class="com.example.webpagejsp.dao.web.ProductDao"
-                                                 scope="request"/>
-                                    <c:forEach items="${inventoryID.inventoryList}" var="object">
-                                        <option value="${object.inventoryID}">
-                                                ${object.inventoryID}
-                                        </option>
-                                    </c:forEach>
-                                </select>
-                            </div>
-
-                            <div class="form-group d-flex justify-content-between">
-                                <div class="ml-5" style="width: 47%">
-                                    <label>Price</label>
-                                    <input name="price" type="number" class="form-control" required>
-                                </div>
-                                <div class="" style="width: 47%">
-                                    <label>Discount</label>
-                                    <select name="discount" class="form-control" aria-label="Default select example">
-                                        <jsp:useBean id="discount" class="com.example.webpagejsp.dao.web.ProductDao"
-                                                     scope="request"/>
-                                        <c:forEach items="${discount.discountList}" var="object">
-                                            <option value="${object.discountID}">
-                                                    ${object.discountName}
-                                            </option>
-                                        </c:forEach>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-success" value="Add">
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Edit Modal HTML -->
-        <div id="editEmployeeModal" class="modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form action="">
+                    <form action="${pageContext.request.contextPath}/addUser">
                         <div class="modal-header">
-                            <h4 class="modal-title">Add Product</h4>
+                            <h4 class="modal-title">Add User System</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
-                                <label>Name</label>
-                                <input type="text" class="form-control" required>
+                                <label>Username</label>
+                                <input name="username" type="text" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label>Description</label>
-                                <textarea type="text" class="form-control" required> </textarea>
+                                <label>Password</label>
+                                <input name="password" type="text" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label>SKUD</label>
-                                <input type="text" class="form-control" required/>
-                            </div>
-                            <div class="form-group">
-                                <label>Category</label>
-                                <select name="category" class="form-control" aria-label="Default select example">
-                                    <c:forEach items="${categoryID.productCategory}" var="object">
-                                        <option>
-                                                ${object.categoryName}
+                                <label>Role</label>
+                                <jsp:useBean id="roleList" class="com.example.webpagejsp.dao.web.UserDao"/>
+                                <select name="role" class="form-control" aria-label="Default select example">
+                                    <c:forEach items="${roleList.listRole}" var="object">
+                                        <option value="${object.ID}">
+                                                ${object.roleName}
                                         </option>
                                     </c:forEach>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>INVENTORY_ID</label>
-                                <jsp:useBean id="inventory" class="com.example.webpagejsp.dao.web.ProductDao"/>
-                                <select name="inventory" class="form-control" aria-label="Default select example">
-                                    <c:forEach items="${inventory.inventoryList}" var="object">
-                                    <option>
-                                            ${object.inventoryID}
-                                    </option>
-                                    </c:forEach>
+                                <label>Email</label>
+                                <input name="email" type="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <fmt:setLocale value="vi_VN"/>
+
+                                <label>ADDRESS</label>
+                                <input name="address" type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>PHONE_NUMBER</label>
+                                <input name="phoneNumber" type="number" class="form-control" required>
                             </div>
 
-                            <div class="form-group d-flex justify-content-between">
-                                <div class="ml-5" style="width: 47%">
-                                    <label>Price</label>
-                                    <input type="number" class="form-control" required>
-                                </div>
-                            </div>
-                            <div class="" style="width: 47%">
-                                <label>Discount</label>
-                                <select name="discount" class="form-control" aria-label="Default select example">
-                                    <c:forEach items="${discount.discountList}" var="object">
-                                        <option>
-                                                ${object.discountID}
-                                        </option>
 
-                                    </c:forEach>
-
-
-                                </select>
-                            </div>
                         </div>
 
                         <div class="modal-footer">

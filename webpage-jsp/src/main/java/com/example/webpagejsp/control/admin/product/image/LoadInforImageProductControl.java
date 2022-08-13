@@ -3,7 +3,7 @@
  *
  */
 
-package com.example.webpagejsp.control.admin.product;
+package com.example.webpagejsp.control.admin.product.image;
 
 import com.example.webpagejsp.dao.admin.AdminDao;
 import com.example.webpagejsp.entity.ImageProduct;

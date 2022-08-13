@@ -36,6 +36,12 @@
                 }
             });
         });
+        function showConfirm(id) {
+            var option = confirm('Bạn có muốn ảnh xóa mã sản phẩm ' + id);
+            if (option === true) {
+                window.location.href = 'deleteImageProduct?imageID=' + id;
+            }
+        }
     </script>
 </head>
 <div id="layoutSidenav_content">
@@ -46,7 +52,7 @@
                     <div class="table-title">
                         <div class="row">
                             <div class="col-xs-6">
-                                <h2>Manage<b>Product</b>Images</h2>
+                                <h2>Manage <b>Product </b>Images</h2>
                             </div>
                             <div class="col-xs-6">
                                 <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i
@@ -93,7 +99,7 @@
                                             class="material-icons"
                                             data-toggle="tooltip"
                                             title="Edit">&#xE254;</i></a>
-                                    <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i
+                                    <a href="#" onclick="showConfirm('${object.imageProductID}')" class="delete" data-toggle="modal"><i
                                             class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                 </td>
                             </tr>
@@ -112,76 +118,39 @@
                 </div>
             </div>
         </div>
-        <!-- Add Product -->
+        <!-- Add iamge Product -->
         <div id="addEmployeeModal" class="modal fade">
             <div class="modal-dialog d-flex">
                 <div class="modal-content">
-                    <%--                    <form action="<%=request.getContextPath()%>/createProduct" method="post">--%>
-                    <div class="modal-header">
-                        <h4 class="modal-title">Add Product</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label>Name</label>
-                            <input name="name" type="text" class="form-control" required>
+                    <form action="<%=request.getContextPath()%>/addImageProduct" method="post">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Add Product</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         </div>
-                        <div class="form-group">
-                            <label>Description</label>
-                            <textarea name="description" type="text" class="form-control" required> </textarea>
-                        </div>
-                        <%--                            <div class="form-group">--%>
-                        <%--                                <label>SKUD</label>--%>
-                        <%--                                <input name="SKU" type="text" class="form-control" required/>--%>
-                        <%--                            </div>--%>
-                        <div class="form-group">
-                            <label>Category</label>
-                            <select name="category" class="form-control" aria-label="Default select example">
-                                <jsp:useBean id="categoryID" class="com.example.webpagejsp.dao.web.ProductDao"
-                                             scope="request"/>
-                                <c:forEach items="${categoryID.productCategory}" var="object">
-                                    <option value="${object.categoryID}">
-                                            ${object.categoryName}
-                                    </option>
-                                </c:forEach>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Inventory</label>
-                            <select name="inventory-id" class="form-control" aria-label="Default select example">
-                                <jsp:useBean id="inventoryID" class="com.example.webpagejsp.dao.web.ProductDao"
-                                             scope="request"/>
-                                <c:forEach items="${inventoryID.inventoryList}" var="object">
-                                    <option value="${object.inventoryID}">
-                                            ${object.inventoryID}
-                                    </option>
-                                </c:forEach>
-                            </select>
-                        </div>
-
-                        <div class="form-group d-flex justify-content-between">
-                            <div class="ml-5" style="width: 47%">
-                                <label>Price</label>
-                                <input name="price" type="number" class="form-control" required>
-                            </div>
-                            <div class="" style="width: 47%">
-                                <label>Discount</label>
-                                <select name="discount" class="form-control" aria-label="Default select example">
-                                    <jsp:useBean id="discount" class="com.example.webpagejsp.dao.web.ProductDao"
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Inventory</label>
+                                <select name="productID" class="form-control" aria-label="Default select example">
+                                    <jsp:useBean id="listProduct" class="com.example.webpagejsp.dao.admin.AdminDao"
                                                  scope="request"/>
-                                    <c:forEach items="${discount.discountList}" var="object">
-                                        <option value="${object.discountID}">
-                                                ${object.discountName}
+                                    <c:forEach items="${listProduct.allProduct}" var="object">
+                                        <option value="${object.productId}">
+                                                ${object.productId}
                                         </option>
                                     </c:forEach>
                                 </select>
                             </div>
+                            <div class="form-group">
+                                <label>imageURL</label>
+                                <input name="imageURL" type="text" class="form-control" required>
+                            </div>
+
+
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                        <input type="submit" class="btn btn-success" value="Add">
-                    </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                            <input type="submit" class="btn btn-success" value="Add">
+                        </div>
                     </form>
                 </div>
 

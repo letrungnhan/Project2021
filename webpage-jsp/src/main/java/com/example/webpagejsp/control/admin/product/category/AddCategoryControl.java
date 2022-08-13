@@ -3,7 +3,7 @@
  *
  */
 
-package com.example.webpagejsp.control.admin.product;
+package com.example.webpagejsp.control.admin.product.category;
 
 import com.example.webpagejsp.dao.admin.AdminDao;
 import com.example.webpagejsp.entity.Category;
@@ -15,20 +15,22 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "loadInforCategoryControl", value = "/loadInforCategoryControl")
-public class LoadInforCategoryControl extends HttpServlet {
+@WebServlet(name = "AddCategoryControl", value = "/addCategory")
+public class AddCategoryControl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("UTF-8");
+        String categoryName = request.getParameter("categoryName");
         String categoryID = request.getParameter("categoryID");
-        AdminDao productDao = new AdminDao();
-        Category loadProductCategory = productDao.loadProductCategory(categoryID);
 
-        request.getSession().setAttribute("categoryInfor", loadProductCategory);
-        request.getRequestDispatcher("/admin/edit-category-page.jsp").forward(request, response);
+        AdminDao adminDao = new AdminDao();
+        adminDao.createCategoryProduct(new Category(categoryID,categoryName));
+        response.sendRedirect("adminProductCategory");
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        this.doGet(request, response);
+    this.doGet(request, response);
     }
 }
