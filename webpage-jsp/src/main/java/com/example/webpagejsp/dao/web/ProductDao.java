@@ -14,6 +14,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -277,8 +278,6 @@ public class ProductDao {
 
     public static void main(String[] args) {
         ProductDao dao = new ProductDao();
-        List<Product> list = dao.getListProduct();
-        System.out.println(list);
 
 
     }
@@ -299,4 +298,6 @@ public class ProductDao {
         }
         return 0;
     }
+
+
 }

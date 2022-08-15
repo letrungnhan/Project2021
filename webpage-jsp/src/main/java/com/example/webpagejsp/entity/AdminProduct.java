@@ -43,6 +43,10 @@ public class AdminProduct {
         this.imageProduct = imageProduct;
     }
 
+    public AdminProduct() {
+
+    }
+
     public String getProductId() {
         return productId;
     }

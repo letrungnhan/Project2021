@@ -22,4 +22,6 @@ public interface AdminServices {
     void updateCategory(Category categoryName, String categoryID);
 
     void deleteUser(String userID);
+
+    void updateUser(User user, String userID);
 }

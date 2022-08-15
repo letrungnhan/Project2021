@@ -39,6 +39,16 @@ public class User implements Serializable {
         this.phoneNumber = phoneNumber;
     }
 
+    public User(String id, String username, String password, String roleId, String email, String address, int phoneNumber) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.roleId = roleId;
+        this.email = email;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+    }
+
     public String getId() {
         return id;
     }

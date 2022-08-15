@@ -146,9 +146,4 @@ public class UserDao {
         return null;
     }
 
-    public static void main(String[] args) throws Exception {
-        UserDao accountDAO = new UserDao();
-        accountDAO.register("testmain5", "12345", "testMain@gmail.com", "Dĩ An", 1234567);
-
-    }
 }

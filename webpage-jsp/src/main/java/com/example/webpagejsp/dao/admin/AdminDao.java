@@ -114,7 +114,6 @@ public class AdminDao implements AdminServices {
         return null;
     }
 
-
     //    Manage Product
     @Override
     public void createProduct(AdminProduct product) {
@@ -171,12 +170,12 @@ public class AdminDao implements AdminServices {
     @Override
     public void updateProduct(AdminProduct product, String productID) {
         String query = " UPDATE PRODUCT SET P_NAME =?\n" +
-                "                  , P_DESC =?\n" +
-                "                  , CATEGORY_ID=?\n" +
-                "                  ,INVENTORY_ID=?\n" +
-                "\t\t\t\t   ,PRICE=?\n" +
-                "                  ,DISCOUNT_ID=?\n" +
-                "                WHERE P_ID=?";
+                ", P_DESC =?\n" +
+                ", CATEGORY_ID=?\n" +
+                ",INVENTORY_ID=?\n" +
+                "   ,PRICE=?\n" +
+                ",DISCOUNT_ID=?\n" +
+                " WHERE P_ID=?";
 
         try {
             conn = new DBContext().getConnection();
@@ -362,6 +361,7 @@ public class AdminDao implements AdminServices {
 
             }
         } catch (Exception e) {
+            e.printStackTrace();
         }
 
         return null;
@@ -400,6 +400,31 @@ public class AdminDao implements AdminServices {
 
     }
 
+    @Override
+    public void updateUser(User user, String userID) {
+        String query = " UPDATE USERS SET USERNAME =?\n" +
+                ", PASS_WORD =?\n" +
+                ", ROLE_ID=?\n" +
+                ",EMAIL=?\n" +
+                "   ,ADDRESSS=?\n" +
+                ",TELEPHONE=?\n" +
+                " WHERE ID=?";
+
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, user.getUsername());
+            ps.setString(2, user.getPassword());
+            ps.setString(3, user.getRoleId());
+            ps.setString(4, user.getEmail());
+            ps.setString(5, user.getAddress());
+            ps.setInt(6, user.getPhoneNumber());
+            ps.setString(7, userID);
+            ps.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     public AdminProduct loadProductByID(String pid) {
 
@@ -426,15 +451,6 @@ public class AdminDao implements AdminServices {
 
         return null;
 
-    }
-
-    public static void main(String[] args) {
-        AdminDao adminDao = new AdminDao();
-//        adminDao.updateProduct(new AdminProduct("update", "Cđáadfasdfd", "CG006", "IT164", 10900000, "DC045"), "PT100669");
-//        System.out.println(adminDao.loadProductByID("PT100236"));
-//        System.out.println(adminDao.pagingAdminProductImage(1));
-
-        System.out.println(adminDao.loadUserByID("US001"));
     }
 
     public ImageProduct loadImageProductByID(String imageID) {
@@ -533,6 +549,7 @@ public class AdminDao implements AdminServices {
             rs = ps.executeQuery();
             while (rs.next()) {
                 return new User(
+                        rs.getString("ID"),
                         rs.getString("USERNAME"),
                         rs.getString("PASS_WORD"),
                         rs.getString("ROLE_ID"),

@@ -44,12 +44,17 @@
         <div id="edit-user">
             <div class="d-flex">
                 <div class="modal-content">
-                    <form action="">
+                    <form action="<%=request.getContextPath()%>/editUser">
                         <div class="modal-header">
                             <h4 class="modal-title">Add User System</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         </div>
                         <div class="modal-body">
+                            <div class="form-group">
+                                <label>UserID</label>
+                                <input name="userID" value="${sessionScope.userInfor.id}" type="text"
+                                       class="form-control" required readonly>
+                            </div>
                             <div class="form-group">
                                 <label>Username</label>
                                 <input name="username" value="${sessionScope.userInfor.username}" type="text"
@@ -91,7 +96,7 @@
                         </div>
 
                         <div class="modal-footer">
-                            <a class="medium" href="<%=request.getContextPath()%>/manageUserControl">Back </a> &nbsp;&nbsp;
+                            <a class="medium" href="<%=request.getContextPath()%>/manageUser">Back </a> &nbsp;&nbsp;
                             <input type="submit" class="btn btn-success" value="Edit">
                         </div>
                     </form>

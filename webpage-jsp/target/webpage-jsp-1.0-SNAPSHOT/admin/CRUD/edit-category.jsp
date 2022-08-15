@@ -16,7 +16,6 @@
         $(document).ready(function () {
             // Activate tooltip
             $('[data-toggle="tooltip"]').tooltip();
-
             // Select/Deselect checkboxes
             var checkbox = $('table tbody input[type="checkbox"]');
             $("#selectAll").click(function () {
@@ -44,38 +43,27 @@
         <div class="edit--product">
             <div class="d-flex">
                 <div class="modal-content">
-                    <form action="<%=request.getContextPath()%>/editImageProduct">
+                    <form action="<%=request.getContextPath()%>/EditCategory">
                         <div class="modal-header">
                             <h4 class="modal-title">Edit Category</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
-                                <label>Product Name</label>
-                                <input value="${sessionScope.productImageInfor.productName}" type="text" class="form-control"
-                                       name="product-name" readonly>
+                                <label>Category ID</label>
+                                <input value="${sessionScope.categoryInfor.categoryID}" type="text" class="form-control"
+                                       name="categoryID" readonly>
                             </div>
                             <div class="form-group">
-                                <label>image ID</label>
-                                <input value="${sessionScope.productImageInfor.imageProductID}" type="text"
+                                <label>Category Name</label>
+                                <input value="${sessionScope.categoryInfor.categoryName}" type="text"
                                        class="form-control"
-                                       name="imageID" required>
+                                       name="categoryName" required>
                             </div>
-                            <div class="form-group">
-                                <label>Product ID</label>
-                                <input value="${sessionScope.productImageInfor.productID}" type="text"
-                                       class="form-control"
-                                       name="productID" required readonly>
-                            </div>
-                            <div class="form-group">
-                                <label>URL Images</label>
-                                <input value="${sessionScope.productImageInfor.urlImage}" type="text"
-                                       class="form-control"
-                                       name="imageURL" required>
-                            </div>
+
                         </div>
                         <div class="modal-footer mr-10">
-                            <a class="small" href="<%=request.getContextPath()%>/adminProduct">Back </a> &nbsp;
+                            <a class="small" href="<%=request.getContextPath()%>/adminProduct">Back </a>
                             <input type="submit" class="btn btn-success" value="Edit"/>
                         </div>
                     </form>
