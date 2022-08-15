@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!doctype html>
 <html class="no-js" lang="zxx">
 <jsp:include page="head.jsp"/>
@@ -71,19 +72,14 @@
                                 <a class="active" href="#pro-details1">
                                     <img src="${detail.image}" alt="">
                                 </a>
-                                <a href="#pro-details2">
-                                    <img src="<%=request.getContextPath()%>/assets/img/product-details/b3.png" alt="">
-                                </a>
-                                <a href="#pro-details3">
-                                    <img src="<%=request.getContextPath()%>/assets/img/product-details/c3.jpg" alt="">
-                                </a>
-                                <a href="#pro-details4">
-                                    <img src="<%=request.getContextPath()%>/assets/img/product-details/tn3.jpg" alt="">
-                                </a>
-                                <a href="#pro-details5">
-                                    <img src="<%=request.getContextPath()%>/assets/img/product-details/minipc3.jpg"
-                                         alt="">
-                                </a>
+
+                                <c:forEach items="${sessionScope.detailImage}" var="object">
+                                    <a href="#pro-details2">
+                                        <img src="${object.urlImage}" alt="">
+                                    </a>
+                                </c:forEach>
+
+
                             </div>
                         </div>
                     </div>
@@ -100,7 +96,12 @@
                             <span> ( 1 khách hàng bình luận )</span>
                         </div>
                         <div class="product-price">
-                            <span>Giá: ${detail.price}</span>
+                            <fmt:setLocale value="vi_VN"/>
+                            <span>Giá:       <fmt:formatNumber>  ${detail.price}</fmt:formatNumber>
+
+
+
+                            </span>
                         </div>
                         <div class="product-overview">
                             <h5 class="pd-sub-title">Tổng quan về sản phẩm</h5>

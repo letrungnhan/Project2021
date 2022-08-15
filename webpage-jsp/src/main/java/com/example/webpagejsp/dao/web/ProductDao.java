@@ -14,7 +14,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -278,7 +277,7 @@ public class ProductDao {
 
     public static void main(String[] args) {
         ProductDao dao = new ProductDao();
-
+            System.out.println(dao.getImageProdcutByID("PT001"));
 
     }
 
@@ -300,4 +299,25 @@ public class ProductDao {
     }
 
 
+    public List<ImageProduct> getImageProdcutByID(String pid) {
+        List<ImageProduct> list = new ArrayList<>();
+        String query = "SELECT * FROM IMAGES WHERE PRODUCT_ID=?";
+        try {
+            conn = new DBContext().getConnection();//mo ket noi voi sql
+            ps = conn.prepareStatement(query);
+            ps.setString(1, pid);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                ImageProduct a = new ImageProduct(rs.getString("ID"),
+                        rs.getString("PRODUCT_ID"),
+                        rs.getString("URl_IMG"));
+
+                list.add(a);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
 }

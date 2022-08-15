@@ -28,7 +28,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 ml-auto mr-auto">
-                    <div class="login-register-wrapper">
+                    <div class="login-register-wrapper shadow-lg">
                         <div class="login-register-tab-list nav">
 
                             <a class="active" href="#lg1">
