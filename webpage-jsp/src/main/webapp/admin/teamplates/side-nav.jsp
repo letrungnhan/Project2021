@@ -47,6 +47,8 @@
                                    href="<%=request.getContextPath()%>/createImagePage">Update Image Product</a>
                                 <a class="nav-link"
                                    href="<%=request.getContextPath()%>/adminProductCategory">Category</a>
+                                <a class="nav-link"
+                                   href="<%=request.getContextPath()%>/discount">Discount</a>
                             </nav>
                         </div>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"

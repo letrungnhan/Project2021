@@ -37,47 +37,17 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane" id="pro-details2">
-                                    <div class="easyzoom easyzoom--overlay">
+                                    <div>
                                         <a href="<%=request.getContextPath()%>/assets/img/product-details/b1.jpg">
                                             <img src="${detail.image}" alt="">
                                         </a>
                                     </div>
                                 </div>
-                                <div class="tab-pane" id="pro-details3">
-                                    <div class="easyzoom easyzoom--overlay">
-                                        <a href="<%=request.getContextPath()%>/assets/img/product-details/c1.jpg">
-                                            <img src="<%=request.getContextPath()%>/assets/img/product-details/c2.jpg"
-                                                 alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="pro-details4">
-                                    <div class="easyzoom easyzoom--overlay">
-                                        <a href="<%=request.getContextPath()%>/assets/img/product-details/tn1.jpg">
-                                            <img src="<%=request.getContextPath()%>/assets/img/product-details/tn2.jpg"
-                                                 alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="pro-details5">
-                                    <div class="easyzoom easyzoom--overlay">
-                                        <a href="<%=request.getContextPath()%>/assets/img/product-details/minipc1.jpg">
-                                            <img src="<%=request.getContextPath()%>/assets/img/product-details/minipc2.jpg"
-                                                 alt="">
-                                        </a>
-                                    </div>
-                                </div>
+
                             </div>
                             <div class="product-details-small nav mt-12 product-dec-slider owl-carousel">
-                                <a class="active" href="#pro-details1">
-                                    <img src="${detail.image}" alt="">
-                                </a>
 
-                                <c:forEach items="${sessionScope.detailImage}" var="object">
-                                    <a href="#pro-details2">
-                                        <img src="${object.urlImage}" alt="">
-                                    </a>
-                                </c:forEach>
+
 
 
                             </div>

@@ -209,7 +209,7 @@
                         <h4>tổng giá: <span>96.940đ</span></h4>
                     </div>
                     <div class="shopping-cart-btn">
-                        <a class="btn-style cr-btn" href="login.jsp">Thanh toán</a>
+                        <a class="btn-style cr-btn" href="cart.jsp">Thanh toán</a>
                     </div>
                 </div>
             </div>

@@ -426,6 +426,26 @@ public class AdminDao implements AdminServices {
         }
     }
 
+    @Override
+    public void updateDiscount(Discount discount, String discountID) {
+        String query = " UPDATE DISCOUNT SET ID= ?, D_NAME=?,DISCOUNT_PERCENT=?,ACTIVE=?\n" +
+                "WHERE ID=?";
+
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, discount.getDiscountID());
+            ps.setString(2, discount.getDiscountName());
+            ps.setFloat(3, discount.getDiscountPercent());
+            ps.setString(4, discount.getDiscountActive());
+            ps.setString(5, discountID);
+            ps.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
     public AdminProduct loadProductByID(String pid) {
 
         String query = "SELECT * FROM PRODUCT \n" +
@@ -563,5 +583,90 @@ public class AdminDao implements AdminServices {
         }
 
         return null;
+    }
+
+    public List<Discount> getListDiscount() {
+        List<Discount> list = new ArrayList<>();
+        String query = "SELECT * FROM DISCOUNT";
+        try {
+            conn = new DBContext().getConnection();//mo ket noi voi sql
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                Discount a = new Discount(
+                        rs.getString("ID"),
+                        rs.getString("D_NAME"),
+                        rs.getFloat("DISCOUNT_PERCENT"),
+                        rs.getString("ACTIVE")
+                );
+                list.add(a);
+            }
+            return list;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public Discount loadInforDiscount(String discountID) {
+        String query = " SELECT * FROM [dbo].[DISCOUNT]\n" +
+                "WHERE ID=?";
+        try {
+            conn = new DBContext().getConnection();//mo ket noi voi sql
+            ps = conn.prepareStatement(query);
+            ps.setString(1, discountID);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return new Discount(
+                        rs.getString("ID"),
+                        rs.getString("D_NAME"),
+                        rs.getFloat("DISCOUNT_PERCENT"),
+                        rs.getString("ACTIVE"));
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return null;
+
+
+    }
+
+    public static void main(String[] args) {
+        AdminDao adminDao = new AdminDao();
+        System.out.println(adminDao.loadInforDiscount("DC040"));
+    }
+
+    public void createDiscount(Discount discount) {
+        String query = " INSERT INTO DISCOUNT (ID , D_NAME,DISCOUNT_PERCENT,ACTIVE)\n" +
+                " VALUES (?,?,?,?)\n";
+        try {
+
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, discount.getDiscountID());
+            ps.setString(2, discount.getDiscountName());
+            ps.setFloat(3, discount.getDiscountPercent());
+            ps.setString(4, discount.getDiscountActive());
+
+            ps.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void deleteDiscount(String discountID) {
+        String query = "DELETE FROM DISCOUNT WHERE ID=?";
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, discountID);
+            ps.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

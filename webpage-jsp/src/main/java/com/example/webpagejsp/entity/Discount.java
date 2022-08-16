@@ -18,6 +18,12 @@ public class Discount {
         this.discountActive = discountActive;
     }
 
+    public Discount(String discountName, float discountPercent, String discountActive) {
+        this.discountName = discountName;
+        this.discountPercent = discountPercent;
+        this.discountActive = discountActive;
+    }
+
     public String getDiscountID() {
         return discountID;
     }

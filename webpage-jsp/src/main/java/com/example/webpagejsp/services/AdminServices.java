@@ -1,10 +1,7 @@
 
 package com.example.webpagejsp.services;
 
-import com.example.webpagejsp.entity.Admin;
-import com.example.webpagejsp.entity.AdminProduct;
-import com.example.webpagejsp.entity.Category;
-import com.example.webpagejsp.entity.User;
+import com.example.webpagejsp.entity.*;
 
 public interface AdminServices {
     Admin loginAdmin(String username, String password);
@@ -24,4 +21,6 @@ public interface AdminServices {
     void deleteUser(String userID);
 
     void updateUser(User user, String userID);
+
+    void updateDiscount(Discount discount, String discountID);
 }
