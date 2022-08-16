@@ -37,9 +37,9 @@
                             <div class="main-menu">
                                 <nav>
                                     <ul>
-                                        <li><a href="index.jsp">Trang Chủ</a></li>
+                                        <li><a href="home">Trang Chủ</a></li>
 
-                                        <li><a href="#">Cửa Hàng</a>
+                                        <li><a href="product">Cửa Hàng</a>
                                             <ul>
                                                 <li><a href="<%=request.getContextPath()%>/product">Cửa Hàng</a></li>
                                             </ul>
@@ -134,17 +134,13 @@
                                 <li><a href="home">TRANG CHỦ</a></li>
                                 <li><a href="#">pages</a>
                                     <ul>
-                                        <li><a href="pixel/cart.html">trang giỏ hàng</a></li>
-                                        <li><a href="pixel/checkout.html">checkout</a></li>
-                                        <li><a href="pixel/wishlist.html">danh sách mong muốn</a></li>
+
                                         <li><a href="login.jsp">đăng nhập</a></li>
                                     </ul>
                                 </li>
                                     <ul>
                                         <li><a href="product">cửa hàng</a></li>
-                                        <li><a href="pixel/checkout.html">checkout</a></li>
-                                        <li><a href="pixel/wishlist.html">danh sách mong muốn</a></li>
-                                        <li><a href="pixel/cart.html">giỏ hàng</a></li>
+
                                     </ul>
                                 </li>
                             </ul>
