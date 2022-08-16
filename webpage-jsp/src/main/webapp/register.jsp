@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%
     String error = (String) request.getAttribute("error");
 
@@ -45,10 +46,18 @@
                                 <div class="login-form-container">
                                     <div class="login-form">
                                         <form action="register" method="post">
+                                            <%if (error != null) { %>
+                                            <div class="alert alert-danger" role="alert">
+                                                <%=error%>
+                                            </div>
+                                            <%
+                                                }
+                                            %>
                                             <input type="text" name="user-name" placeholder="Tên đăng nhập ">
                                             <input type="password" name="user-password" placeholder="Mật khẩu">
                                             <input type="password" name="re-password" placeholder="Nhập lại mật khẩu">
                                             <input name="user-email" placeholder="Email" type="email">
+                                            <fmt:setLocale value="vi_VN"/>
                                             <input name="address" placeholder="Địa chỉ" type="text">
                                             <input name="phoneNumber" placeholder="Số điện thoại" type="number">
                                             <div class="button-box">

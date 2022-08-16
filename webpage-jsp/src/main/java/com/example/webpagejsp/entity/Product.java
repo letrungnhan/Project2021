@@ -9,6 +9,25 @@ public class Product implements Serializable {
     private String description;
     private double price;
     private String image;
+    private String SKU;
+
+
+    public Product(String id, String name, String description, double price, String image, String SKU) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.image = image;
+        this.SKU = SKU;
+    }
+
+    public String getSKU() {
+        return SKU;
+    }
+
+    public void setSKU(String SKU) {
+        this.SKU = SKU;
+    }
 
     public Product() {
     }
@@ -69,6 +88,7 @@ public class Product implements Serializable {
                 ", description='" + description + '\'' +
                 ", price=" + price +
                 ", image='" + image + '\'' +
+                ", SKU='" + SKU + '\'' +
                 '}';
     }
 }

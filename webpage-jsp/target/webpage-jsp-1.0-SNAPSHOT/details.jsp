@@ -79,14 +79,9 @@
                         </div>
                         <div class="product-color">
                             <h5 class="pd-sub-title">Mã sản phẩm</h5>
-                            <ul>
-                                <li class="red">b</li>
-                                <li class="pink">p</li>
-                                <li class="blue">b</li>
-                                <li class="sky2">b</li>
-                                <li class="green">y</li>
-                                <li class="purple2">g</li>
-                            </ul>
+
+                            ${sessionScope.detail.SKU}
+
                         </div>
                         <div class="quickview-plus-minus">
                             <div class="cart-plus-minus">

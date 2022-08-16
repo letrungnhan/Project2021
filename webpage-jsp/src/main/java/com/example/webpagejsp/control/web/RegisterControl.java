@@ -8,15 +8,20 @@ package com.example.webpagejsp.control.web;
 import com.example.webpagejsp.dao.web.UserDao;
 import com.example.webpagejsp.entity.User;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "RegisterControl", value = "/register")
 public class RegisterControl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("UTF-8");
+
         String username = request.getParameter("user-name");
         String password = request.getParameter("user-password");
         String rePassword = request.getParameter("re-password");
@@ -30,9 +35,10 @@ public class RegisterControl extends HttpServlet {
             UserDao userDao = new UserDao();
             User user = userDao.checkUserExist(username);
             if(user==null){
-                    userDao.register(username,password,email,address,phoneNumber);
-                    response.sendRedirect("home");
+                userDao.register(username, password, email, address, phoneNumber);
+                response.sendRedirect("login.jsp");
             }else{
+                request.setAttribute("error", "Thông tin đăng ký không hợp lệ.");
                 response.sendRedirect("/register.jsp");
             }
         }

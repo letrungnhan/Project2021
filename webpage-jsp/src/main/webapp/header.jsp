@@ -154,8 +154,8 @@
             <div class="header-cart">
                 <button class="icon-cart">
                     <i class="ti-shopping-cart"></i>
-                    <span class="count-style">03</span>
-                    <span class="count-price-add">96.940đ</span>
+                    <span class="count-style"></span>
+                    <span class="count-price-add">0đ</span>
                 </button>
                 <div class="shopping-cart-content">
                     <ul>

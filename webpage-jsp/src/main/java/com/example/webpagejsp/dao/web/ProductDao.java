@@ -121,22 +121,21 @@ public class ProductDao {
 
     public Product getProductByID(String pid) {
 
-        String query = "SELECT\n" +
-                "\tP_ID, P_NAME, P_DESC, PRICE , URL_IMG , CATEGORY_ID\n" +
-                "FROM\n" +
-                "   PRODUCT INNER JOIN IMAGES ON PRODUCT.P_ID = IMAGES.PRODUCT_ID \n" +
-                "WHERE P_ID = ?";
+        String query = "SELECT P_ID, P_NAME, P_DESC, PRICE , URL_IMG ,SKU\n" +
+                "FROM PRODUCT INNER JOIN IMAGES ON PRODUCT.P_ID = IMAGES.PRODUCT_ID WHERE P_ID = ?";
         try {
             conn = new DBContext().getConnection();//mo ket noi voi sql
             ps = conn.prepareStatement(query);
             ps.setString(1, pid);
             rs = ps.executeQuery();
             while (rs.next()) {
-                return new Product(rs.getString(1),
+                return new Product(
+                        rs.getString(1),
                         rs.getString(2),
                         rs.getString(3),
                         rs.getDouble(4),
-                        rs.getString(5)
+                        rs.getString(5),
+                        rs.getString("SKU")
                 );
 
             }
@@ -277,7 +276,7 @@ public class ProductDao {
 
     public static void main(String[] args) {
         ProductDao dao = new ProductDao();
-            System.out.println(dao.getImageProdcutByID("PT001"));
+            System.out.println(dao.getProductByID("PT001"));
 
     }
 
@@ -320,4 +319,5 @@ public class ProductDao {
         }
         return list;
     }
+
 }
